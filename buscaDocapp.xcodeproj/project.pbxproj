@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D7F97191996F51E00417083 /* clinic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F97181996F51E00417083 /* clinic2.png */; };
+		4D7F971B1996F5CA00417083 /* medical77.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971A1996F5CA00417083 /* medical77.png */; };
+		4D7F971D1996F5D600417083 /* heart275.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971C1996F5D600417083 /* heart275.png */; };
+		4D7F971F1996F5E000417083 /* hospital21.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971E1996F5E000417083 /* hospital21.png */; };
+		4D90E10219BD6D1200C1FC60 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10119BD6D1200C1FC60 /* user.png */; };
+		4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10319BD6D1900C1FC60 /* unlocked.png */; };
+		4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10819BD7CDF00C1FC60 /* images.jpeg */; };
+		4D90E10B19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10A19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg */; };
+		4D90E10E19BD850000C1FC60 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10D19BD850000C1FC60 /* home.png */; };
+		4D90E11019BD850B00C1FC60 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10F19BD850B00C1FC60 /* key.png */; };
+		4D90E11219BD851200C1FC60 /* locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11119BD851200C1FC60 /* locked.png */; };
+		4D90E11419BD852700C1FC60 /* envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11319BD852700C1FC60 /* envelope.png */; };
+		4D90E11619BD853500C1FC60 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11519BD853500C1FC60 /* calendar.png */; };
+		4D90E11819BD856300C1FC60 /* pin-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11719BD856300C1FC60 /* pin-2.png */; };
+		4D90E11A19BD862800C1FC60 /* bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11919BD862800C1FC60 /* bullet.png */; };
+		4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E11B19BD872300C1FC60 /* bullet-white-icon.png */; };
+		4D90E11F19BD88E300C1FC60 /* Registro1ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D90E11E19BD88E300C1FC60 /* Registro1ViewController.m */; };
+		4D90E12119BD8BBB00C1FC60 /* circle-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E12019BD8BBB00C1FC60 /* circle-512.png */; };
+		4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E12219BD8C1E00C1FC60 /* dot.png */; };
+		4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D97D5D319B3A2F300DB2201 /* LoginViewController.m */; };
+		4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */; };
+		4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8F80F19A837F1000115EC /* CeldaListaEspecialidades.m */; };
 		4DF562B619943F3A006E7421 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF562B519943F3A006E7421 /* Foundation.framework */; };
 		4DF562B819943F3A006E7421 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF562B719943F3A006E7421 /* CoreGraphics.framework */; };
 		4DF562BA19943F3A006E7421 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF562B919943F3A006E7421 /* UIKit.framework */; };
@@ -35,6 +57,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D7F97181996F51E00417083 /* clinic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clinic2.png; sourceTree = "<group>"; };
+		4D7F971A1996F5CA00417083 /* medical77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical77.png; sourceTree = "<group>"; };
+		4D7F971C1996F5D600417083 /* heart275.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart275.png; sourceTree = "<group>"; };
+		4D7F971E1996F5E000417083 /* hospital21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hospital21.png; sourceTree = "<group>"; };
+		4D90E10119BD6D1200C1FC60 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		4D90E10319BD6D1900C1FC60 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
+		4D90E10819BD7CDF00C1FC60 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		4D90E10A19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "medical-appointment-arrow-prestige-limousine.jpg"; sourceTree = "<group>"; };
+		4D90E10D19BD850000C1FC60 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		4D90E10F19BD850B00C1FC60 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		4D90E11119BD851200C1FC60 /* locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locked.png; sourceTree = "<group>"; };
+		4D90E11319BD852700C1FC60 /* envelope.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = envelope.png; sourceTree = "<group>"; };
+		4D90E11519BD853500C1FC60 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		4D90E11719BD856300C1FC60 /* pin-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin-2.png"; sourceTree = "<group>"; };
+		4D90E11919BD862800C1FC60 /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullet.png; sourceTree = "<group>"; };
+		4D90E11B19BD872300C1FC60 /* bullet-white-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bullet-white-icon.png"; sourceTree = "<group>"; };
+		4D90E11D19BD88E300C1FC60 /* Registro1ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registro1ViewController.h; sourceTree = "<group>"; };
+		4D90E11E19BD88E300C1FC60 /* Registro1ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registro1ViewController.m; sourceTree = "<group>"; };
+		4D90E12019BD8BBB00C1FC60 /* circle-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-512.png"; sourceTree = "<group>"; };
+		4D90E12219BD8C1E00C1FC60 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
+		4D97D5D219B3A2F300DB2201 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4D97D5D319B3A2F300DB2201 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4DD8F80B19A8329E000115EC /* EspecialidadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EspecialidadTableViewController.h; sourceTree = "<group>"; };
+		4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EspecialidadTableViewController.m; sourceTree = "<group>"; };
+		4DD8F80E19A837F1000115EC /* CeldaListaEspecialidades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaListaEspecialidades.h; sourceTree = "<group>"; };
+		4DD8F80F19A837F1000115EC /* CeldaListaEspecialidades.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaListaEspecialidades.m; sourceTree = "<group>"; };
 		4DF562B219943F3A006E7421 /* buscaDocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = buscaDocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF562B519943F3A006E7421 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4DF562B719943F3A006E7421 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,6 +129,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D7F96ED1996F2AF00417083 /* Iconos */ = {
+			isa = PBXGroup;
+			children = (
+				4D7F971E1996F5E000417083 /* hospital21.png */,
+				4D7F971C1996F5D600417083 /* heart275.png */,
+				4D7F971A1996F5CA00417083 /* medical77.png */,
+				4D7F97181996F51E00417083 /* clinic2.png */,
+			);
+			name = Iconos;
+			sourceTree = "<group>";
+		};
+		4D90E10C19BD84AF00C1FC60 /* Registro */ = {
+			isa = PBXGroup;
+			children = (
+				4D90E12219BD8C1E00C1FC60 /* dot.png */,
+				4D90E12019BD8BBB00C1FC60 /* circle-512.png */,
+				4D90E11B19BD872300C1FC60 /* bullet-white-icon.png */,
+				4D90E11919BD862800C1FC60 /* bullet.png */,
+				4D90E11719BD856300C1FC60 /* pin-2.png */,
+				4D90E11519BD853500C1FC60 /* calendar.png */,
+				4D90E11319BD852700C1FC60 /* envelope.png */,
+				4D90E11119BD851200C1FC60 /* locked.png */,
+				4D90E10F19BD850B00C1FC60 /* key.png */,
+				4D90E10D19BD850000C1FC60 /* home.png */,
+				4D90E11D19BD88E300C1FC60 /* Registro1ViewController.h */,
+				4D90E11E19BD88E300C1FC60 /* Registro1ViewController.m */,
+			);
+			name = Registro;
+			sourceTree = "<group>";
+		};
+		4D97D5D119B3A2D700DB2201 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				4D90E10C19BD84AF00C1FC60 /* Registro */,
+				4D90E10A19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg */,
+				4D90E10319BD6D1900C1FC60 /* unlocked.png */,
+				4D90E10819BD7CDF00C1FC60 /* images.jpeg */,
+				4D90E10119BD6D1200C1FC60 /* user.png */,
+				4D97D5D219B3A2F300DB2201 /* LoginViewController.h */,
+				4D97D5D319B3A2F300DB2201 /* LoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		4DD8F80819A7FDFA000115EC /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		4DD8F80919A7FE06000115EC /* Especialidad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Especialidad;
+			sourceTree = "<group>";
+		};
+		4DD8F80A19A82626000115EC /* Distrito */ = {
+			isa = PBXGroup;
+			children = (
+				4DD8F80B19A8329E000115EC /* EspecialidadTableViewController.h */,
+				4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */,
+				4DD8F80E19A837F1000115EC /* CeldaListaEspecialidades.h */,
+				4DD8F80F19A837F1000115EC /* CeldaListaEspecialidades.m */,
+			);
+			name = Distrito;
+			sourceTree = "<group>";
+		};
 		4DF562A919943F3A006E7421 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +231,11 @@
 		4DF562BB19943F3A006E7421 /* buscaDocapp */ = {
 			isa = PBXGroup;
 			children = (
+				4D97D5D119B3A2D700DB2201 /* Login */,
+				4DD8F80A19A82626000115EC /* Distrito */,
+				4DD8F80919A7FE06000115EC /* Especialidad */,
+				4DD8F80819A7FDFA000115EC /* General */,
+				4D7F96ED1996F2AF00417083 /* Iconos */,
 				4DF562C419943F3A006E7421 /* AppDelegate.h */,
 				4DF562C519943F3A006E7421 /* AppDelegate.m */,
 				4DF562C719943F3A006E7421 /* Main_iPhone.storyboard */,
@@ -231,10 +353,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
+				4D90E10219BD6D1200C1FC60 /* user.png in Resources */,
+				4D90E11219BD851200C1FC60 /* locked.png in Resources */,
 				4DF562D119943F3A006E7421 /* Images.xcassets in Resources */,
+				4D90E10B19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg in Resources */,
+				4D90E11619BD853500C1FC60 /* calendar.png in Resources */,
 				4DF562C919943F3A006E7421 /* Main_iPhone.storyboard in Resources */,
 				4DF562C019943F3A006E7421 /* InfoPlist.strings in Resources */,
+				4D90E12119BD8BBB00C1FC60 /* circle-512.png in Resources */,
+				4D7F971D1996F5D600417083 /* heart275.png in Resources */,
+				4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */,
+				4D7F97191996F51E00417083 /* clinic2.png in Resources */,
+				4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */,
+				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
+				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
+				4D90E11A19BD862800C1FC60 /* bullet.png in Resources */,
+				4D90E11019BD850B00C1FC60 /* key.png in Resources */,
+				4D90E11819BD856300C1FC60 /* pin-2.png in Resources */,
+				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
+				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
+				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +394,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF562CF19943F3A006E7421 /* ViewController.m in Sources */,
+				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
+				4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */,
+				4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */,
+				4D90E11F19BD88E300C1FC60 /* Registro1ViewController.m in Sources */,
 				4DF562C619943F3A006E7421 /* AppDelegate.m in Sources */,
 				4DF562C219943F3A006E7421 /* main.m in Sources */,
 			);
@@ -470,6 +614,7 @@
 				4DF562E919943F3A006E7421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4DF562EA19943F3A006E7421 /* Build configuration list for PBXNativeTarget "buscaDocappTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +623,7 @@
 				4DF562EC19943F3A006E7421 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
