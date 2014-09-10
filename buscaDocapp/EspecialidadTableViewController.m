@@ -15,6 +15,8 @@
 
 @implementation EspecialidadTableViewController
 
+NSMutableArray *titulos;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -27,6 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    titulos = [[NSMutableArray alloc] init];
     
     //Carga la lista de Especialidades por Orden Alfabetico
     
@@ -51,19 +54,18 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return (titulos.count);
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    UITableViewCell *cell;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaEspecialidades"];
+
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

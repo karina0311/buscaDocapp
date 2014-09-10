@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */; };
+		127DD8FB19C110390059EA10 /* search-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DD8FA19C110390059EA10 /* search-25.png */; };
 		4D7F97191996F51E00417083 /* clinic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F97181996F51E00417083 /* clinic2.png */; };
 		4D7F971B1996F5CA00417083 /* medical77.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971A1996F5CA00417083 /* medical77.png */; };
 		4D7F971D1996F5D600417083 /* heart275.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971C1996F5D600417083 /* heart275.png */; };
@@ -57,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		127DD8F719C10CEE0059EA10 /* BusquedaGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaGeneralViewController.h; sourceTree = "<group>"; };
+		127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaGeneralViewController.m; sourceTree = "<group>"; };
+		127DD8FA19C110390059EA10 /* search-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-25.png"; sourceTree = "<group>"; };
 		4D7F97181996F51E00417083 /* clinic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clinic2.png; sourceTree = "<group>"; };
 		4D7F971A1996F5CA00417083 /* medical77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical77.png; sourceTree = "<group>"; };
 		4D7F971C1996F5D600417083 /* heart275.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart275.png; sourceTree = "<group>"; };
@@ -176,6 +181,9 @@
 		4DD8F80819A7FDFA000115EC /* General */ = {
 			isa = PBXGroup;
 			children = (
+				127DD8FA19C110390059EA10 /* search-25.png */,
+				127DD8F719C10CEE0059EA10 /* BusquedaGeneralViewController.h */,
+				127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -375,6 +383,7 @@
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
+				127DD8FB19C110390059EA10 /* search-25.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF562CF19943F3A006E7421 /* ViewController.m in Sources */,
+				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
 				4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */,
 				4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */,
