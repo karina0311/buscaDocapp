@@ -8,6 +8,8 @@
 
 #import "EspecialidadTableViewController.h"
 #import "CeldaListaEspecialidades.h"
+#import "UIImageView+AFNetworking.h"
+#import "URLS json.h"
 
 @interface EspecialidadTableViewController ()
 
@@ -16,6 +18,7 @@
 @implementation EspecialidadTableViewController
 
 NSMutableArray *titulos;
+NSMutableArray * respuesta;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -30,6 +33,7 @@ NSMutableArray *titulos;
 {
     [super viewDidLoad];
     titulos = [[NSMutableArray alloc] init];
+    [self recuperoListaEspecialidades];
     
     //Carga la lista de Especialidades por Orden Alfabetico
     
@@ -62,58 +66,51 @@ NSMutableArray *titulos;
 {
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaEspecialidades"];
+    
+    ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];
 
     return cell;
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+//METODO PARA OBTENER TODAS LAS ESPECIALIDADES, ENVIADO DESDE BACKEND
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+-(void) recuperoListaEspecialidades{
+    
+    NSDictionary * consulta;
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:listaespecialidades parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+        for(int i=0;i<respuesta.count;i++){
+            NSDictionary * diccionario = [respuesta objectAtIndex:i];
+            NSDictionary * diccionario2=  [diccionario objectForKey:@"specialty"];
+            NSString * NombresEspecialidades= [diccionario2 objectForKey:@"name"];
+            
+            [titulos addObject:NombresEspecialidades];
+        }
+        
+        NSLog(@"JSON: %@", titulos);
 
-/*
-#pragma mark - Navigation
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+     [self.tableView reloadData];
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+
+
 
 @end
