@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "buscaDocapp/LoginViewController.m"
-            timestampString = "431848235.936351"
+            filePath = "buscaDocapp/EspecialidadTableViewController.m"
+            timestampString = "432085840.725689"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "@implementation LoginViewController"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "@implementation EspecialidadTableViewController"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
