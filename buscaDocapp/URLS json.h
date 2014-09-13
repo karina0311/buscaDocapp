@@ -15,6 +15,6 @@
 //ip de la cato: 10.100.12.112
 //ip de mi casa: 192.168.0.105
 
-#define listaespecialidades @"http://10.100.112.112:8080/tesis2Karina/services/getAllSpecialtiesJSON"
+#define listaespecialidades @"http://10.100.112.23:8080/tesis2Karina/services/getAllSpecialtiesJSON"
 
 @end

@@ -19,6 +19,8 @@
 
 NSMutableArray *titulos;
 NSMutableArray * respuesta;
+//Para el resultado de los filtros
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,9 +35,12 @@ NSMutableArray * respuesta;
 {
     [super viewDidLoad];
     titulos = [[NSMutableArray alloc] init];
+
     [self recuperoListaEspecialidades];
     
     //Carga la lista de Especialidades por Orden Alfabetico
+    
+    self.searchResult = [NSMutableArray arrayWithCapacity:[titulos count]];
     
 }
 
@@ -65,11 +70,11 @@ NSMutableArray * respuesta;
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaEspecialidades"];
     
-    ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];
+
+        ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];;
 
     return cell;
 }
-
 
 //METODO PARA OBTENER TODAS LAS ESPECIALIDADES, ENVIADO DESDE BACKEND
 

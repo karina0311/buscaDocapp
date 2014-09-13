@@ -505,12 +505,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.96862751250000001" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.96862751250000001" blue="0.94901967050000002" alpha="1" colorSpace="deviceRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="MOC-oh-ZcL">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="2DJ-MT-CvL" id="hey-cc-2N8"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CeldaEspecialidades" rowHeight="37" id="Prz-cB-Pjs" customClass="CeldaListaEspecialidades">
-                                <rect key="frame" x="0.0" y="86" width="320" height="37"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CeldaEspecialidades" rowHeight="37" id="Prz-cB-Pjs" customClass="CeldaListaEspecialidades">
+                                <rect key="frame" x="0.0" y="130" width="320" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Prz-cB-Pjs" id="8Sq-WE-dGf">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="36"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s50-kg-lXp">
@@ -534,8 +542,20 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Especialidades" id="aEY-n9-L5j"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="yHs-1J-LnE" id="yrz-gr-Bfr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wdg-G4-ApN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="yHs-1J-LnE">
+                    <connections>
+                        <outlet property="delegate" destination="2DJ-MT-CvL" id="ifa-w4-10W"/>
+                        <outlet property="searchBar" destination="MOC-oh-ZcL" id="iR3-Jv-Fud"/>
+                        <outlet property="searchContentsController" destination="2DJ-MT-CvL" id="sb0-R8-51Y"/>
+                        <outlet property="searchResultsDataSource" destination="2DJ-MT-CvL" id="eRm-Cm-Ooi"/>
+                        <outlet property="searchResultsDelegate" destination="2DJ-MT-CvL" id="Fa5-ZQ-KAH"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1852" y="-1086"/>
         </scene>
@@ -565,7 +585,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxp-eM-YrE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2289" y="-1086"/>
+            <point key="canvasLocation" x="2215" y="-1086"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UHX-nP-8uU">
