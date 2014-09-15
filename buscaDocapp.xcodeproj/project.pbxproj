@@ -29,6 +29,10 @@
 		4D90E12119BD8BBB00C1FC60 /* circle-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E12019BD8BBB00C1FC60 /* circle-512.png */; };
 		4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E12219BD8C1E00C1FC60 /* dot.png */; };
 		4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D97D5D319B3A2F300DB2201 /* LoginViewController.m */; };
+		4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC581A919C667C80072DE26 /* DoctoresxEspTableViewController.m */; };
+		4DC581AD19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC581AC19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m */; };
+		4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC581AE19C673510072DE26 /* femaledoctor.png */; };
+		4DC581B119C673570072DE26 /* maledoctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC581B019C673570072DE26 /* maledoctor.png */; };
 		4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */; };
 		4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DD8F80F19A837F1000115EC /* CeldaListaEspecialidades.m */; };
 		4DDB717119C1741500217DD3 /* URLS json.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB717019C1741500217DD3 /* URLS json.m */; };
@@ -101,6 +105,12 @@
 		4D90E12219BD8C1E00C1FC60 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		4D97D5D219B3A2F300DB2201 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4D97D5D319B3A2F300DB2201 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4DC581A819C667C80072DE26 /* DoctoresxEspTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctoresxEspTableViewController.h; sourceTree = "<group>"; };
+		4DC581A919C667C80072DE26 /* DoctoresxEspTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctoresxEspTableViewController.m; sourceTree = "<group>"; };
+		4DC581AB19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaDoctoresEspTableViewCell.h; sourceTree = "<group>"; };
+		4DC581AC19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaDoctoresEspTableViewCell.m; sourceTree = "<group>"; };
+		4DC581AE19C673510072DE26 /* femaledoctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = femaledoctor.png; sourceTree = "<group>"; };
+		4DC581B019C673570072DE26 /* maledoctor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maledoctor.png; sourceTree = "<group>"; };
 		4DD8F80B19A8329E000115EC /* EspecialidadTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EspecialidadTableViewController.h; sourceTree = "<group>"; };
 		4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EspecialidadTableViewController.m; sourceTree = "<group>"; };
 		4DD8F80E19A837F1000115EC /* CeldaListaEspecialidades.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaListaEspecialidades.h; sourceTree = "<group>"; };
@@ -190,10 +200,12 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				4DC581AE19C673510072DE26 /* femaledoctor.png */,
 				4D7F971E1996F5E000417083 /* hospital21.png */,
 				4D7F971C1996F5D600417083 /* heart275.png */,
 				4D7F971A1996F5CA00417083 /* medical77.png */,
 				4D7F97181996F51E00417083 /* clinic2.png */,
+				4DC581B019C673570072DE26 /* maledoctor.png */,
 			);
 			name = Iconos;
 			sourceTree = "<group>";
@@ -241,22 +253,26 @@
 			name = General;
 			sourceTree = "<group>";
 		};
-		4DD8F80919A7FE06000115EC /* Especialidad */ = {
+		4DD8F80919A7FE06000115EC /* Distritos */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = Especialidad;
+			name = Distritos;
 			sourceTree = "<group>";
 		};
-		4DD8F80A19A82626000115EC /* Distrito */ = {
+		4DD8F80A19A82626000115EC /* Especialidad */ = {
 			isa = PBXGroup;
 			children = (
 				4DD8F80B19A8329E000115EC /* EspecialidadTableViewController.h */,
 				4DD8F80C19A8329E000115EC /* EspecialidadTableViewController.m */,
 				4DD8F80E19A837F1000115EC /* CeldaListaEspecialidades.h */,
 				4DD8F80F19A837F1000115EC /* CeldaListaEspecialidades.m */,
+				4DC581A819C667C80072DE26 /* DoctoresxEspTableViewController.h */,
+				4DC581A919C667C80072DE26 /* DoctoresxEspTableViewController.m */,
+				4DC581AB19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.h */,
+				4DC581AC19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m */,
 			);
-			name = Distrito;
+			name = Especialidad;
 			sourceTree = "<group>";
 		};
 		4DDB717219C17B0D00217DD3 /* AFNetworking */ = {
@@ -345,8 +361,8 @@
 				4DDB717219C17B0D00217DD3 /* AFNetworking */,
 				4DDB718619C17B0D00217DD3 /* UIKit+AFNetworking */,
 				4D97D5D119B3A2D700DB2201 /* Login */,
-				4DD8F80A19A82626000115EC /* Distrito */,
-				4DD8F80919A7FE06000115EC /* Especialidad */,
+				4DD8F80A19A82626000115EC /* Especialidad */,
+				4DD8F80919A7FE06000115EC /* Distritos */,
 				4DD8F80819A7FDFA000115EC /* General */,
 				4D7F96ED1996F2AF00417083 /* Iconos */,
 				4DF562C419943F3A006E7421 /* AppDelegate.h */,
@@ -466,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */,
 				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
 				4D90E10219BD6D1200C1FC60 /* user.png in Resources */,
@@ -483,6 +500,7 @@
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
 				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
 				4D90E11A19BD862800C1FC60 /* bullet.png in Resources */,
+				4DC581B119C673570072DE26 /* maledoctor.png in Resources */,
 				4D90E11019BD850B00C1FC60 /* key.png in Resources */,
 				4D90E11819BD856300C1FC60 /* pin-2.png in Resources */,
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
@@ -515,12 +533,14 @@
 				4DDB719819C17B0D00217DD3 /* AFHTTPRequestOperation.m in Sources */,
 				4DDB717119C1741500217DD3 /* URLS json.m in Sources */,
 				4DDB71A319C17B0D00217DD3 /* UIAlertView+AFNetworking.m in Sources */,
+				4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */,
 				4DDB719919C17B0D00217DD3 /* AFHTTPRequestOperationManager.m in Sources */,
 				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
 				4DDB71A519C17B0D00217DD3 /* UIImageView+AFNetworking.m in Sources */,
 				4DDB719A19C17B0D00217DD3 /* AFHTTPSessionManager.m in Sources */,
 				4DDB71A219C17B0D00217DD3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4DC581AD19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m in Sources */,
 				4DDB71A119C17B0D00217DD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */,
 				4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */,

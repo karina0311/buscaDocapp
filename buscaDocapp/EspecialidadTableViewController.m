@@ -10,6 +10,7 @@
 #import "CeldaListaEspecialidades.h"
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
+#import "DoctoresxEspTableViewController.h"
 
 @interface EspecialidadTableViewController ()
 
@@ -18,6 +19,7 @@
 @implementation EspecialidadTableViewController
 
 NSMutableArray *titulos;
+NSMutableArray *ids;
 NSMutableArray * respuesta;
 //Para el resultado de los filtros
 
@@ -35,6 +37,7 @@ NSMutableArray * respuesta;
 {
     [super viewDidLoad];
     titulos = [[NSMutableArray alloc] init];
+    ids = [[NSMutableArray alloc] init];
 
     [self recuperoListaEspecialidades];
     
@@ -61,7 +64,14 @@ NSMutableArray * respuesta;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return (titulos.count);
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        return (self.searchResult.count);
+    }
+    else
+    {
+        return (titulos.count);
+    };
 }
 
 
@@ -70,10 +80,37 @@ NSMutableArray * respuesta;
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaEspecialidades"];
     
-
-        ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        ((CeldaListaEspecialidades*)cell).lblEspecialidad.text= self.searchResult[indexPath.row];
+    }
+    else
+    {
+        ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];
+    }
+    
+    
+    
 
     return cell;
+}
+
+//METODO PARA EL FILTER
+
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    [self.searchResult removeAllObjects];
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+    
+    self.searchResult = [NSMutableArray arrayWithArray: [titulos filteredArrayUsingPredicate:resultPredicate]];
+}
+
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    return YES;
 }
 
 //METODO PARA OBTENER TODAS LAS ESPECIALIDADES, ENVIADO DESDE BACKEND
@@ -81,7 +118,6 @@ NSMutableArray * respuesta;
 
 -(void) recuperoListaEspecialidades{
     
-    NSDictionary * consulta;
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -94,7 +130,10 @@ NSMutableArray * respuesta;
             NSDictionary * diccionario = [respuesta objectAtIndex:i];
             NSDictionary * diccionario2=  [diccionario objectForKey:@"specialty"];
             NSString * NombresEspecialidades= [diccionario2 objectForKey:@"name"];
+            NSNumber *IDSpecialty = [diccionario2 objectForKey:@"idspecialty"];
             
+            
+            [ids addObject:IDSpecialty];
             [titulos addObject:NombresEspecialidades];
         }
         [self.tableView reloadData];
@@ -112,6 +151,17 @@ NSMutableArray * respuesta;
     
     
 
+}
+
+//PARA MANDAR A LA SIGUIENTE PESTAÑA
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    DoctoresxEspTableViewController *escenadestino = segue.destinationViewController;
+    NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
+    escenadestino.idespecialidad= [ids objectAtIndex:filaseleccionada.row];
+    escenadestino.cantidadfilas=titulos.count;
+    
 }
 
 
