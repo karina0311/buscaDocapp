@@ -84,8 +84,8 @@ NSDictionary *consulta;
     ((CeldaDoctoresEspTableViewCell*)cell).lblName.text= [NSString stringWithFormat:@"Dr. %@ %@ ",(NSString*)names[indexPath.row], (NSString*)lastnames[indexPath.row]];
 
     if (((NSNumber*)gender[indexPath.row]).intValue==70) {
-        ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"femaledoctor.png"];
-    }else ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"maledoctor.png"];
+        ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"female50.png"];
+    }else ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"male50.png"];
  
     
     return cell;
