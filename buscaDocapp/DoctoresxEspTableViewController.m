@@ -19,6 +19,7 @@
 
 NSMutableArray *names;
 NSMutableArray *lastnames;
+NSMutableArray *maidennames;
 NSMutableArray *iddoctors;
 NSMutableArray *idclinics;
 NSMutableArray *gender;
@@ -77,8 +78,15 @@ NSDictionary *consulta;
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDoc"];
     
-    ((CeldaDoctoresEspTableViewCell*)cell).lblName= names[indexPath.row];
+
     
+    
+    ((CeldaDoctoresEspTableViewCell*)cell).lblName.text= [NSString stringWithFormat:@"Dr. %@ %@ ",(NSString*)names[indexPath.row], (NSString*)lastnames[indexPath.row]];
+
+    if (((NSNumber*)gender[indexPath.row]).intValue==70) {
+        ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"femaledoctor.png"];
+    }else ((CeldaDoctoresEspTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"maledoctor.png"];
+ 
     
     return cell;
 }
@@ -95,7 +103,30 @@ NSDictionary *consulta;
     
     [manager POST:docsxespecialidad parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
-        //NSLog(@"JSON: %@", respuesta);
+        NSLog(@"JSON: %@", respuesta);
+        
+        
+        
+        for(int i=0;i<respuesta.count;i++){
+            NSDictionary * diccionario = [respuesta objectAtIndex:i];
+            NSDictionary * diccionario2=  [diccionario objectForKey:@"doctor"];
+            NSNumber * IDDoctor= [diccionario2 objectForKey:@"iddoctor"];
+            NSString * NombreDoctor= [diccionario2 objectForKey:@"name"];
+            NSString * ApellidoDoctor= [diccionario2 objectForKey:@"lastName"];
+            NSString * Apellido2Doctor= [diccionario2 objectForKey:@"maidenName"];
+            NSNumber *IDClinic= [diccionario2 objectForKey:@"idclinic"];
+            NSString *Genero = [diccionario2 objectForKey:@"gender"];
+            
+            [iddoctors addObject:IDDoctor];
+            [names addObject:NombreDoctor];
+            [lastnames addObject:ApellidoDoctor];
+            [maidennames addObject:Apellido2Doctor];
+            [idclinics addObject:IDClinic];
+            [gender addObject:Genero];
+        }
+        [self.tableView reloadData];
+       
+
         
     }
          failure:^(AFHTTPRequestOperation *task, NSError *error) {

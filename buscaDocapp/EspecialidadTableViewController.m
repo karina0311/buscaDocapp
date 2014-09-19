@@ -14,7 +14,11 @@
 
 @interface EspecialidadTableViewController ()
 
+
+
 @end
+
+
 
 @implementation EspecialidadTableViewController
 
@@ -103,15 +107,28 @@ NSMutableArray * respuesta;
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
     
     self.searchResult = [NSMutableArray arrayWithArray: [titulos filteredArrayUsingPredicate:resultPredicate]];
+    
+    //lNSLog(self.searchResult);
+    
+    //[self.tableView reloadData];
 }
 
-
--(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
     return YES;
 }
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+   
+    return YES;
+}
+
 
 //METODO PARA OBTENER TODAS LAS ESPECIALIDADES, ENVIADO DESDE BACKEND
 
