@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */; };
 		127DD8FB19C110390059EA10 /* search-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DD8FA19C110390059EA10 /* search-25.png */; };
+		4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */; };
+		4D159CA819CBF8540039D348 /* CeldaListaDistritos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D159CA719CBF8540039D348 /* CeldaListaDistritos.m */; };
 		4D7F97191996F51E00417083 /* clinic2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F97181996F51E00417083 /* clinic2.png */; };
 		4D7F971B1996F5CA00417083 /* medical77.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971A1996F5CA00417083 /* medical77.png */; };
 		4D7F971D1996F5D600417083 /* heart275.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D7F971C1996F5D600417083 /* heart275.png */; };
@@ -83,6 +85,10 @@
 		127DD8F719C10CEE0059EA10 /* BusquedaGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaGeneralViewController.h; sourceTree = "<group>"; };
 		127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaGeneralViewController.m; sourceTree = "<group>"; };
 		127DD8FA19C110390059EA10 /* search-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-25.png"; sourceTree = "<group>"; };
+		4D159CA319CBF66D0039D348 /* DistritosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistritosTableViewController.h; sourceTree = "<group>"; };
+		4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistritosTableViewController.m; sourceTree = "<group>"; };
+		4D159CA619CBF8540039D348 /* CeldaListaDistritos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaListaDistritos.h; sourceTree = "<group>"; };
+		4D159CA719CBF8540039D348 /* CeldaListaDistritos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CeldaListaDistritos.m; sourceTree = "<group>"; };
 		4D7F97181996F51E00417083 /* clinic2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clinic2.png; sourceTree = "<group>"; };
 		4D7F971A1996F5CA00417083 /* medical77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = medical77.png; sourceTree = "<group>"; };
 		4D7F971C1996F5D600417083 /* heart275.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart275.png; sourceTree = "<group>"; };
@@ -256,6 +262,10 @@
 		4DD8F80919A7FE06000115EC /* Distritos */ = {
 			isa = PBXGroup;
 			children = (
+				4D159CA319CBF66D0039D348 /* DistritosTableViewController.h */,
+				4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */,
+				4D159CA619CBF8540039D348 /* CeldaListaDistritos.h */,
+				4D159CA719CBF8540039D348 /* CeldaListaDistritos.m */,
 			);
 			name = Distritos;
 			sourceTree = "<group>";
@@ -533,7 +543,9 @@
 				4DDB719819C17B0D00217DD3 /* AFHTTPRequestOperation.m in Sources */,
 				4DDB717119C1741500217DD3 /* URLS json.m in Sources */,
 				4DDB71A319C17B0D00217DD3 /* UIAlertView+AFNetworking.m in Sources */,
+				4D159CA819CBF8540039D348 /* CeldaListaDistritos.m in Sources */,
 				4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */,
+				4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */,
 				4DDB719919C17B0D00217DD3 /* AFHTTPRequestOperationManager.m in Sources */,
 				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,

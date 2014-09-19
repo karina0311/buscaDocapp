@@ -15,8 +15,14 @@
 //ip de la cato: 10.100.12.112
 //ip de mi casa: 192.168.0.105
 
-#define listaespecialidades @"http://10.100.114.134:8080/tesis2Karina/services/getAllSpecialtiesJSON"
+#define listaespecialidades @"http://192.168.0.104:8080/tesis2Karina/services/getAllSpecialtiesJSON"
+#define docsxespecialidad @"http://192.168.0.104:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
+#define listadistritos @"http://192.168.0.104:8080/tesis2Karina/services/getAllDistrictsJSON"
+#define listaseguros @"http://192.168.0.104:8080/tesis2Karina/services/getAllInsurancesJSON"
+#define listaclinicas @"http://192.168.0.104:8080/tesis2Karina/services/getAllClinicsJSON"
+#define docsxclinica @"http://192.168.0.104:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
+#define docsxdistrito @"http://192.168.0.104:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
 
-#define docsxespecialidad @"http://10.100.114.134:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
+
 
 @end
