@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -686,36 +686,36 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="maledoctor.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rtc-qo-ETt">
-                                        <rect key="frame" x="112" y="60" width="80" height="80"/>
+                                        <rect key="frame" x="120" y="64" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Doctor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15X-OV-1fX">
-                                        <rect key="frame" x="34" y="153" width="266" height="25"/>
+                                        <rect key="frame" x="34" y="152" width="266" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="21"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8T-jn-15e">
-                                        <rect key="frame" x="53" y="189" width="115" height="21"/>
+                                        <rect key="frame" x="114" y="178" width="165" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                         <color key="textColor" white="0.72857862900000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hospital-3-26w.png" translatesAutoresizingMaskIntoConstraints="NO" id="cmX-Sj-ydJ">
-                                        <rect key="frame" x="20" y="186" width="25" height="25"/>
+                                        <rect key="frame" x="85" y="178" width="15" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stethoscope-26w.png" translatesAutoresizingMaskIntoConstraints="NO" id="mp5-uD-m26">
-                                        <rect key="frame" x="176" y="186" width="24" height="24"/>
+                                        <rect key="frame" x="85" y="201" width="15" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Especialidad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPl-5f-RnT">
-                                        <rect key="frame" x="208" y="189" width="137" height="21"/>
+                                        <rect key="frame" x="114" y="198" width="175" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
                                         <color key="textColor" white="0.72857862900000003" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -811,7 +811,12 @@
                         <outlet property="iconDoctor" destination="Rtc-qo-ETt" id="JCt-BZ-xiq"/>
                         <outlet property="lblClinica" destination="m8T-jn-15e" id="dkd-Tf-D7u"/>
                         <outlet property="lblEspecialidad" destination="WPl-5f-RnT" id="mDZ-Um-dkB"/>
+                        <outlet property="lblJueves" destination="GIq-2h-5Ka" id="04u-8b-uQO"/>
+                        <outlet property="lblLunes" destination="fwe-gJ-thJ" id="hJa-jM-lOT"/>
+                        <outlet property="lblMartes" destination="8YL-Dm-uU8" id="Pw9-wK-Huq"/>
+                        <outlet property="lblMiercoles" destination="wdm-fj-Ahs" id="UR4-yY-g71"/>
                         <outlet property="lblNombre" destination="15X-OV-1fX" id="Qrv-hj-8UT"/>
+                        <outlet property="lblViernes" destination="GGH-xk-OUI" id="OMR-EZ-7Ll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfX-Ta-mtR" userLabel="First Responder" sceneMemberID="firstResponder"/>

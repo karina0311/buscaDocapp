@@ -23,6 +23,10 @@
 #define docsxclinica @"http://10.100.112.196:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
 #define docsxdistrito @"http://10.100.112.196:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
 
+#define clinicaxid @"http://10.100.112.196:8080/tesis2Karina/services/getClinicByIdJSON"
 
+#define horarioxdoc @"http://10.100.112.196:8080/tesis2Karina/services/getScheduleByDoctorJSON"
+
+#define bloquexhorario @"http://10.100.112.196:8080/tesis2Karina/services/getBlocksByScheduleJSON"
 
 @end

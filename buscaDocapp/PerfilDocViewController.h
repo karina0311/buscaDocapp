@@ -13,6 +13,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblNombre;
 @property (weak, nonatomic) IBOutlet UILabel *lblClinica;
 @property (weak, nonatomic) IBOutlet UILabel *lblEspecialidad;
+@property (weak, nonatomic) IBOutlet UILabel *lblLunes;
+@property (weak, nonatomic) IBOutlet UILabel *lblMartes;
+@property (weak, nonatomic) IBOutlet UILabel *lblMiercoles;
+@property (weak, nonatomic) IBOutlet UILabel *lblJueves;
+@property (weak, nonatomic) IBOutlet UILabel *lblViernes;
+
 
 
 

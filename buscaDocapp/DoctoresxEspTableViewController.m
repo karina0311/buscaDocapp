@@ -78,10 +78,7 @@ NSDictionary *consulta;
 {
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDoc"];
-    
 
-    
-    
     ((CeldaDoctoresEspTableViewCell*)cell).lblName.text= [NSString stringWithFormat:@"Dr. %@ %@ ",(NSString*)names[indexPath.row], (NSString*)lastnames[indexPath.row]];
 
     if (((NSNumber*)gender[indexPath.row]).intValue==70) {
