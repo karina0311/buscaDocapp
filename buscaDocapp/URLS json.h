@@ -15,13 +15,13 @@
 //ip de la cato: 10.100.12.112
 //ip de mi casa: 192.168.0.105
 
-#define listaespecialidades @"http://10.100.112.94:8080/tesis2Karina/services/getAllSpecialtiesJSON"
-#define docsxespecialidad @"http://10.100.112.94:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
-#define listadistritos @"http://10.100.112.94:8080/tesis2Karina/services/getAllDistrictsJSON"
-#define listaseguros @"http://10.100.112.94:8080/tesis2Karina/services/getAllInsurancesJSON"
-#define listaclinicas @"http://10.100.112.94:8080/tesis2Karina/services/getAllClinicsJSON"
-#define docsxclinica @"http://10.100.112.94:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
-#define docsxdistrito @"http://10.100.112.94:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
+#define listaespecialidades @"http://10.100.112.196:8080/tesis2Karina/services/getAllSpecialtiesJSON"
+#define docsxespecialidad @"http://10.100.112.196:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
+#define listadistritos @"http://10.100.112.196:8080/tesis2Karina/services/getAllDistrictsJSON"
+#define listaseguros @"http://10.100.112.196:8080/tesis2Karina/services/getAllInsurancesJSON"
+#define listaclinicas @"http://10.100.112.196:8080/tesis2Karina/services/getAllClinicsJSON"
+#define docsxclinica @"http://10.100.112.196:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
+#define docsxdistrito @"http://10.100.112.196:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
 
 
 

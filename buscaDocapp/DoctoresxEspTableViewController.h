@@ -12,6 +12,10 @@
 
 @property NSInteger indice;
 @property NSNumber *idespecialidad;
+@property NSString *nombreespecialidad;
 @property NSInteger cantidadfilas;
+
+
+
 
 @end

@@ -10,7 +10,18 @@
 
 @interface PerfilDocViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *iconDoctor;
+@property (weak, nonatomic) IBOutlet UILabel *lblNombre;
+@property (weak, nonatomic) IBOutlet UILabel *lblClinica;
+@property (weak, nonatomic) IBOutlet UILabel *lblEspecialidad;
 
+
+
+@property NSNumber* iddoctor;
+@property NSString* name;
+@property NSString* lastname;
+@property NSNumber *idclinic;
+@property NSString *nombreespecialidad;
+@property int cantidadfilas;
 
 
 @end

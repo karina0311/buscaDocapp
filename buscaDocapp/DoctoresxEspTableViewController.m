@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
 #import "CeldaDoctoresEspTableViewCell.h"
+#import "PerfilDocViewController.h"
 
 @interface DoctoresxEspTableViewController ()
 
@@ -138,9 +139,18 @@ NSDictionary *consulta;
              [alertView show];
          }];
     
-    
+}
 
-    
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    PerfilDocViewController *escenadestino = segue.destinationViewController;
+    NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
+    escenadestino.iddoctor = [iddoctors objectAtIndex:filaseleccionada.row];
+    escenadestino.name = [names objectAtIndex:filaseleccionada.row];
+    escenadestino.lastname = [lastnames objectAtIndex:filaseleccionada.row];
+    escenadestino.idclinic = [idclinics objectAtIndex:filaseleccionada.row];
+    escenadestino.cantidadfilas = iddoctors.count;
+    escenadestino.nombreespecialidad= self.nombreespecialidad;
 
 }
 

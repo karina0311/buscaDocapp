@@ -177,6 +177,7 @@ NSMutableArray * respuesta;
     DoctoresxEspTableViewController *escenadestino = segue.destinationViewController;
     NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
     escenadestino.idespecialidad= [ids objectAtIndex:filaseleccionada.row];
+    escenadestino.nombreespecialidad = [titulos objectAtIndex:filaseleccionada.row];
     escenadestino.cantidadfilas=titulos.count;
     
 }
