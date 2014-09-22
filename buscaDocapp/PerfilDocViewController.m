@@ -24,6 +24,8 @@ NSMutableArray *horasinicio;
 NSMutableArray *horasfin;
 NSMutableArray *dias;
 
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -36,6 +38,11 @@ NSMutableArray *dias;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    idshorarios = [[NSMutableArray alloc] init];
+    horasinicio = [[NSMutableArray alloc] init];
+    horasfin = [[NSMutableArray alloc] init];
+    dias = [[NSMutableArray alloc] init];
+    
     self.iconDoctor.layer.cornerRadius = self.iconDoctor.frame.size.width / 2;
     self.iconDoctor.clipsToBounds = YES;
     
@@ -43,6 +50,8 @@ NSMutableArray *dias;
     self.lblEspecialidad.text=self.nombreespecialidad;
     
     [self buscaNombreClinica];
+    
+    [self listaHorario];
 
   
 }
@@ -110,7 +119,41 @@ NSMutableArray *dias;
             NSString * StartTime= [diccionario2 objectForKey:@"start_time"];
             NSString * EndTime= [diccionario2 objectForKey:@"end_time"];
             NSNumber *IDSchedule= [diccionario2 objectForKey:@"idschedule"];
-
+            
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss-zz:zz"];
+            
+            NSDateFormatter *dateFormat3 = [[NSDateFormatter alloc] init];
+            [dateFormat3 setDateFormat:@"HH:mm"];
+            
+            NSDate *date = [dateFormat dateFromString:StartTime];
+            NSDate *date2 = [dateFormat dateFromString:EndTime];
+            
+            NSString *horai = [dateFormat3 stringFromDate:date];
+            NSString *horaf= [dateFormat3 stringFromDate:date2];
+            
+            [dias addObject:Dia];
+            [horasinicio addObject:horai];
+            [horasfin addObject:horaf];
+            [idshorarios addObject:IDSchedule];
+    
+        }
+        
+        NSLog(@"JSON: %@", dias);
+        
+        for(int i=0;i<dias.count;i++){
+        
+            if([[dias objectAtIndex:i] isEqualToString:@"Lunes"]) self.lblLunes.text= [NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]]; ;
+            
+            if([[dias objectAtIndex:i] isEqualToString:@"Martes"]) self.lblMartes.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            
+            if([[dias objectAtIndex:i] isEqualToString:@"Miercoles"]) self.lblMiercoles.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            
+            if([[dias objectAtIndex:i] isEqualToString:@"Jueves"]) self.lblJueves.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            
+            if([[dias objectAtIndex:i] isEqualToString:@"Viernes"]) self.lblViernes.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+     
+        
         }
        
         

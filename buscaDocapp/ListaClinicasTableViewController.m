@@ -1,22 +1,21 @@
 //
-//  DistritosTableViewController.m
+//  ListaClinicasTableViewController.m
 //  buscaDocapp
 //
-//  Created by Nancy Ramirez on 19/09/14.
+//  Created by Nancy Ramirez on 22/09/14.
 //  Copyright (c) 2014 tesis2. All rights reserved.
 //
 
-#import "DistritosTableViewController.h"
-#import "CeldaListaDistritos.h"
+#import "ListaClinicasTableViewController.h"
+#import "CeldaListaClinicasTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
-#import "DoctoresxDistritoTableViewController.h"
 
-@interface DistritosTableViewController ()
+@interface ListaClinicasTableViewController ()
 
 @end
 
-@implementation DistritosTableViewController
+@implementation ListaClinicasTableViewController
 
 NSMutableArray *titulos;
 NSMutableArray *ids;
@@ -37,7 +36,8 @@ NSMutableArray * respuesta;
     titulos = [[NSMutableArray alloc] init];
     ids = [[NSMutableArray alloc] init];
     
-    [self recuperoDistritos];
+    [self recuperoClinicas];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,7 +50,7 @@ NSMutableArray * respuesta;
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
@@ -65,33 +65,32 @@ NSMutableArray * respuesta;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+
     UITableViewCell *cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDistritos"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"celdaClinicas"];
     
-    ((CeldaListaDistritos*)cell).lblDistritos.text= titulos[indexPath.row];
+    ((CeldaListaClinicasTableViewCell*)cell).lblNombre.text= titulos[indexPath.row];
+    
 
-
+    
     return cell;
 }
 
-
-//METODO PARA LISTA LOS DISTRITOS DE LIMA
-
--(void) recuperoDistritos{
+-(void) recuperoClinicas{
     
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    [manager GET:listadistritos parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+    [manager GET:listaclinicas parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
         NSLog(@"JSON: %@", respuesta);
         
         for(int i=0;i<respuesta.count;i++){
             NSDictionary * diccionario = [respuesta objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"district"];
+            NSDictionary * diccionario2=  [diccionario objectForKey:@"clinic"];
             NSString * Distrito= [diccionario2 objectForKey:@"name"];
-            NSNumber *IDDistrito = [diccionario2 objectForKey:@"iddistrict"];
+            NSNumber *IDDistrito = [diccionario2 objectForKey:@"idclinic"];
             
             
             [ids addObject:IDDistrito];
@@ -110,18 +109,9 @@ NSMutableArray * respuesta;
              [alertView show];
          }];
     
-
-
-}
-
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    DoctoresxDistritoTableViewController *escenadestino = segue.destinationViewController;
-    NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
-    escenadestino.iddistrito= [ids objectAtIndex:filaseleccionada.row];
-    escenadestino.nombreDistrito = [titulos objectAtIndex:filaseleccionada.row];
-    escenadestino.cantidadfilas=titulos.count;
     
 }
+
 
 @end
