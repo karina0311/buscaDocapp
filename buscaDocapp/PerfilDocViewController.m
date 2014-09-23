@@ -64,7 +64,7 @@ NSMutableArray *dias;
 
 -(void) buscaNombreClinica{
     
-    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.idclinic, @"idclinic", nil];
+    NSDictionary *consulta = @{@"idclinic": self.idclinic};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -75,8 +75,8 @@ NSMutableArray *dias;
         respuesta = responseObject;
         NSLog(@"JSON: %@", respuesta);
 
-        NSDictionary * diccionario2=  [respuesta objectForKey:@"clinic"];
-        clinicaname= [diccionario2 objectForKey:@"name"];
+        NSDictionary * diccionario2=  respuesta[@"clinic"];
+        clinicaname= diccionario2[@"name"];
 
         
         self.lblClinica.text=clinicaname;
@@ -99,7 +99,7 @@ NSMutableArray *dias;
 
 -(void) listaHorario{
 
-    NSDictionary *consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.iddoctor, @"iddoctor", nil];
+    NSDictionary *consulta = @{@"iddoctor": self.iddoctor};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -113,12 +113,12 @@ NSMutableArray *dias;
         
         
         for(int i=0;i<respuesta2.count;i++){
-            NSDictionary * diccionario = [respuesta2 objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"schedule"];
-            NSString * Dia= [diccionario2 objectForKey:@"day"];
-            NSString * StartTime= [diccionario2 objectForKey:@"start_time"];
-            NSString * EndTime= [diccionario2 objectForKey:@"end_time"];
-            NSNumber *IDSchedule= [diccionario2 objectForKey:@"idschedule"];
+            NSDictionary * diccionario = respuesta2[i];
+            NSDictionary * diccionario2=  diccionario[@"schedule"];
+            NSString * Dia= diccionario2[@"day"];
+            NSString * StartTime= diccionario2[@"start_time"];
+            NSString * EndTime= diccionario2[@"end_time"];
+            NSNumber *IDSchedule= diccionario2[@"idschedule"];
             
             NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
             [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss-zz:zz"];
@@ -143,15 +143,15 @@ NSMutableArray *dias;
         
         for(int i=0;i<dias.count;i++){
         
-            if([[dias objectAtIndex:i] isEqualToString:@"Lunes"]) self.lblLunes.text= [NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]]; ;
+            if([dias[i] isEqualToString:@"Lunes"]) self.lblLunes.text= [NSString stringWithFormat:@"%@ - %@ ", horasinicio[i],horasfin[i]]; ;
             
-            if([[dias objectAtIndex:i] isEqualToString:@"Martes"]) self.lblMartes.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            if([dias[i] isEqualToString:@"Martes"]) self.lblMartes.text=[NSString stringWithFormat:@"%@ - %@ ", horasinicio[i],horasfin[i]];;
             
-            if([[dias objectAtIndex:i] isEqualToString:@"Miercoles"]) self.lblMiercoles.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            if([dias[i] isEqualToString:@"Miercoles"]) self.lblMiercoles.text=[NSString stringWithFormat:@"%@ - %@ ", horasinicio[i],horasfin[i]];;
             
-            if([[dias objectAtIndex:i] isEqualToString:@"Jueves"]) self.lblJueves.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            if([dias[i] isEqualToString:@"Jueves"]) self.lblJueves.text=[NSString stringWithFormat:@"%@ - %@ ", horasinicio[i],horasfin[i]];;
             
-            if([[dias objectAtIndex:i] isEqualToString:@"Viernes"]) self.lblViernes.text=[NSString stringWithFormat:@"%@ - %@ ", [horasinicio objectAtIndex:i],[horasfin objectAtIndex:i]];;
+            if([dias[i] isEqualToString:@"Viernes"]) self.lblViernes.text=[NSString stringWithFormat:@"%@ - %@ ", horasinicio[i],horasfin[i]];;
      
         
         }

@@ -87,10 +87,10 @@ NSMutableArray * respuesta;
         NSLog(@"JSON: %@", respuesta);
         
         for(int i=0;i<respuesta.count;i++){
-            NSDictionary * diccionario = [respuesta objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"clinic"];
-            NSString * Distrito= [diccionario2 objectForKey:@"name"];
-            NSNumber *IDDistrito = [diccionario2 objectForKey:@"idclinic"];
+            NSDictionary * diccionario = respuesta[i];
+            NSDictionary * diccionario2=  diccionario[@"clinic"];
+            NSString * Distrito= diccionario2[@"name"];
+            NSNumber *IDDistrito = diccionario2[@"idclinic"];
             
             
             [ids addObject:IDDistrito];

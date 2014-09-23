@@ -116,7 +116,7 @@ NSMutableArray * respuesta;
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
     
     [self filterContentForSearchText:searchString scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+     [self.searchDisplayController.searchBar scopeButtonTitles][[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
     
     return YES;
 }
@@ -124,7 +124,7 @@ NSMutableArray * respuesta;
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
     
     [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
-     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+     [self.searchDisplayController.searchBar scopeButtonTitles][searchOption]];
    
     return YES;
 }
@@ -144,10 +144,10 @@ NSMutableArray * respuesta;
         NSLog(@"JSON: %@", respuesta);
 
         for(int i=0;i<respuesta.count;i++){
-            NSDictionary * diccionario = [respuesta objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"specialty"];
-            NSString * NombresEspecialidades= [diccionario2 objectForKey:@"name"];
-            NSNumber *IDSpecialty = [diccionario2 objectForKey:@"idspecialty"];
+            NSDictionary * diccionario = respuesta[i];
+            NSDictionary * diccionario2=  diccionario[@"specialty"];
+            NSString * NombresEspecialidades= diccionario2[@"name"];
+            NSNumber *IDSpecialty = diccionario2[@"idspecialty"];
             
             
             [ids addObject:IDSpecialty];
@@ -176,8 +176,8 @@ NSMutableArray * respuesta;
     
     DoctoresxEspTableViewController *escenadestino = segue.destinationViewController;
     NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
-    escenadestino.idespecialidad= [ids objectAtIndex:filaseleccionada.row];
-    escenadestino.nombreespecialidad = [titulos objectAtIndex:filaseleccionada.row];
+    escenadestino.idespecialidad= ids[filaseleccionada.row];
+    escenadestino.nombreespecialidad = titulos[filaseleccionada.row];
     escenadestino.cantidadfilas=titulos.count;
     
 }

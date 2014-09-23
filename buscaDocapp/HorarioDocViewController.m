@@ -37,6 +37,8 @@
     [self.datepicker addTarget:self action:@selector(updateSelectedDate) forControlEvents:UIControlEventValueChanged];
     [self.datepicker fillDatesFromCurrentDate:14];
     [self.datepicker selectDateAtIndex:0];
+    
+    
     //[self.datepicker fillCurrentWeek];
 }
 

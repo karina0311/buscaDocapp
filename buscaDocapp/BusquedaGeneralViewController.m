@@ -60,7 +60,7 @@ int variable;
     CGRect pickerFrame = CGRectMake(0, 44, 0, 0);
     
     
-    [pickerespecialidad setHidden:YES];
+    /*[pickerespecialidad setHidden:YES];
     if (self.lblEspecialidad.editing == YES) {
         [lblEspecialidad resignFirstResponder];
         [pickerespecialidad setHidden:NO];
@@ -71,17 +71,17 @@ int variable;
         variable = 2;
     }
     NSLog(@"variabla %d",variable);
-    [pickerespecialidad reloadAllComponents];
+    [pickerespecialidad reloadAllComponents];*/
     
     
     
     
-    //pickerespecialidad = [[UIPickerView alloc]initWithFrame:pickerFrame];
+    pickerespecialidad = [[UIPickerView alloc]initWithFrame:pickerFrame];
 
-    //lblEspecialidad.text= [especialidad objectAtIndex:0];
-    //lblEspecialidad.inputView = pickerespecialidad;
+    lblEspecialidad.text= [especialidad objectAtIndex:0];
+    lblEspecialidad.inputView = pickerespecialidad;
     
-    //pickerespecialidad.delegate=self;
+    pickerespecialidad.delegate=self;
 
 }
 
@@ -102,26 +102,22 @@ int variable;
 }
 
 -(NSInteger) pickerView: (UIPickerView*) picker numberOfRowsInComponent:(NSInteger)component{
-    if (variable == 1) {
         return (especialidad.count);
-    }else if (variable == 2) {
-        return (distrito.count);
-    }else {
-        return 0;
-    }
+   
 
 }
 
 -(NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [especialidad objectAtIndex:row];
+        return [especialidad objectAtIndex:row];
+
 
 }
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 
-
-    lblEspecialidad.text= [especialidad objectAtIndex:row];
+    lblEspecialidad.text= especialidad[row];
 }
+
 
 
 -(void) sacoEspecialidades{
@@ -135,9 +131,9 @@ int variable;
         NSLog(@"JSON: %@", respuestaesp);
         
         for(int i=0;i<respuestaesp.count;i++){
-            NSDictionary * diccionario = [respuestaesp objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"specialty"];
-            NSString * NombresEspecialidades= [diccionario2 objectForKey:@"name"];
+            NSDictionary * diccionario = respuestaesp[i];
+            NSDictionary * diccionario2=  diccionario[@"specialty"];
+            NSString * NombresEspecialidades= diccionario2[@"name"];
             
             
             [especialidad addObject:NombresEspecialidades];
@@ -168,10 +164,10 @@ int variable;
         NSLog(@"JSON: %@", respuestadis);
         
         for(int i=0;i<respuestadis.count;i++){
-            NSDictionary * diccionario = [respuestadis objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"district"];
-            NSString * Distrito= [diccionario2 objectForKey:@"name"];
-            NSNumber *IDDistrito = [diccionario2 objectForKey:@"iddistrict"];
+            NSDictionary * diccionario = respuestadis[i];
+            NSDictionary * diccionario2=  diccionario[@"district"];
+            NSString * Distrito= diccionario2[@"name"];
+            NSNumber *IDDistrito = diccionario2[@"iddistrict"];
             
             
             [distrito addObject:Distrito];

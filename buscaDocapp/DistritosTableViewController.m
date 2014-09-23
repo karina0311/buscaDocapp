@@ -88,10 +88,10 @@ NSMutableArray * respuesta;
         NSLog(@"JSON: %@", respuesta);
         
         for(int i=0;i<respuesta.count;i++){
-            NSDictionary * diccionario = [respuesta objectAtIndex:i];
-            NSDictionary * diccionario2=  [diccionario objectForKey:@"district"];
-            NSString * Distrito= [diccionario2 objectForKey:@"name"];
-            NSNumber *IDDistrito = [diccionario2 objectForKey:@"iddistrict"];
+            NSDictionary * diccionario = respuesta[i];
+            NSDictionary * diccionario2=  diccionario[@"district"];
+            NSString * Distrito= diccionario2[@"name"];
+            NSNumber *IDDistrito = diccionario2[@"iddistrict"];
             
             
             [idsdistritos addObject:IDDistrito];
@@ -118,8 +118,8 @@ NSMutableArray * respuesta;
     
     DoctoresxDistritoTableViewController *escenadestino = segue.destinationViewController;
     NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
-    escenadestino.iddistrito= [idsdistritos objectAtIndex:filaseleccionada.row];
-    escenadestino.nombreDistrito = [titulosdistritos objectAtIndex:filaseleccionada.row];
+    escenadestino.iddistrito= idsdistritos[filaseleccionada.row];
+    escenadestino.nombreDistrito = titulosdistritos[filaseleccionada.row];
     escenadestino.cantidadfilas=titulosdistritos.count;
     
 }
