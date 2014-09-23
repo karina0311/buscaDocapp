@@ -18,8 +18,8 @@
 
 @implementation DistritosTableViewController
 
-NSMutableArray *titulos;
-NSMutableArray *ids;
+NSMutableArray *titulosdistritos;
+NSMutableArray *idsdistritos;
 NSMutableArray * respuesta;
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -34,8 +34,8 @@ NSMutableArray * respuesta;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    titulos = [[NSMutableArray alloc] init];
-    ids = [[NSMutableArray alloc] init];
+    titulosdistritos = [[NSMutableArray alloc] init];
+    idsdistritos = [[NSMutableArray alloc] init];
     
     [self recuperoDistritos];
 }
@@ -59,7 +59,7 @@ NSMutableArray * respuesta;
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return (titulos.count);
+    return (titulosdistritos.count);
 }
 
 
@@ -68,7 +68,7 @@ NSMutableArray * respuesta;
     UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDistritos"];
     
-    ((CeldaListaDistritos*)cell).lblDistritos.text= titulos[indexPath.row];
+    ((CeldaListaDistritos*)cell).lblDistritos.text= titulosdistritos[indexPath.row];
 
 
     return cell;
@@ -94,11 +94,11 @@ NSMutableArray * respuesta;
             NSNumber *IDDistrito = [diccionario2 objectForKey:@"iddistrict"];
             
             
-            [ids addObject:IDDistrito];
-            [titulos addObject:Distrito];
+            [idsdistritos addObject:IDDistrito];
+            [titulosdistritos addObject:Distrito];
         }
         [self.tableView reloadData];
-        NSLog(@"JSON: %@", titulos);
+        NSLog(@"JSON: %@", titulosdistritos);
         
     }
          failure:^(AFHTTPRequestOperation *task, NSError *error) {
@@ -118,9 +118,9 @@ NSMutableArray * respuesta;
     
     DoctoresxDistritoTableViewController *escenadestino = segue.destinationViewController;
     NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
-    escenadestino.iddistrito= [ids objectAtIndex:filaseleccionada.row];
-    escenadestino.nombreDistrito = [titulos objectAtIndex:filaseleccionada.row];
-    escenadestino.cantidadfilas=titulos.count;
+    escenadestino.iddistrito= [idsdistritos objectAtIndex:filaseleccionada.row];
+    escenadestino.nombreDistrito = [titulosdistritos objectAtIndex:filaseleccionada.row];
+    escenadestino.cantidadfilas=titulosdistritos.count;
     
 }
 

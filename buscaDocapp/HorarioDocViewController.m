@@ -8,15 +8,17 @@
 
 #import "HorarioDocViewController.h"
 #import "DIDatepicker.h"
+#import "BloqueEspTableViewCell.h"
 
 @interface HorarioDocViewController ()
-
 
 
 
 @end
 
 @implementation HorarioDocViewController
+
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +32,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.table.dataSource=self;
+    self.table.delegate=self;
     [self.datepicker addTarget:self action:@selector(updateSelectedDate) forControlEvents:UIControlEventValueChanged];
     [self.datepicker fillDatesFromCurrentDate:14];
     [self.datepicker selectDateAtIndex:0];
@@ -65,8 +69,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *MyIdentifier = @"MyReuseIdentifier";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+    static NSString *MyIdentifier = @"celdaBloque";
+    BloqueEspTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
 
     return cell;
 }

@@ -836,27 +836,55 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-ed-EHm" customClass="DIDatepicker">
-                                <rect key="frame" x="12" y="86" width="296" height="84"/>
+                                <rect key="frame" x="0.0" y="79" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.039215687659999998" green="0.35294118520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5ar-Bw-jfV">
-                                <rect key="frame" x="12" y="206" width="296" height="269"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QQv-rT-U69">
+                                <rect key="frame" x="13" y="189" width="294" height="284"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sXU-ia-wvI">
-                                        <rect key="frame" x="0.0" y="22" width="296" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaBloque" rowHeight="46" id="4Hs-Sg-zL3" customClass="BloqueEspTableViewCell">
+                                        <rect key="frame" x="0.0" y="22" width="294" height="46"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sXU-ia-wvI" id="xHY-9T-ehu">
-                                            <rect key="frame" x="0.0" y="0.0" width="296" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Hs-Sg-zL3" id="ia0-oC-LDm">
+                                            <rect key="frame" x="0.0" y="0.0" width="294" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9:00 - 9:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dep-32-zy8">
+                                                    <rect key="frame" x="20" y="12" width="99" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WoB-TY-Afv">
+                                                    <rect key="frame" x="115" y="10" width="26" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MdJ-5L-yRT">
+                                                    <rect key="frame" x="204" y="10" width="70" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                    <state key="normal" title="Reservar">
+                                                        <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnReservar" destination="MdJ-5L-yRT" id="a3S-ka-HNp"/>
+                                            <outlet property="imageDisponibilidad" destination="WoB-TY-Afv" id="Qli-a3-ahY"/>
+                                            <outlet property="lblHoras" destination="dep-32-zy8" id="Z13-oO-mSB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="wz5-HF-tF3" id="mih-qw-qfL"/>
-                                    <outlet property="delegate" destination="wz5-HF-tF3" id="Up8-Xs-p1F"/>
+                                    <outlet property="dataSource" destination="wz5-HF-tF3" id="o09-gk-VX8"/>
+                                    <outlet property="delegate" destination="wz5-HF-tF3" id="OYn-ir-JwC"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -865,6 +893,7 @@
                     <navigationItem key="navigationItem" title="Disponibilidad" id="OIQ-Lv-eF7"/>
                     <connections>
                         <outlet property="datepicker" destination="gnt-ed-EHm" id="LoV-Qu-SwO"/>
+                        <outlet property="table" destination="QQv-rT-U69" id="T99-7K-CCl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRD-qr-SeM" userLabel="First Responder" sceneMemberID="firstResponder"/>

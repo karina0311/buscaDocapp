@@ -19,7 +19,10 @@
 @implementation BusquedaGeneralViewController
 @synthesize lblEspecialidad;
 
+NSMutableArray * respuestaesp;
+NSMutableArray * respuestadis;
 NSMutableArray * respuesta;
+int variable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,7 +37,10 @@ NSMutableArray * respuesta;
 {
     [super viewDidLoad];
     especialidad = [[NSMutableArray alloc] init];
+    distrito = [[NSMutableArray alloc] init];
+    seguro = [[NSMutableArray alloc] init];
     [self sacoEspecialidades];
+    [self sacoDistritos];
     
     lblEspecialidad.delegate = self;
    
@@ -52,12 +58,30 @@ NSMutableArray * respuesta;
 -(void) textFieldDidBeginEditing:(UITextField *)textField{
 
     CGRect pickerFrame = CGRectMake(0, 44, 0, 0);
-    pickerespecialidad = [[UIPickerView alloc]initWithFrame:pickerFrame];
-
-    lblEspecialidad.text= [especialidad objectAtIndex:0];
-    lblEspecialidad.inputView = pickerespecialidad;
     
-    pickerespecialidad.delegate=self;
+    
+    [pickerespecialidad setHidden:YES];
+    if (self.lblEspecialidad.editing == YES) {
+        [lblEspecialidad resignFirstResponder];
+        [pickerespecialidad setHidden:NO];
+        variable = 1;
+    }else if (self.lblDistrito.editing == YES) {
+        [self.lblDistrito resignFirstResponder];
+        [pickerespecialidad setHidden:NO];
+        variable = 2;
+    }
+    NSLog(@"variabla %d",variable);
+    [pickerespecialidad reloadAllComponents];
+    
+    
+    
+    
+    //pickerespecialidad = [[UIPickerView alloc]initWithFrame:pickerFrame];
+
+    //lblEspecialidad.text= [especialidad objectAtIndex:0];
+    //lblEspecialidad.inputView = pickerespecialidad;
+    
+    //pickerespecialidad.delegate=self;
 
 }
 
@@ -78,7 +102,13 @@ NSMutableArray * respuesta;
 }
 
 -(NSInteger) pickerView: (UIPickerView*) picker numberOfRowsInComponent:(NSInteger)component{
-    return (especialidad.count);
+    if (variable == 1) {
+        return (especialidad.count);
+    }else if (variable == 2) {
+        return (distrito.count);
+    }else {
+        return 0;
+    }
 
 }
 
@@ -101,11 +131,11 @@ NSMutableArray * respuesta;
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
     [manager GET:listaespecialidades parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
-        respuesta = responseObject;
-        NSLog(@"JSON: %@", respuesta);
+        respuestaesp = responseObject;
+        NSLog(@"JSON: %@", respuestaesp);
         
-        for(int i=0;i<respuesta.count;i++){
-            NSDictionary * diccionario = [respuesta objectAtIndex:i];
+        for(int i=0;i<respuestaesp.count;i++){
+            NSDictionary * diccionario = [respuestaesp objectAtIndex:i];
             NSDictionary * diccionario2=  [diccionario objectForKey:@"specialty"];
             NSString * NombresEspecialidades= [diccionario2 objectForKey:@"name"];
             
@@ -126,6 +156,47 @@ NSMutableArray * respuesta;
     
     
     
+}
+
+-(void) sacoDistritos{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:listadistritos parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuestadis = responseObject;
+        NSLog(@"JSON: %@", respuestadis);
+        
+        for(int i=0;i<respuestadis.count;i++){
+            NSDictionary * diccionario = [respuestadis objectAtIndex:i];
+            NSDictionary * diccionario2=  [diccionario objectForKey:@"district"];
+            NSString * Distrito= [diccionario2 objectForKey:@"name"];
+            NSNumber *IDDistrito = [diccionario2 objectForKey:@"iddistrict"];
+            
+            
+            [distrito addObject:Distrito];
+
+        }
+
+        NSLog(@"JSON: %@", distrito);
+        
+    }
+         failure:^(AFHTTPRequestOperation *task, NSError *error) {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+    
+    
+
+
+}
+
+-(void) sacoSeguros{
+
 }
 
 @end

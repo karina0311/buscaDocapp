@@ -10,6 +10,8 @@
 #import "DIDatepicker.h"
 
 @interface HorarioDocViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *table;
+
 
 @property (weak, nonatomic) IBOutlet DIDatepicker *datepicker;
 

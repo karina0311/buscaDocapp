@@ -24,6 +24,9 @@
 		12A4C96019D1D3470064428C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C95D19D1D3470064428C /* DIDatepicker.m */; };
 		12A4C96119D1D3470064428C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C95F19D1D3470064428C /* DIDatepickerDateView.m */; };
 		12A4C96419D1D4910064428C /* HorarioDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C96319D1D4910064428C /* HorarioDocViewController.m */; };
+		12A57F4F19D202F30005827A /* ok-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F4E19D202F30005827A /* ok-26.png */; };
+		12A57F5119D203590005827A /* cancel-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F5019D203590005827A /* cancel-26.png */; };
+		12A57F5419D2038A0005827A /* BloqueEspTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */; };
 		12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */; };
 		12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */; };
 		4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */; };
@@ -125,6 +128,10 @@
 		12A4C95F19D1D3470064428C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		12A4C96219D1D4910064428C /* HorarioDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorarioDocViewController.h; sourceTree = "<group>"; };
 		12A4C96319D1D4910064428C /* HorarioDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorarioDocViewController.m; sourceTree = "<group>"; };
+		12A57F4E19D202F30005827A /* ok-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok-26.png"; sourceTree = "<group>"; };
+		12A57F5019D203590005827A /* cancel-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-26.png"; sourceTree = "<group>"; };
+		12A57F5219D2038A0005827A /* BloqueEspTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloqueEspTableViewCell.h; sourceTree = "<group>"; };
+		12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloqueEspTableViewCell.m; sourceTree = "<group>"; };
 		12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blog_image_frame-2.png"; sourceTree = "<group>"; };
 		12B9824919CC995E00E5CCF1 /* Unknown */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unknown; sourceTree = "<group>"; };
 		12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tip6.BetterMedicalAppointments.JPG; sourceTree = "<group>"; };
@@ -279,6 +286,8 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				12A57F5019D203590005827A /* cancel-26.png */,
+				12A57F4E19D202F30005827A /* ok-26.png */,
 				12989B4A19CCD05B00F2A2FD /* alarm_clock-24.png */,
 				12989B4819CCCFDA00F2A2FD /* stethoscope-26w.png */,
 				12989B4619CCCEFC00F2A2FD /* hospital-3-26w.png */,
@@ -376,6 +385,8 @@
 				12989B3819CCBFEF00F2A2FD /* PerfilDocViewController.m */,
 				12A4C96219D1D4910064428C /* HorarioDocViewController.h */,
 				12A4C96319D1D4910064428C /* HorarioDocViewController.m */,
+				12A57F5219D2038A0005827A /* BloqueEspTableViewCell.h */,
+				12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */,
 			);
 			name = Especialidad;
 			sourceTree = "<group>";
@@ -593,6 +604,7 @@
 				12989B4719CCCEFC00F2A2FD /* hospital-3-26w.png in Resources */,
 				12989B3F19CCC93F00F2A2FD /* overtime-25.png in Resources */,
 				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
+				12A57F4F19D202F30005827A /* ok-26.png in Resources */,
 				12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
 				4D90E10219BD6D1200C1FC60 /* user.png in Resources */,
@@ -615,6 +627,7 @@
 				4D7F97191996F51E00417083 /* clinic2.png in Resources */,
 				4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */,
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
+				12A57F5119D203590005827A /* cancel-26.png in Resources */,
 				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
 				4D90E11A19BD862800C1FC60 /* bullet.png in Resources */,
 				4DC581B119C673570072DE26 /* maledoctor.png in Resources */,
@@ -659,6 +672,7 @@
 				4DDB717119C1741500217DD3 /* URLS json.m in Sources */,
 				4DDB71A319C17B0D00217DD3 /* UIAlertView+AFNetworking.m in Sources */,
 				4D159CA819CBF8540039D348 /* CeldaListaDistritos.m in Sources */,
+				12A57F5419D2038A0005827A /* BloqueEspTableViewCell.m in Sources */,
 				4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */,
 				4D6301F119D0093900BEE7A2 /* CeldaListaClinicasTableViewCell.m in Sources */,
 				4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */,

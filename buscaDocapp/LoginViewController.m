@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "BloqueEspTableViewCell.h"
 
 @interface LoginViewController ()
 
