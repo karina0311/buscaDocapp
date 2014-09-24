@@ -22,7 +22,15 @@
 NSMutableArray * respuestaesp;
 NSMutableArray * respuestadis;
 NSMutableArray * respuesta;
+NSMutableArray * idsespecialidad;
+NSMutableArray * idsdistrito;
+NSMutableArray * idsseguro;
+
 int variable;
+NSNumber* idespecialidad;
+NSNumber*  iddistrito;
+NSNumber*  idseguro;
+int turno;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,10 +47,16 @@ int variable;
     especialidad = [[NSMutableArray alloc] init];
     distrito = [[NSMutableArray alloc] init];
     seguro = [[NSMutableArray alloc] init];
+    idsespecialidad = [[NSMutableArray alloc] init];
+    idsdistrito = [[NSMutableArray alloc] init];
+    idsseguro = [[NSMutableArray alloc] init];
     [self sacoEspecialidades];
     [self sacoDistritos];
     
     lblEspecialidad.delegate = self;
+    self.lblDistrito.delegate=self;
+    self.lblSeguro.delegate=self;
+    self.lblDia.delegate=self;
    
 }
 
@@ -59,34 +73,31 @@ int variable;
 
     CGRect pickerFrame = CGRectMake(0, 44, 0, 0);
     
-    
-    /*[pickerespecialidad setHidden:YES];
-    if (self.lblEspecialidad.editing == YES) {
-        [lblEspecialidad resignFirstResponder];
-        [pickerespecialidad setHidden:NO];
-        variable = 1;
-    }else if (self.lblDistrito.editing == YES) {
-        [self.lblDistrito resignFirstResponder];
-        [pickerespecialidad setHidden:NO];
-        variable = 2;
-    }
-    NSLog(@"variabla %d",variable);
-    [pickerespecialidad reloadAllComponents];*/
-    
-    
-    
-    
     pickerespecialidad = [[UIPickerView alloc]initWithFrame:pickerFrame];
-
-    lblEspecialidad.text= [especialidad objectAtIndex:0];
-    lblEspecialidad.inputView = pickerespecialidad;
     
     pickerespecialidad.delegate=self;
+    
+    if (lblEspecialidad.isEditing) {
+ 
+        lblEspecialidad.text= [especialidad objectAtIndex:0];
+        lblEspecialidad.inputView = pickerespecialidad;
+        variable=1;
+        
+    }else if (self.lblDistrito.isEditing){
+    
+        self.lblDistrito.text= [distrito objectAtIndex:0];
+        self.lblDistrito.inputView=pickerespecialidad;
+        variable=2;
+    
+    }
+    
+    
 
 }
 
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [lblEspecialidad resignFirstResponder];
+    [self.lblDistrito resignFirstResponder];
 
 }
 
@@ -102,20 +113,37 @@ int variable;
 }
 
 -(NSInteger) pickerView: (UIPickerView*) picker numberOfRowsInComponent:(NSInteger)component{
+    
+    if (variable==1) {
         return (especialidad.count);
-   
+    } else if (variable==2){
+        return (distrito.count);
+    } else return 0;
 
 }
 
 -(NSString*) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+    
+    if (variable==1) {
         return [especialidad objectAtIndex:row];
+    } else if (variable==2){
+        return [distrito objectAtIndex:row];
+    } else return 0;
 
 
 }
 
 -(void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 
-    lblEspecialidad.text= especialidad[row];
+    if (variable==1) {
+        lblEspecialidad.text= especialidad[row];
+        idespecialidad= idsespecialidad[row];
+    } else if (variable==2){
+        self.lblDistrito.text= distrito[row];
+        iddistrito = idsespecialidad[row];
+    }
+    
+    
 }
 
 
@@ -134,9 +162,11 @@ int variable;
             NSDictionary * diccionario = respuestaesp[i];
             NSDictionary * diccionario2=  diccionario[@"specialty"];
             NSString * NombresEspecialidades= diccionario2[@"name"];
+            NSNumber * IDSpecialty = diccionario2[@"idspecialty"];
             
             
             [especialidad addObject:NombresEspecialidades];
+            [idsespecialidad addObject:IDSpecialty];
             
         }
         
@@ -171,6 +201,7 @@ int variable;
             
             
             [distrito addObject:Distrito];
+            [idsdistrito addObject:IDDistrito];
 
         }
 

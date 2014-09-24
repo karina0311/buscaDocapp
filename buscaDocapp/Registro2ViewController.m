@@ -58,6 +58,7 @@ NSString *respuesta;
 - (IBAction)seApretoBoton:(id)sender {
     
     [self RegistroPaciente];
+    
 }
 
 

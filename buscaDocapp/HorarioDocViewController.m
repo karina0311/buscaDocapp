@@ -54,9 +54,12 @@
 - (void)updateSelectedDate
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"EEEEddMMMM" options:0 locale:nil];
+    formatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"dd/MM/yyyy" options:0 locale:nil];
     
-    //self.selectedDateLabel.text = [formatter stringFromDate:self.datepicker.selectedDate];
+    NSLog(@"JSON: %@", self.datepicker.selectedDate);
+    
+    
+        //self.selectedDateLabel.text = [formatter stringFromDate:self.datepicker.selectedDate];
 }
 
 //METODOS PARA EL TABLE VIEW CONTROLLER
