@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface Registro1ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIView *botoncito;
+
+@property (weak, nonatomic) IBOutlet UITextField *txtNombre;
+@property (weak, nonatomic) IBOutlet UITextField *txtApellidoP;
+@property (weak, nonatomic) IBOutlet UITextField *txtApellidoM;
+@property (weak, nonatomic) IBOutlet UITextField *txtDireccion;
+
 
 @end

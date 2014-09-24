@@ -77,4 +77,11 @@
     return cell;
 }
 
+
+
+-(void) cargaBloquesporFecha{
+
+
+}
+
 @end

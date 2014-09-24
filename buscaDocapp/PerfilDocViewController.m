@@ -9,6 +9,7 @@
 #import "PerfilDocViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
+#import "HorarioDocViewController.h"
 
 @interface PerfilDocViewController ()
 
@@ -169,5 +170,11 @@ NSMutableArray *dias;
 
 }
 
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    HorarioDocViewController *escenadestino = segue.destinationViewController;
+    escenadestino.iddoctor= self.iddoctor;
+
+}
 
 @end

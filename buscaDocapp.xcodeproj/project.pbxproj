@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126F2F9019D353AA00AEE535 /* phone-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F8F19D353AA00AEE535 /* phone-26.png */; };
+		126F2F9219D3546100AEE535 /* gift-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9119D3546100AEE535 /* gift-26.png */; };
+		126F2F9419D3546B00AEE535 /* new_post-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9319D3546B00AEE535 /* new_post-26.png */; };
+		126F2F9619D3547700AEE535 /* lock-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9519D3547700AEE535 /* lock-26.png */; };
+		126F2F9819D3548000AEE535 /* key_security-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9719D3548000AEE535 /* key_security-26.png */; };
+		126F2F9A19D354AD00AEE535 /* identity_theft-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9919D354AD00AEE535 /* identity_theft-26.png */; };
+		126F2F9C19D3552B00AEE535 /* treatment_plan-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9B19D3552B00AEE535 /* treatment_plan-26.png */; };
+		126F2F9F19D3590A00AEE535 /* Registro2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F2F9E19D3590A00AEE535 /* Registro2ViewController.m */; };
+		126F2FA219D3591400AEE535 /* Registro3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 126F2FA119D3591400AEE535 /* Registro3ViewController.m */; };
 		127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */; };
 		127DD8FB19C110390059EA10 /* search-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 127DD8FA19C110390059EA10 /* search-25.png */; };
 		12989B3419CCBA7200F2A2FD /* female50.png in Resources */ = {isa = PBXBuildFile; fileRef = 12989B3319CCBA7200F2A2FD /* female50.png */; };
@@ -106,6 +115,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126F2F8F19D353AA00AEE535 /* phone-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-26.png"; sourceTree = "<group>"; };
+		126F2F9119D3546100AEE535 /* gift-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift-26.png"; sourceTree = "<group>"; };
+		126F2F9319D3546B00AEE535 /* new_post-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_post-26.png"; sourceTree = "<group>"; };
+		126F2F9519D3547700AEE535 /* lock-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-26.png"; sourceTree = "<group>"; };
+		126F2F9719D3548000AEE535 /* key_security-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "key_security-26.png"; sourceTree = "<group>"; };
+		126F2F9919D354AD00AEE535 /* identity_theft-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "identity_theft-26.png"; sourceTree = "<group>"; };
+		126F2F9B19D3552B00AEE535 /* treatment_plan-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "treatment_plan-26.png"; sourceTree = "<group>"; };
+		126F2F9D19D3590A00AEE535 /* Registro2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registro2ViewController.h; sourceTree = "<group>"; };
+		126F2F9E19D3590A00AEE535 /* Registro2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registro2ViewController.m; sourceTree = "<group>"; };
+		126F2FA019D3591400AEE535 /* Registro3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Registro3ViewController.h; sourceTree = "<group>"; };
+		126F2FA119D3591400AEE535 /* Registro3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Registro3ViewController.m; sourceTree = "<group>"; };
 		127DD8F719C10CEE0059EA10 /* BusquedaGeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaGeneralViewController.h; sourceTree = "<group>"; };
 		127DD8F819C10CEE0059EA10 /* BusquedaGeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaGeneralViewController.m; sourceTree = "<group>"; };
 		127DD8FA19C110390059EA10 /* search-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-25.png"; sourceTree = "<group>"; };
@@ -133,7 +153,6 @@
 		12A57F5219D2038A0005827A /* BloqueEspTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloqueEspTableViewCell.h; sourceTree = "<group>"; };
 		12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloqueEspTableViewCell.m; sourceTree = "<group>"; };
 		12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blog_image_frame-2.png"; sourceTree = "<group>"; };
-		12B9824919CC995E00E5CCF1 /* Unknown */ = {isa = PBXFileReference; lastKnownFileType = file; path = Unknown; sourceTree = "<group>"; };
 		12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tip6.BetterMedicalAppointments.JPG; sourceTree = "<group>"; };
 		4D159CA319CBF66D0039D348 /* DistritosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistritosTableViewController.h; sourceTree = "<group>"; };
 		4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistritosTableViewController.m; sourceTree = "<group>"; };
@@ -312,6 +331,13 @@
 		4D90E10C19BD84AF00C1FC60 /* Registro */ = {
 			isa = PBXGroup;
 			children = (
+				126F2F9B19D3552B00AEE535 /* treatment_plan-26.png */,
+				126F2F9919D354AD00AEE535 /* identity_theft-26.png */,
+				126F2F9719D3548000AEE535 /* key_security-26.png */,
+				126F2F9519D3547700AEE535 /* lock-26.png */,
+				126F2F9319D3546B00AEE535 /* new_post-26.png */,
+				126F2F9119D3546100AEE535 /* gift-26.png */,
+				126F2F8F19D353AA00AEE535 /* phone-26.png */,
 				12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */,
 				12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */,
 				4D90E12219BD8C1E00C1FC60 /* dot.png */,
@@ -326,7 +352,10 @@
 				4D90E10D19BD850000C1FC60 /* home.png */,
 				4D90E11D19BD88E300C1FC60 /* Registro1ViewController.h */,
 				4D90E11E19BD88E300C1FC60 /* Registro1ViewController.m */,
-				12B9824919CC995E00E5CCF1 /* Unknown */,
+				126F2F9D19D3590A00AEE535 /* Registro2ViewController.h */,
+				126F2F9E19D3590A00AEE535 /* Registro2ViewController.m */,
+				126F2FA019D3591400AEE535 /* Registro3ViewController.h */,
+				126F2FA119D3591400AEE535 /* Registro3ViewController.m */,
 			);
 			name = Registro;
 			sourceTree = "<group>";
@@ -605,6 +634,7 @@
 				12989B3F19CCC93F00F2A2FD /* overtime-25.png in Resources */,
 				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
 				12A57F4F19D202F30005827A /* ok-26.png in Resources */,
+				126F2F9419D3546B00AEE535 /* new_post-26.png in Resources */,
 				12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
 				4D90E10219BD6D1200C1FC60 /* user.png in Resources */,
@@ -613,14 +643,18 @@
 				4D90E11219BD851200C1FC60 /* locked.png in Resources */,
 				12989B3419CCBA7200F2A2FD /* female50.png in Resources */,
 				12989B3B19CCC6D500F2A2FD /* hospital-3-26.png in Resources */,
+				126F2F9819D3548000AEE535 /* key_security-26.png in Resources */,
 				12989B4319CCCA9400F2A2FD /* phone_office-26.png in Resources */,
 				4DF562D119943F3A006E7421 /* Images.xcassets in Resources */,
+				126F2F9619D3547700AEE535 /* lock-26.png in Resources */,
 				12989B4B19CCD05B00F2A2FD /* alarm_clock-24.png in Resources */,
 				4D90E10B19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg in Resources */,
 				12989B3619CCBA7B00F2A2FD /* male50.png in Resources */,
 				4D90E11619BD853500C1FC60 /* calendar.png in Resources */,
+				126F2F9219D3546100AEE535 /* gift-26.png in Resources */,
 				4DF562C919943F3A006E7421 /* Main_iPhone.storyboard in Resources */,
 				4DF562C019943F3A006E7421 /* InfoPlist.strings in Resources */,
+				126F2F9019D353AA00AEE535 /* phone-26.png in Resources */,
 				4D90E12119BD8BBB00C1FC60 /* circle-512.png in Resources */,
 				4D7F971D1996F5D600417083 /* heart275.png in Resources */,
 				4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */,
@@ -638,8 +672,10 @@
 				12989B4519CCCE0E00F2A2FD /* today-26.png in Resources */,
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
+				126F2F9A19D354AD00AEE535 /* identity_theft-26.png in Resources */,
 				12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */,
 				127DD8FB19C110390059EA10 /* search-25.png in Resources */,
+				126F2F9C19D3552B00AEE535 /* treatment_plan-26.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,6 +698,8 @@
 				12A4C96019D1D3470064428C /* DIDatepicker.m in Sources */,
 				4DDB719D19C17B0D00217DD3 /* AFURLConnectionOperation.m in Sources */,
 				12A4C96119D1D3470064428C /* DIDatepickerDateView.m in Sources */,
+				126F2F9F19D3590A00AEE535 /* Registro2ViewController.m in Sources */,
+				126F2FA219D3591400AEE535 /* Registro3ViewController.m in Sources */,
 				4D6301E719CFF22200BEE7A2 /* DoctoresxDistritoTableViewController.m in Sources */,
 				4DDB71A719C17B0D00217DD3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4D6301EA19CFF27300BEE7A2 /* CeldaDocsDistritoTableViewCell.m in Sources */,

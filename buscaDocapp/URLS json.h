@@ -12,21 +12,27 @@
 
 //Cambiar la ip segun corresponda
 
-//ip de la cato: 10.100.112.42
+//ip de la cato: 10.100.114.153
 //ip de mi casa: 192.168.0.100
 
-#define listaespecialidades @"http://10.100.113.148:8080/tesis2Karina/services/getAllSpecialtiesJSON"
-#define docsxespecialidad @"http://10.100.113.148:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
-#define listadistritos @"http://10.100.113.148:8080/tesis2Karina/services/getAllDistrictsJSON"
-#define listaseguros @"http://10.100.113.148:8080/tesis2Karina/services/getAllInsurancesJSON"
-#define listaclinicas @"http://10.100.113.148:8080/tesis2Karina/services/getAllClinicsJSON"
-#define docsxclinica @"http://10.100.113.148:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
-#define docsxdistrito @"http://10.100.113.148:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
+#define listaespecialidades @"http://10.100.114.153:8080/tesis2Karina/services/getAllSpecialtiesJSON"
+#define docsxespecialidad @"http://10.100.114.153:8080/tesis2Karina/services/getAllDoctorsBySpecialtyJSON"
+#define listadistritos @"http://10.100.114.153:8080/tesis2Karina/services/getAllDistrictsJSON"
+#define listaseguros @"http://10.100.114.153:8080/tesis2Karina/services/getAllInsurancesJSON"
+#define listaclinicas @"http://10.100.114.153:8080/tesis2Karina/services/getAllClinicsJSON"
+#define docsxclinica @"http://10.100.114.153:8080/tesis2Karina/services/getAllDoctorsByClinicJSON
+#define docsxdistrito @"http://10.100.114.153:8080/tesis2Karina/services/getAllDoctorsByDistrictJSON"
 
-#define clinicaxid @"http://10.100.113.148:8080/tesis2Karina/services/getClinicByIdJSON"
+#define clinicaxid @"http://10.100.114.153:8080/tesis2Karina/services/getClinicByIdJSON"
 
-#define horarioxdoc @"http://10.100.113.148:8080/tesis2Karina/services/getSchedulesByDoctorJSON"
+#define horarioxdoc @"http://10.100.114.153:8080/tesis2Karina/services/getSchedulesByDoctorJSON"
 
-#define bloquexhorario @"http://10.100.113.148:8080/tesis2Karina/services/getBlocksByScheduleJSON"
+#define bloquexhorario @"http://10.100.114.153:8080/tesis2Karina/services/getBlocksByScheduleJSON"
+
+#define guardaPaciente @"http://10.100.114.153:8080/tesis2Karina/services/savePatient"
+
+#define guardaUser @"http://10.100.114.153:8080/tesis2Karina/services/saveUser"
+
+#define guardaCita @"http://10.100.114.153:8080/tesis2Karina/services/saveAppoinment"
 
 @end

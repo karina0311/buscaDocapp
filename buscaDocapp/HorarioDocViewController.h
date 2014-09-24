@@ -15,4 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet DIDatepicker *datepicker;
 
+@property NSNumber *iddoctor;
+
 @end

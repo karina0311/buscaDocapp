@@ -7,6 +7,7 @@
 //
 
 #import "Registro1ViewController.h"
+#import "Registro2ViewController.h"
 
 @interface Registro1ViewController ()
 
@@ -26,28 +27,37 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
-    //self.botoncito.layercornerRadius = self.botoncito.frame.size.width / 2;
+    [self.view addGestureRecognizer:tap];
     
-    self.botoncito.clipsToBounds = YES;
+
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)dismissKeyboard {
+    [self.txtNombre resignFirstResponder];
+    [self.txtApellidoP resignFirstResponder];
+    [self.txtApellidoM resignFirstResponder];
+    [self.txtDireccion resignFirstResponder];
 }
-*/
+
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    Registro2ViewController *escenadestino = segue.destinationViewController;
+    escenadestino.nombre=self.txtNombre.text;
+    escenadestino.apellidop=self.txtApellidoP.text;
+    escenadestino.apellidom=self.txtApellidoM.text;
+    escenadestino.direccion=self.txtDireccion.text;
+
+}
 
 @end
