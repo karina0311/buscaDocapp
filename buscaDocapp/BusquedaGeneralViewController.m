@@ -21,6 +21,7 @@
 
 NSMutableArray * respuestaesp;
 NSMutableArray * respuestadis;
+NSMutableArray * respuestaseg;
 NSMutableArray * respuesta;
 NSMutableArray * idsespecialidad;
 NSMutableArray * idsdistrito;
@@ -47,11 +48,15 @@ int turno;
     especialidad = [[NSMutableArray alloc] init];
     distrito = [[NSMutableArray alloc] init];
     seguro = [[NSMutableArray alloc] init];
+    fechas = [[NSMutableArray alloc]init];
     idsespecialidad = [[NSMutableArray alloc] init];
     idsdistrito = [[NSMutableArray alloc] init];
     idsseguro = [[NSMutableArray alloc] init];
     [self sacoEspecialidades];
     [self sacoDistritos];
+    [self sacoSeguros];
+    [self llenoFechas ];
+    
     
     lblEspecialidad.delegate = self;
     self.lblDistrito.delegate=self;
@@ -90,6 +95,9 @@ int turno;
         variable=2;
     
     } else if (self.lblSeguro.isEditing){
+        self.lblSeguro.text= [seguro objectAtIndex:0];
+        self.lblSeguro.inputView=pickerespecialidad;
+        variable=3;
     
     } else if (self.lblDia.isEditing){
         self.lblDia.text = [fechas objectAtIndex:0];
@@ -106,6 +114,7 @@ int turno;
     [lblEspecialidad resignFirstResponder];
     [self.lblDistrito resignFirstResponder];
     [self.lblDia resignFirstResponder];
+    [self.lblSeguro resignFirstResponder];
 }
 
 
@@ -125,6 +134,8 @@ int turno;
         return (especialidad.count);
     } else if (variable==2){
         return (distrito.count);
+    }else if (variable==3){
+        return (seguro.count);
     }else if (variable==4) {
         return (fechas.count);
     }else return 0;
@@ -237,6 +248,40 @@ int turno;
 }
 
 -(void) sacoSeguros{
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:listaseguros parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuestaseg = responseObject;
+        NSLog(@"JSON: %@", respuestaseg);
+        
+        for(int i=0;i<respuestaseg.count;i++){
+            NSDictionary * diccionario = respuestaseg[i];
+            NSDictionary * diccionario2=  diccionario[@"insurance"];
+            NSString * Seguro= diccionario2[@"name"];
+            NSNumber *IDSeguro = diccionario2[@"idinsurance"];
+            
+            
+            [seguro addObject:Seguro];
+            [idsseguro addObject:IDSeguro];
+            
+        }
+        
+        NSLog(@"JSON: %@", seguro);
+        
+    }
+         failure:^(AFHTTPRequestOperation *task, NSError *error) {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+    
+    
+
 
 }
 
@@ -248,19 +293,23 @@ int turno;
     NSInteger dc = [currentCalendar  ordinalityOfUnit:NSDayCalendarUnit
                                                inUnit:NSYearCalendarUnit
                                               forDate:today];
-    fechas = [[NSMutableArray alloc]init];
+
     
-    for (int index = 1; index <= dc; index++)
+    for (int index = dc; index <= 365; index++)
     {
         NSDateComponents *components = [[NSDateComponents alloc] init];
         [components setDay:index];
-        NSCalendar *gregorian = [[NSCalendar alloc]
-                                 initWithCalendarIdentifier:NSGregorianCalendar];
-        NSDate *date = [gregorian dateFromComponents:components];
+        [components setYear:2014];
+        //NSCalendar *gregorian = [[NSCalendar alloc]
+                                //initWithCalendarIdentifier:NSGregorianCalendar];
+        
+        NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+        NSDate *date = [currentCalendar dateFromComponents:components];
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"MMM dd"];
+        [formatter setDateFormat:@"dd/MM/yyyy"];
+        
         NSString *articleDateString = [formatter stringFromDate:date];
-        NSString *pickerItemTitle = [NSString stringWithFormat: @"Day: %d/%@", index, articleDateString];
+        NSString *pickerItemTitle = [NSString stringWithFormat: @"%@",articleDateString];
         [fechas addObject: pickerItemTitle];
 
 }
