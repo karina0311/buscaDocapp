@@ -12,12 +12,9 @@
 
     NSMutableArray *especialidad;
     UIPickerView *pickerespecialidad;
-    
     NSMutableArray *distrito;
-    UIPickerView *pickerdistrito;
-    
     NSMutableArray *seguro;
-    UIPickerView *pickerseguro;
+    NSMutableArray *fechas;
 
 }
 

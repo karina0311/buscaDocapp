@@ -89,6 +89,13 @@ int turno;
         self.lblDistrito.inputView=pickerespecialidad;
         variable=2;
     
+    } else if (self.lblSeguro.isEditing){
+    
+    } else if (self.lblDia.isEditing){
+        self.lblDia.text = [fechas objectAtIndex:0];
+        self.lblDia.inputView=pickerespecialidad;
+        variable=4;
+    
     }
     
     
@@ -98,7 +105,7 @@ int turno;
 -(void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
     [lblEspecialidad resignFirstResponder];
     [self.lblDistrito resignFirstResponder];
-
+    [self.lblDia resignFirstResponder];
 }
 
 
@@ -118,7 +125,9 @@ int turno;
         return (especialidad.count);
     } else if (variable==2){
         return (distrito.count);
-    } else return 0;
+    }else if (variable==4) {
+        return (fechas.count);
+    }else return 0;
 
 }
 
@@ -128,7 +137,10 @@ int turno;
         return [especialidad objectAtIndex:row];
     } else if (variable==2){
         return [distrito objectAtIndex:row];
-    } else return 0;
+    } else if(variable==4){
+        return [fechas objectAtIndex:row];
+    }
+    else return 0;
 
 
 }
@@ -141,6 +153,8 @@ int turno;
     } else if (variable==2){
         self.lblDistrito.text= distrito[row];
         iddistrito = idsespecialidad[row];
+    } else if (variable==4){
+        self.lblDia.text=fechas[row];
     }
     
     
@@ -224,6 +238,32 @@ int turno;
 
 -(void) sacoSeguros{
 
+}
+
+-(void) llenoFechas{
+
+    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+    NSDate *today = [NSDate date];
+    
+    NSInteger dc = [currentCalendar  ordinalityOfUnit:NSDayCalendarUnit
+                                               inUnit:NSYearCalendarUnit
+                                              forDate:today];
+    fechas = [[NSMutableArray alloc]init];
+    
+    for (int index = 1; index <= dc; index++)
+    {
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setDay:index];
+        NSCalendar *gregorian = [[NSCalendar alloc]
+                                 initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDate *date = [gregorian dateFromComponents:components];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"MMM dd"];
+        NSString *articleDateString = [formatter stringFromDate:date];
+        NSString *pickerItemTitle = [NSString stringWithFormat: @"Day: %d/%@", index, articleDateString];
+        [fechas addObject: pickerItemTitle];
+
+}
 }
 
 @end
