@@ -9,6 +9,8 @@
 #import "HorarioDocViewController.h"
 #import "DIDatepicker.h"
 #import "BloqueEspTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
+#import "URLS json.h"
 
 @interface HorarioDocViewController ()
 
@@ -17,6 +19,9 @@
 @end
 
 @implementation HorarioDocViewController
+NSDictionary *respuesta;
+NSMutableArray *respuesta2;
+NSString * fechajson;
 
 
 
@@ -39,6 +44,7 @@
     [self.datepicker selectDateAtIndex:0];
     
     
+    
     //[self.datepicker fillCurrentWeek];
 }
 
@@ -56,10 +62,13 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:@"dd/MM/yyyy" options:0 locale:nil];
     
-    NSLog(@"JSON: %@", self.datepicker.selectedDate);
-    
-    
-        //self.selectedDateLabel.text = [formatter stringFromDate:self.datepicker.selectedDate];
+
+    fechajson = [formatter stringFromDate:self.datepicker.selectedDate];
+    NSLog(@"JSON: %@", fechajson);
+    if (fechajson != nil) {
+        [self cargaBloquesporFecha];
+    }
+
 }
 
 //METODOS PARA EL TABLE VIEW CONTROLLER
@@ -83,6 +92,36 @@
 
 
 -(void) cargaBloquesporFecha{
+    
+     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:fechajson,@"fecha", self.iddoctor,@"iddoctor",nil];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:bloquexhorario parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta2 = responseObject;
+        NSLog(@"JSON: %@", respuesta2);
+        
+        
+        
+        for(int i=0;i<respuesta2.count;i++){
+
+            
+        }
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+
 
 
 }

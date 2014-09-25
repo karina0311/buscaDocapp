@@ -74,7 +74,7 @@ NSDictionary *consulta;
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"celdadocDistritos"];
+    cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDocDistritos"];
     
     ((CeldaDocsDistritoTableViewCell*)cell).lblNombre.text= [NSString stringWithFormat:@"Dr. %@ %@ ",(NSString*)names[indexPath.row], (NSString*)lastnames[indexPath.row]];
     
