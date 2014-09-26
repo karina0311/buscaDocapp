@@ -18,6 +18,7 @@
 
 }
 
+@property (strong, nonatomic) IBOutlet UISegmentedControl *SegmentedShift;
 
 @property (weak, nonatomic) IBOutlet UITextField *lblEspecialidad;
 @property (weak, nonatomic) IBOutlet UITextField *lblDistrito;

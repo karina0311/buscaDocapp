@@ -9,6 +9,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
 #import "BusquedaGeneralViewController.h"
+#import "DocsBusquedaTableViewController.h"
 
 @interface BusquedaGeneralViewController ()
 
@@ -31,7 +32,8 @@ int variable;
 NSNumber* idespecialidad;
 NSNumber*  iddistrito;
 NSNumber*  idseguro;
-int turno;
+NSString *fechatexto;
+NSNumber * turno;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,6 +73,17 @@ int turno;
     
 
 }
+
+//METODO PARA EL SEGMENTED CONTROL
+- (IBAction)seApretoSegmented:(id)sender {
+    
+    if([sender selectedSegmentIndex]==0){
+        turno=@0;
+    }else if([sender selectedSegmentIndex]==1){
+        turno=@1;
+    }
+}
+
 
 
 
@@ -164,8 +177,12 @@ int turno;
     } else if (variable==2){
         self.lblDistrito.text= distrito[row];
         iddistrito = idsespecialidad[row];
+    } else if(variable==3){
+        self.lblSeguro.text=seguro[row];
+        idseguro=idsseguro[row];
     } else if (variable==4){
         self.lblDia.text=fechas[row];
+        fechatexto = fechas[row]; //AQUI SE ASIGNA STRING
     }
     
     
@@ -313,6 +330,19 @@ int turno;
         [fechas addObject: pickerItemTitle];
 
 }
+}
+
+//Para pasar los datos a la otra ventana!
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+
+    DocsBusquedaTableViewController *escenadestino = segue.destinationViewController;
+    escenadestino.idespecialidad= idespecialidad;
+    escenadestino.iddistrito=iddistrito;
+    escenadestino.idseguromed=idseguro;
+    escenadestino.fecha= fechatexto;
+    escenadestino.turno=turno;
+
 }
 
 @end

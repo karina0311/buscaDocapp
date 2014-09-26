@@ -182,6 +182,8 @@ NSMutableArray * respuesta;
     
 }
 
+//PARA EL SEGMENTED CONTROL
+
 
 
 @end

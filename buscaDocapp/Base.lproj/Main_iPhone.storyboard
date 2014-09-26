@@ -824,6 +824,9 @@
                                             <segment title="Tarde"/>
                                         </segments>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="seApretoSegmented:" destination="hgG-g8-jN8" eventType="valueChanged" id="g33-JG-wIY"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -837,6 +840,9 @@
                                     <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jjK-A4-6b3" kind="push" id="Kti-AA-ROh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98H-E0-vQa">
                                 <rect key="frame" x="132" y="82" width="0.0" height="0.0"/>
@@ -850,6 +856,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Busqueda General" id="uS2-h3-kpZ"/>
                     <connections>
+                        <outlet property="SegmentedShift" destination="SxA-t3-zK9" id="4eR-sg-3uV"/>
                         <outlet property="lblDia" destination="UKU-e7-41i" id="r9X-C3-3UJ"/>
                         <outlet property="lblDistrito" destination="Nas-yb-866" id="qDJ-MY-Mxl"/>
                         <outlet property="lblEspecialidad" destination="sVQ-Qa-MKP" id="Ikq-lE-gYT"/>
@@ -860,22 +867,47 @@
             </objects>
             <point key="canvasLocation" x="1914" y="-1924"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Docs Busqueda Table View Controller-->
         <scene sceneID="kv3-ha-LQ8">
             <objects>
-                <tableViewController id="jjK-A4-6b3" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="s9L-3d-KBx">
+                <tableViewController id="jjK-A4-6b3" customClass="DocsBusquedaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="s9L-3d-KBx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="4Co-sZ-8C4">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="celdaDocBusqueda" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="4Co-sZ-8C4" customClass="CeldaDocsBusquedaTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Co-sZ-8C4" id="2h3-9p-0b6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs7-nX-Wc0">
+                                            <rect key="frame" x="70" y="6" width="221" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="16"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ic-Xp-KJ0">
+                                            <rect key="frame" x="12" y="6" width="50" height="45"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jie-Sj-OHI">
+                                            <rect key="frame" x="70" y="30" width="201" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageDoc" destination="0Ic-Xp-KJ0" id="dAM-Bo-mc4"/>
+                                    <outlet property="lblClinica" destination="Jie-Sj-OHI" id="bJt-c2-zVh"/>
+                                    <outlet property="lblNombre" destination="Cs7-nX-Wc0" id="33L-9R-Y9L"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -883,6 +915,7 @@
                             <outlet property="delegate" destination="jjK-A4-6b3" id="W3t-m1-0T9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="9MB-yw-z25"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPt-KD-YTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1531,6 +1564,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NDb-A1-jOF"/>
+        <segue reference="gzN-zb-7o9"/>
     </inferredMetricsTieBreakers>
 </document>
