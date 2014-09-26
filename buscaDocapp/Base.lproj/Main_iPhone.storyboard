@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -509,7 +509,6 @@
                         <outlet property="txtFechaNac" destination="5cv-if-TuB" id="BwD-2P-UUK"/>
                         <outlet property="txtSeguro" destination="TPi-0s-r1y" id="bnF-g1-OKB"/>
                         <outlet property="txtTelefono" destination="I9l-4K-R6O" id="vZc-QO-1Yv"/>
-                        <segue destination="Jnf-iM-qB8" kind="modal" id="gDQ-iW-xFR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0f-Ig-hAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -646,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Elm-sn-z3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="1488"/>
+            <point key="canvasLocation" x="1116" y="1486"/>
         </scene>
         <!--Navigation Controller - General-->
         <scene sceneID="X9Q-ni-4Ve">
@@ -871,16 +870,16 @@
         <scene sceneID="kv3-ha-LQ8">
             <objects>
                 <tableViewController id="jjK-A4-6b3" customClass="DocsBusquedaTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" id="s9L-3d-KBx">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" id="s9L-3d-KBx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="celdaDocBusqueda" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="60" id="4Co-sZ-8C4" customClass="CeldaDocsBusquedaTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="60"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="celdaDocBusqueda" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaDocBusqueda" rowHeight="66" id="4Co-sZ-8C4" customClass="CeldaDocsBusquedaTableViewCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Co-sZ-8C4" id="2h3-9p-0b6">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cs7-nX-Wc0">
@@ -907,6 +906,7 @@
                                     <outlet property="imageDoc" destination="0Ic-Xp-KJ0" id="dAM-Bo-mc4"/>
                                     <outlet property="lblClinica" destination="Jie-Sj-OHI" id="bJt-c2-zVh"/>
                                     <outlet property="lblNombre" destination="Cs7-nX-Wc0" id="33L-9R-Y9L"/>
+                                    <segue destination="2qg-xT-MvU" kind="push" id="M4Q-yL-Wdm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -919,7 +919,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dPt-KD-YTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2327" y="-1925"/>
+            <point key="canvasLocation" x="2327" y="-1885"/>
         </scene>
         <!--Navigation Controller - Especialidad-->
         <scene sceneID="GaE-Dc-amY">
@@ -1564,6 +1564,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="gzN-zb-7o9"/>
+        <segue reference="M4Q-yL-Wdm"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,6 +10,7 @@
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
 #import "CeldaDocsBusquedaTableViewCell.h"
+#import "PerfilDocViewController.h"
 
 @interface DocsBusquedaTableViewController ()
 
@@ -88,9 +89,7 @@ NSDictionary *consulta;
 
 -(void) BusquedaAvanzada{
     
-    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.turno,@"shift",self.idseguromed,@"idinsurance",self.iddistrito,@"iddistrict",self.idespecialidad,@"idspecialty",nil];
-    
-    //NSDictionary *consulta = @{@"name": self.nombre};
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.turno,@"shift",self.fecha,@"fecha",self.idseguromed,@"idinsurance",self.iddistrito,@"iddistrict",self.idespecialidad,@"idspecialty",nil];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -134,6 +133,19 @@ NSDictionary *consulta;
           }];
     
     
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    PerfilDocViewController *escenadestino = segue.destinationViewController;
+    NSIndexPath *filaseleccionada = [self.tableView indexPathForSelectedRow];
+    escenadestino.iddoctor = iddoctors[filaseleccionada.row];
+    escenadestino.name = names[filaseleccionada.row];
+    escenadestino.lastname = lastnames[filaseleccionada.row];
+    escenadestino.idclinic = idclinics[filaseleccionada.row];
+    escenadestino.cantidadfilas = iddoctors.count;
+    //escenadestino.nombreespecialidad= self.nombreespecialidad;
     
 }
 

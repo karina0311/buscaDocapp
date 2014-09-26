@@ -161,7 +161,9 @@ NSNumber * turno;
         return [especialidad objectAtIndex:row];
     } else if (variable==2){
         return [distrito objectAtIndex:row];
-    } else if(variable==4){
+    } else if(variable==3){
+        return [seguro objectAtIndex:row];
+    }else if(variable==4){
         return [fechas objectAtIndex:row];
     }
     else return 0;
@@ -182,7 +184,7 @@ NSNumber * turno;
         idseguro=idsseguro[row];
     } else if (variable==4){
         self.lblDia.text=fechas[row];
-        fechatexto = fechas[row]; //AQUI SE ASIGNA STRING
+        fechatexto = [NSString stringWithString:fechas[row]];
     }
     
     
@@ -323,7 +325,7 @@ NSNumber * turno;
         NSCalendar *currentCalendar = [NSCalendar currentCalendar];
         NSDate *date = [currentCalendar dateFromComponents:components];
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"dd/MM/yyyy"];
+        [formatter setDateFormat:@"dd-MM-yyyy"];
         
         NSString *articleDateString = [formatter stringFromDate:date];
         NSString *pickerItemTitle = [NSString stringWithFormat: @"%@",articleDateString];
