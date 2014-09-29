@@ -31,7 +31,7 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    
+
 
 }
 
@@ -59,5 +59,11 @@
     escenadestino.direccion=self.txtDireccion.text;
 
 }
+
+- (IBAction)btnCancelar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 @end

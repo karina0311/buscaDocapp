@@ -8,12 +8,19 @@
 
 #import "LoginViewController.h"
 #import "BloqueEspTableViewCell.h"
+#import "URLS json.h"
+#import "Login.h"
+
+typedef void (^myCompletion)(BOOL);
 
 @interface LoginViewController ()
 
 @end
 
 @implementation LoginViewController
+
+NSDictionary * respuesta;
+Login *objetoLogin;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +36,20 @@
     [super viewDidLoad];
     
     [[self.btnIngresar layer] setCornerRadius:8.0f];
+    
+    objetoLogin = [Login sharedManager];
+    objetoLogin.delegate = self;
+    self.cargando.alpha = 0 ;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 
+}
+
+-(void)dismissKeyboard {
+    [self.lblIUsuario resignFirstResponder];
+    [self.lblPassword resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,15 +58,63 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) viewWillAppear:(BOOL)animated{
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    
+    NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
+    
+    NSString * ContraseñaUsuario = [datosDeMemoria stringForKey:@"ContraseñaUsuario"];
+    
+    
+    if(![NombreUsuario  isEqual: @""] && ![ContraseñaUsuario  isEqual: @""] && NombreUsuario != nil && ContraseñaUsuario != nil) {
+        self.cargando.alpha = 1 ;
+        // Arreglo de los indices(indices son Strings)
+        [Login jsonLoginConUsuarioPersistente:NombreUsuario yPassword:ContraseñaUsuario];
+        
+    }
+    
+    
 }
-*/
+- (IBAction)apretoIngresar:(id)sender {
+    
+    self.cargando.alpha = 1 ;
+    // Arreglo de los indices(indices son Strings)
+    [Login jsonLoginConUsuario:self.lblIUsuario.text yPassword:self.lblPassword.text];
+}
+
+-(void) myMethod:(myCompletion) compblock {
+    NSUserDefaults * datosDeMemoria = [NSUserDefaults standardUserDefaults];
+    NSString * NombreUsuario = [datosDeMemoria stringForKey:@"NombreUsuario"];
+    compblock (YES);
+    
+}
+
+-(void)loginExito{
+    [self myMethod:^(BOOL finished) {
+        if(finished){
+            [self performSegueWithIdentifier:@"exito_login" sender:self];
+        }
+    }];
+    
+}
+
+-(void)loginFallo:(NSString *)mensaje{
+    UIAlertView * miAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:mensaje delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [miAlert show];
+    
+    self.cargando.alpha = 0 ;
+}
+
+-(void)falloServidor{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Fallo en el servicio" message:nil
+                                                       delegate:nil
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil];
+    [alertView show];
+    self.cargando.alpha = 0 ;
+}
+
+
+
 
 @end

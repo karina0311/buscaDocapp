@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Login.h"
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController <loginDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *lblIUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *lblPassword;
 @property (weak, nonatomic) IBOutlet UIButton *btnIngresar;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *cargando;
+
 
 @end

@@ -10,6 +10,8 @@
 #import "URLS json.h"
 #import "AFNetworking.h"
 #import "UIImageView+AFNetworking.h"
+#import "Registro3ViewController.h"
+
 
 
 @interface Registro2ViewController ()
@@ -58,7 +60,8 @@ NSString *respuesta;
 - (IBAction)seApretoBoton:(id)sender {
     
     [self RegistroPaciente];
-    
+
+    [self performSegueWithIdentifier:@"idsegue" sender:self];
 }
 
 
@@ -96,5 +99,11 @@ NSString *respuesta;
     
 
 }
+- (IBAction)btnCancelar:(id)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 @end
