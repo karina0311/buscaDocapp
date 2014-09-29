@@ -128,7 +128,7 @@ NSString * emailpaciente;
         
         
         if ([resultado isEqualToString:@"ok"]) {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"El evento se registró correctamente"
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"El usuario se registró correctamente"
                                                                 message:nil
                                                                delegate:self
                                                       cancelButtonTitle:@"Ok"

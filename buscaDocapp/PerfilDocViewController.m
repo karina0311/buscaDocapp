@@ -128,10 +128,16 @@ NSMutableArray *dias;
             [dateFormat3 setDateFormat:@"HH:mm"];
             
             NSDate *date = [dateFormat dateFromString:StartTime];
-            NSDate *date2 = [dateFormat dateFromString:EndTime];
+            NSTimeInterval secondsInEightHours = 29 * 60 * 60;
+            NSDate *dateEightHoursAhead = [date dateByAddingTimeInterval:secondsInEightHours];
             
-            NSString *horai = [dateFormat3 stringFromDate:date];
-            NSString *horaf= [dateFormat3 stringFromDate:date2];
+            NSDate *date2 = [dateFormat dateFromString:EndTime];
+            NSTimeInterval secondsInEightHours2 = 29 * 60 * 60;
+            NSDate *dateEightHoursAhead2 = [date2 dateByAddingTimeInterval:secondsInEightHours2];
+            
+            
+            NSString *horai = [dateFormat3 stringFromDate:dateEightHoursAhead];
+            NSString *horaf= [dateFormat3 stringFromDate:dateEightHoursAhead2];
             
             [dias addObject:Dia];
             [horasinicio addObject:horai];

@@ -145,7 +145,7 @@ NSDictionary *consulta;
     escenadestino.lastname = lastnames[filaseleccionada.row];
     escenadestino.idclinic = idclinics[filaseleccionada.row];
     escenadestino.cantidadfilas = iddoctors.count;
-    //escenadestino.nombreespecialidad= self.nombreespecialidad;
+    //escenadestino.nombreespecialidad= self.idespecialidad;
     
 }
 
