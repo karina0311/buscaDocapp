@@ -67,6 +67,8 @@
 		4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E12219BD8C1E00C1FC60 /* dot.png */; };
 		4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D97D5D319B3A2F300DB2201 /* LoginViewController.m */; };
 		4DADA4EF19D947C000CC81AC /* Login.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DADA4EE19D947C000CC81AC /* Login.m */; };
+		4DBAACDF19F4422C00A46B8A /* RegistroSeguro.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBAACDE19F4422C00A46B8A /* RegistroSeguro.m */; };
+		4DBAACE119F4FE4B00A46B8A /* doctor_suitecase-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DBAACE019F4FE4B00A46B8A /* doctor_suitecase-26.png */; };
 		4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC581A919C667C80072DE26 /* DoctoresxEspTableViewController.m */; };
 		4DC581AD19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC581AC19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m */; };
 		4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DC581AE19C673510072DE26 /* femaledoctor.png */; };
@@ -197,6 +199,9 @@
 		4D97D5D319B3A2F300DB2201 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4DADA4ED19D947C000CC81AC /* Login.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Login.h; sourceTree = "<group>"; };
 		4DADA4EE19D947C000CC81AC /* Login.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Login.m; sourceTree = "<group>"; };
+		4DBAACDD19F4422C00A46B8A /* RegistroSeguro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistroSeguro.h; sourceTree = "<group>"; };
+		4DBAACDE19F4422C00A46B8A /* RegistroSeguro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistroSeguro.m; sourceTree = "<group>"; };
+		4DBAACE019F4FE4B00A46B8A /* doctor_suitecase-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctor_suitecase-26.png"; sourceTree = "<group>"; };
 		4DC581A819C667C80072DE26 /* DoctoresxEspTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoctoresxEspTableViewController.h; sourceTree = "<group>"; };
 		4DC581A919C667C80072DE26 /* DoctoresxEspTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoctoresxEspTableViewController.m; sourceTree = "<group>"; };
 		4DC581AB19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaDoctoresEspTableViewCell.h; sourceTree = "<group>"; };
@@ -314,6 +319,7 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				4DBAACE019F4FE4B00A46B8A /* doctor_suitecase-26.png */,
 				12A57F5019D203590005827A /* cancel-26.png */,
 				12A57F4E19D202F30005827A /* ok-26.png */,
 				12989B4A19CCD05B00F2A2FD /* alarm_clock-24.png */,
@@ -365,6 +371,8 @@
 				126F2F9E19D3590A00AEE535 /* Registro2ViewController.m */,
 				126F2FA019D3591400AEE535 /* Registro3ViewController.h */,
 				126F2FA119D3591400AEE535 /* Registro3ViewController.m */,
+				4DBAACDD19F4422C00A46B8A /* RegistroSeguro.h */,
+				4DBAACDE19F4422C00A46B8A /* RegistroSeguro.m */,
 			);
 			name = Registro;
 			sourceTree = "<group>";
@@ -675,6 +683,7 @@
 				4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */,
 				4D7F97191996F51E00417083 /* clinic2.png in Resources */,
 				4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */,
+				4DBAACE119F4FE4B00A46B8A /* doctor_suitecase-26.png in Resources */,
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
 				12A57F5119D203590005827A /* cancel-26.png in Resources */,
 				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
@@ -736,6 +745,7 @@
 				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
 				4DDB71A519C17B0D00217DD3 /* UIImageView+AFNetworking.m in Sources */,
+				4DBAACDF19F4422C00A46B8A /* RegistroSeguro.m in Sources */,
 				4DDB719A19C17B0D00217DD3 /* AFHTTPSessionManager.m in Sources */,
 				4DDB71A219C17B0D00217DD3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				4DC581AD19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m in Sources */,

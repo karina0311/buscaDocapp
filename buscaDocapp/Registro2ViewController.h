@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Registro2ViewController : UIViewController
+@interface Registro2ViewController : UIViewController <UITextFieldDelegate, UIPickerViewDelegate> {
+    
+    UIPickerView *picker;
+    NSMutableArray *seguros;
+    
+}
 
 @property NSString *nombre;
 @property NSString *apellidop;
