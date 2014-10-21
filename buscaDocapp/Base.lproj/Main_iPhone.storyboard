@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -65,7 +65,7 @@
                                         <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
@@ -1484,7 +1484,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnt-ed-EHm" customClass="DIDatepicker">
-                                <rect key="frame" x="0.0" y="79" width="320" height="60"/>
+                                <rect key="frame" x="0.0" y="87" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.039215687659999998" green="0.35294118520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                             </view>
@@ -1520,6 +1520,10 @@
                                                         <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="apretoReservar:" destination="wz5-HF-tF3" eventType="touchUpInside" id="mCX-pX-ptG"/>
+                                                        <segue destination="Af2-OY-0hu" kind="push" id="NKx-Rb-ltA"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1547,6 +1551,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRD-qr-SeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3445" y="-259"/>
+        </scene>
+        <!--Reservas View Controller-->
+        <scene sceneID="91i-it-TQ0">
+            <objects>
+                <viewController id="Af2-OY-0hu" customClass="ReservasViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O9p-LF-vYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="lu2-FK-D9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zp4-Aw-61K">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eph-1e-D4y">
+                                <rect key="frame" x="113" y="235" width="143" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4gM-5A-AiC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y0P-rT-4Cm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3867" y="-259"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="UHX-nP-8uU">
@@ -1847,6 +1879,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="rn3-gf-WfV"/>
-        <segue reference="NDb-A1-jOF"/>
+        <segue reference="M4Q-yL-Wdm"/>
     </inferredMetricsTieBreakers>
 </document>

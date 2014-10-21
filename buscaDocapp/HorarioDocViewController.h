@@ -16,5 +16,8 @@
 @property (weak, nonatomic) IBOutlet DIDatepicker *datepicker;
 
 @property NSNumber *iddoctor;
-
+@property NSString* name;
+@property NSString* lastname;
+@property NSNumber *idclinic;
+@property NSString *nombreespecialidad;
 @end

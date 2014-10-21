@@ -180,6 +180,10 @@ NSMutableArray *dias;
 
     HorarioDocViewController *escenadestino = segue.destinationViewController;
     escenadestino.iddoctor= self.iddoctor;
+    escenadestino.idclinic=self.idclinic;
+    escenadestino.name=self.name;
+    escenadestino.lastname=self.lastname;
+    escenadestino.nombreespecialidad=self.nombreespecialidad;
 
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "HorarioDocViewController.h"
+#import "ReservasViewController.h"
 #import "DIDatepicker.h"
 #import "BloqueEspTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
@@ -30,6 +31,7 @@ NSMutableArray *horasfin;
 NSMutableArray *dias;
 NSMutableArray *estados;
 NSMutableArray *idschedules;
+NSInteger var;
 
 
 
@@ -111,16 +113,26 @@ NSMutableArray *idschedules;
     BloqueEspTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
     
     
+    
     ((BloqueEspTableViewCell*)cell).lblHoras.text= [NSString stringWithFormat:@"%@ - %@ ", horasinicio[indexPath.row],horasfin[indexPath.row]];
     
     if (((NSNumber*)estados[indexPath.row]).intValue==0) {
         ((BloqueEspTableViewCell*)cell).imageDisponibilidad.image= [UIImage imageNamed:@"ok-26.png"];
+        ((BloqueEspTableViewCell*)cell).btnReservar.alpha=1;
     }else {
         ((BloqueEspTableViewCell*)cell).imageDisponibilidad.image= [UIImage imageNamed:@"cancel-26.png"];
         ((BloqueEspTableViewCell*)cell).btnReservar.alpha=0;
     }
+    
+    cell.btnReservar.tag=indexPath.row;
     return cell;
 }
+
+- (IBAction)apretoReservar:(UIButton *)sender {
+    
+    var=sender.tag;
+}
+
 
 
 
@@ -197,6 +209,21 @@ NSMutableArray *idschedules;
 
 
 
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    ReservasViewController *escenadestino = segue.destinationViewController;
+
+    escenadestino.idclinic=self.idclinic;
+    escenadestino.name=self.name;
+    escenadestino.lastname=self.lastname;
+    escenadestino.nombreespecialidad=self.nombreespecialidad;
+    escenadestino.idblock=idsbloques[var];
+    escenadestino.idschedule=idschedules[var];
+    escenadestino.horainicio=horasinicio[var];
+    escenadestino.horafin=horasfin[var];
+    
 }
 
 @end

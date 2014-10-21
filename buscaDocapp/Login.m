@@ -14,6 +14,7 @@
 
 NSString *correctpass;
 NSDictionary *respuesta2;
+NSNumber *idpatient;
 
 
 static Login *sharedMyManager;
@@ -54,9 +55,10 @@ static Login *sharedMyManager;
         
         NSDictionary * diccionario2=  respuesta2[@"user"];
         correctpass= diccionario2[@"password"];
+        idpatient =diccionario2[@"idpatient"];
         
         
-
+        [[NSUserDefaults standardUserDefaults] setObject:idpatient forKey:@"IDPatient"];
         
         
         

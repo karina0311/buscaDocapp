@@ -43,7 +43,10 @@ int variable;
     seguros = [[NSMutableArray alloc] init];
     idsseguros = [[NSMutableArray alloc] init];
     [self sacoSeguros];
-    
+    idseguro1=0;
+    idseguro2=0;
+    idseguro3=0;
+    idseguro4=0;
     self.seguro1.delegate=self;
     self.seguro2.delegate=self;
     self.seguro3.delegate=self;
@@ -269,18 +272,6 @@ int variable;
 
 -(void) RegistroSeguros{
     
-    if (idseguro1==nil) {
-        idseguro1=0;
-    }
-    if (idseguro2==nil) {
-        idseguro2=0;
-    }
-    if (idseguro3==nil) {
-        idseguro3=0;
-    }
-    if (idseguro4==nil) {
-        idseguro4=0;
-    }
     
     NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:idultimopaciente,@"idpaciente",idseguro1,@"idseguro1",idseguro2,@"idseguro2",idseguro3,@"idseguro3",idseguro4,@"idseguro4",nil];
     
