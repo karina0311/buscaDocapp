@@ -32,8 +32,8 @@
 		12989B4719CCCEFC00F2A2FD /* hospital-3-26w.png in Resources */ = {isa = PBXBuildFile; fileRef = 12989B4619CCCEFC00F2A2FD /* hospital-3-26w.png */; };
 		12989B4919CCCFDA00F2A2FD /* stethoscope-26w.png in Resources */ = {isa = PBXBuildFile; fileRef = 12989B4819CCCFDA00F2A2FD /* stethoscope-26w.png */; };
 		12989B4B19CCD05B00F2A2FD /* alarm_clock-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 12989B4A19CCD05B00F2A2FD /* alarm_clock-24.png */; };
-		12A4C96019D1D3470064428C /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C95D19D1D3470064428C /* DIDatepicker.m */; };
-		12A4C96119D1D3470064428C /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C95F19D1D3470064428C /* DIDatepickerDateView.m */; };
+		129FAE3919FABC88005B1CBC /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FAE3619FABC88005B1CBC /* DIDatepicker.m */; };
+		129FAE3A19FABC88005B1CBC /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FAE3819FABC88005B1CBC /* DIDatepickerDateView.m */; };
 		12A4C96419D1D4910064428C /* HorarioDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C96319D1D4910064428C /* HorarioDocViewController.m */; };
 		12A57F4F19D202F30005827A /* ok-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F4E19D202F30005827A /* ok-26.png */; };
 		12A57F5119D203590005827A /* cancel-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F5019D203590005827A /* cancel-26.png */; };
@@ -152,10 +152,10 @@
 		12989B4619CCCEFC00F2A2FD /* hospital-3-26w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hospital-3-26w.png"; sourceTree = "<group>"; };
 		12989B4819CCCFDA00F2A2FD /* stethoscope-26w.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stethoscope-26w.png"; sourceTree = "<group>"; };
 		12989B4A19CCD05B00F2A2FD /* alarm_clock-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alarm_clock-24.png"; sourceTree = "<group>"; };
-		12A4C95C19D1D3470064428C /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
-		12A4C95D19D1D3470064428C /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
-		12A4C95E19D1D3470064428C /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
-		12A4C95F19D1D3470064428C /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		129FAE3519FABC88005B1CBC /* DIDatepicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepicker.h; sourceTree = "<group>"; };
+		129FAE3619FABC88005B1CBC /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
+		129FAE3719FABC88005B1CBC /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
+		129FAE3819FABC88005B1CBC /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
 		12A4C96219D1D4910064428C /* HorarioDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorarioDocViewController.h; sourceTree = "<group>"; };
 		12A4C96319D1D4910064428C /* HorarioDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorarioDocViewController.m; sourceTree = "<group>"; };
 		12A57F4E19D202F30005827A /* ok-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok-26.png"; sourceTree = "<group>"; };
@@ -300,10 +300,10 @@
 		12A4C95B19D1D31B0064428C /* Sources DatePicker */ = {
 			isa = PBXGroup;
 			children = (
-				12A4C95C19D1D3470064428C /* DIDatepicker.h */,
-				12A4C95D19D1D3470064428C /* DIDatepicker.m */,
-				12A4C95E19D1D3470064428C /* DIDatepickerDateView.h */,
-				12A4C95F19D1D3470064428C /* DIDatepickerDateView.m */,
+				129FAE3519FABC88005B1CBC /* DIDatepicker.h */,
+				129FAE3619FABC88005B1CBC /* DIDatepicker.m */,
+				129FAE3719FABC88005B1CBC /* DIDatepickerDateView.h */,
+				129FAE3819FABC88005B1CBC /* DIDatepickerDateView.m */,
 			);
 			name = "Sources DatePicker";
 			sourceTree = "<group>";
@@ -734,9 +734,7 @@
 			files = (
 				4DADA4EF19D947C000CC81AC /* Login.m in Sources */,
 				4DDB71A019C17B0D00217DD3 /* AFURLSessionManager.m in Sources */,
-				12A4C96019D1D3470064428C /* DIDatepicker.m in Sources */,
 				4DDB719D19C17B0D00217DD3 /* AFURLConnectionOperation.m in Sources */,
-				12A4C96119D1D3470064428C /* DIDatepickerDateView.m in Sources */,
 				126F2F9F19D3590A00AEE535 /* Registro2ViewController.m in Sources */,
 				126F2FA219D3591400AEE535 /* Registro3ViewController.m in Sources */,
 				4D6301E719CFF22200BEE7A2 /* DoctoresxDistritoTableViewController.m in Sources */,
@@ -773,9 +771,11 @@
 				4DDB719E19C17B0D00217DD3 /* AFURLRequestSerialization.m in Sources */,
 				4DDB719B19C17B0D00217DD3 /* AFNetworkReachabilityManager.m in Sources */,
 				4DDB71A819C17B0D00217DD3 /* UIWebView+AFNetworking.m in Sources */,
+				129FAE3A19FABC88005B1CBC /* DIDatepickerDateView.m in Sources */,
 				12E9D58B19F71B7000162D79 /* ReservasViewController.m in Sources */,
 				4D6301EE19D0091900BEE7A2 /* ListaClinicasTableViewController.m in Sources */,
 				4DDB719F19C17B0D00217DD3 /* AFURLResponseSerialization.m in Sources */,
+				129FAE3919FABC88005B1CBC /* DIDatepicker.m in Sources */,
 				4DF562C219943F3A006E7421 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

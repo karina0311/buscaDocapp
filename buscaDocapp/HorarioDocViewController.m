@@ -223,6 +223,7 @@ NSInteger var;
     escenadestino.idschedule=idschedules[var];
     escenadestino.horainicio=horasinicio[var];
     escenadestino.horafin=horasfin[var];
+    escenadestino.fechaseleccionada=self.datepicker.selectedDate;
     
 }
 

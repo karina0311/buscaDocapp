@@ -53,20 +53,20 @@ const CGFloat kDIDatepickerSelectionLineWidth = 51.;
     NSMutableAttributedString *dateString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@ %@\n%@", dayFormattedString, [dayInWeekFormattedString uppercaseString], monthFormattedString]];
 
     [dateString addAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Medium" size:20],
-                                NSForegroundColorAttributeName: [UIColor whiteColor]
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20],
+                                NSForegroundColorAttributeName: [UIColor blackColor]
                                 }
                         range:NSMakeRange(0, dayFormattedString.length)];
 
     [dateString addAttributes:@{
                                 NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Thin" size:8],
-                                NSForegroundColorAttributeName: [UIColor whiteColor]
+                                NSForegroundColorAttributeName: [UIColor blackColor]
                                 }
                         range:NSMakeRange(dayFormattedString.length + 1, dayInWeekFormattedString.length)];
 
     [dateString addAttributes:@{
-                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Medium" size:8],
-                                NSForegroundColorAttributeName: [UIColor whiteColor]
+                                NSFontAttributeName: [UIFont fontWithName:@"HelveticaNeue-Light" size:8],
+                                NSForegroundColorAttributeName: [UIColor colorWithRed:153./255. green:153./255. blue:153./255. alpha:1.]
                                 }
                         range:NSMakeRange(dateString.string.length - monthFormattedString.length, monthFormattedString.length)];
 
