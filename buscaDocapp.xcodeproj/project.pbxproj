@@ -34,6 +34,10 @@
 		12989B4B19CCD05B00F2A2FD /* alarm_clock-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 12989B4A19CCD05B00F2A2FD /* alarm_clock-24.png */; };
 		129FAE3919FABC88005B1CBC /* DIDatepicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FAE3619FABC88005B1CBC /* DIDatepicker.m */; };
 		129FAE3A19FABC88005B1CBC /* DIDatepickerDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 129FAE3819FABC88005B1CBC /* DIDatepickerDateView.m */; };
+		12A4264B19FC0A95002F5B24 /* Doctor-Male-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A4264A19FC0A95002F5B24 /* Doctor-Male-icon.png */; };
+		12A4264D19FC0ACA002F5B24 /* People-Doctor-Female-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A4264C19FC0ACA002F5B24 /* People-Doctor-Female-icon.png */; };
+		12A4264F19FC0B12002F5B24 /* myit_icon_appointment.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A4264E19FC0B12002F5B24 /* myit_icon_appointment.png */; };
+		12A4265119FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12A4265019FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg */; };
 		12A4C96419D1D4910064428C /* HorarioDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A4C96319D1D4910064428C /* HorarioDocViewController.m */; };
 		12A57F4F19D202F30005827A /* ok-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F4E19D202F30005827A /* ok-26.png */; };
 		12A57F5119D203590005827A /* cancel-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F5019D203590005827A /* cancel-26.png */; };
@@ -156,6 +160,10 @@
 		129FAE3619FABC88005B1CBC /* DIDatepicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepicker.m; sourceTree = "<group>"; };
 		129FAE3719FABC88005B1CBC /* DIDatepickerDateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIDatepickerDateView.h; sourceTree = "<group>"; };
 		129FAE3819FABC88005B1CBC /* DIDatepickerDateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIDatepickerDateView.m; sourceTree = "<group>"; };
+		12A4264A19FC0A95002F5B24 /* Doctor-Male-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Doctor-Male-icon.png"; sourceTree = "<group>"; };
+		12A4264C19FC0ACA002F5B24 /* People-Doctor-Female-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "People-Doctor-Female-icon.png"; sourceTree = "<group>"; };
+		12A4264E19FC0B12002F5B24 /* myit_icon_appointment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myit_icon_appointment.png; sourceTree = "<group>"; };
+		12A4265019FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bigstock-schedule-icon-office-clock-w-29780108.jpg"; sourceTree = "<group>"; };
 		12A4C96219D1D4910064428C /* HorarioDocViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorarioDocViewController.h; sourceTree = "<group>"; };
 		12A4C96319D1D4910064428C /* HorarioDocViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorarioDocViewController.m; sourceTree = "<group>"; };
 		12A57F4E19D202F30005827A /* ok-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ok-26.png"; sourceTree = "<group>"; };
@@ -332,6 +340,10 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				12A4265019FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg */,
+				12A4264E19FC0B12002F5B24 /* myit_icon_appointment.png */,
+				12A4264C19FC0ACA002F5B24 /* People-Doctor-Female-icon.png */,
+				12A4264A19FC0A95002F5B24 /* Doctor-Male-icon.png */,
 				4DBAACE019F4FE4B00A46B8A /* doctor_suitecase-26.png */,
 				12A57F5019D203590005827A /* cancel-26.png */,
 				12A57F4E19D202F30005827A /* ok-26.png */,
@@ -666,15 +678,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A4264D19FC0ACA002F5B24 /* People-Doctor-Female-icon.png in Resources */,
+				12A4265119FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg in Resources */,
 				4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */,
 				12989B4719CCCEFC00F2A2FD /* hospital-3-26w.png in Resources */,
 				12989B3F19CCC93F00F2A2FD /* overtime-25.png in Resources */,
 				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
 				12A57F4F19D202F30005827A /* ok-26.png in Resources */,
 				126F2F9419D3546B00AEE535 /* new_post-26.png in Resources */,
+				12A4264B19FC0A95002F5B24 /* Doctor-Male-icon.png in Resources */,
 				12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
 				4D90E10219BD6D1200C1FC60 /* user.png in Resources */,
+				12A4264F19FC0B12002F5B24 /* myit_icon_appointment.png in Resources */,
 				12989B4919CCCFDA00F2A2FD /* stethoscope-26w.png in Resources */,
 				12989B3D19CCC70F00F2A2FD /* ambulance-24.png in Resources */,
 				4D90E11219BD851200C1FC60 /* locked.png in Resources */,

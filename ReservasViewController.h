@@ -22,4 +22,15 @@
 @property NSDate *horafin;
 @property int cantidadfilas;
 
+
+@property (weak, nonatomic) IBOutlet UIImageView *iconCita;
+
+@property (weak, nonatomic) IBOutlet UILabel *lblNombreDoctor;
+@property (weak, nonatomic) IBOutlet UILabel *lblFecha;
+@property (weak, nonatomic) IBOutlet UILabel *lblHora;
+@property (weak, nonatomic) IBOutlet UILabel *lblEspecialidad;
+@property (weak, nonatomic) IBOutlet UILabel *lblNombreClinica;
+@property (weak, nonatomic) IBOutlet UILabel *lblDireccion;
+@property (weak, nonatomic) IBOutlet UILabel *lblTelefono;
+
 @end

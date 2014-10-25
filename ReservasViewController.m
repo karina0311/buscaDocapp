@@ -26,7 +26,28 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.iconCita.layer.cornerRadius = self.iconCita.frame.size.width / 2;
+    self.lblNombreDoctor.text= [NSString stringWithFormat:@"Dr. %@ %@ ", self.name, self.lastname];
+    self.lblEspecialidad.text= self.nombreespecialidad;
+    
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss-zz:zz"];
+    
+    NSDateFormatter *dateFormat3 = [[NSDateFormatter alloc] init];
+    [dateFormat3 setDateFormat:@"HH:mm"];
+    
+    //NSDate *fecha = [dateFormat dateFromString:Date];
+    
+    NSDate *date = [dateFormat dateFromString:self.horainicio];
+    NSTimeInterval secondsInEightHours = 29 * 60 * 60;
+    NSDate *dateEightHoursAhead = [date dateByAddingTimeInterval:secondsInEightHours];
+    
+    
+    
+    NSString *horai = [dateFormat3 stringFromDate:dateEightHoursAhead];
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
