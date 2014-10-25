@@ -45,6 +45,9 @@
 		12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */; };
 		12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */; };
 		12E9D58B19F71B7000162D79 /* ReservasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E9D58A19F71B7000162D79 /* ReservasViewController.m */; };
+		12FB85CC19FC47320056CCC7 /* punt_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12FB85CB19FC47320056CCC7 /* punt_01.jpg */; };
+		12FB85CE19FC4C420056CCC7 /* phone_office-26 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FB85CD19FC4C420056CCC7 /* phone_office-26 copia.png */; };
+		12FB85D019FC4E540056CCC7 /* address_book-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FB85CF19FC4E540056CCC7 /* address_book-26.png */; };
 		4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */; };
 		4D159CA819CBF8540039D348 /* CeldaListaDistritos.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D159CA719CBF8540039D348 /* CeldaListaDistritos.m */; };
 		4D6301E719CFF22200BEE7A2 /* DoctoresxDistritoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D6301E619CFF22200BEE7A2 /* DoctoresxDistritoTableViewController.m */; };
@@ -174,6 +177,9 @@
 		12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tip6.BetterMedicalAppointments.JPG; sourceTree = "<group>"; };
 		12E9D58919F71B7000162D79 /* ReservasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservasViewController.h; sourceTree = "<group>"; };
 		12E9D58A19F71B7000162D79 /* ReservasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservasViewController.m; sourceTree = "<group>"; };
+		12FB85CB19FC47320056CCC7 /* punt_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = punt_01.jpg; sourceTree = "<group>"; };
+		12FB85CD19FC4C420056CCC7 /* phone_office-26 copia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone_office-26 copia.png"; sourceTree = "<group>"; };
+		12FB85CF19FC4E540056CCC7 /* address_book-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "address_book-26.png"; sourceTree = "<group>"; };
 		4D159CA319CBF66D0039D348 /* DistritosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistritosTableViewController.h; sourceTree = "<group>"; };
 		4D159CA419CBF66D0039D348 /* DistritosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistritosTableViewController.m; sourceTree = "<group>"; };
 		4D159CA619CBF8540039D348 /* CeldaListaDistritos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CeldaListaDistritos.h; sourceTree = "<group>"; };
@@ -340,6 +346,9 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				12FB85CF19FC4E540056CCC7 /* address_book-26.png */,
+				12FB85CD19FC4C420056CCC7 /* phone_office-26 copia.png */,
+				12FB85CB19FC47320056CCC7 /* punt_01.jpg */,
 				12A4265019FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg */,
 				12A4264E19FC0B12002F5B24 /* myit_icon_appointment.png */,
 				12A4264C19FC0ACA002F5B24 /* People-Doctor-Female-icon.png */,
@@ -702,6 +711,7 @@
 				126F2F9619D3547700AEE535 /* lock-26.png in Resources */,
 				12989B4B19CCD05B00F2A2FD /* alarm_clock-24.png in Resources */,
 				4D90E10B19BD7D1900C1FC60 /* medical-appointment-arrow-prestige-limousine.jpg in Resources */,
+				12FB85D019FC4E540056CCC7 /* address_book-26.png in Resources */,
 				12989B3619CCBA7B00F2A2FD /* male50.png in Resources */,
 				4D90E11619BD853500C1FC60 /* calendar.png in Resources */,
 				126F2F9219D3546100AEE535 /* gift-26.png in Resources */,
@@ -726,8 +736,10 @@
 				12989B4519CCCE0E00F2A2FD /* today-26.png in Resources */,
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
+				12FB85CE19FC4C420056CCC7 /* phone_office-26 copia.png in Resources */,
 				126F2F9A19D354AD00AEE535 /* identity_theft-26.png in Resources */,
 				12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */,
+				12FB85CC19FC47320056CCC7 /* punt_01.jpg in Resources */,
 				127DD8FB19C110390059EA10 /* search-25.png in Resources */,
 				126F2F9C19D3552B00AEE535 /* treatment_plan-26.png in Resources */,
 			);
