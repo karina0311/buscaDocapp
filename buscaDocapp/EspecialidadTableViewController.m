@@ -40,6 +40,7 @@ NSMutableArray * respuesta;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     titulos = [[NSMutableArray alloc] init];
     ids = [[NSMutableArray alloc] init];
 
@@ -81,8 +82,33 @@ NSMutableArray * respuesta;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell;
+    
+    static NSString *CellIdentifier = @"CeldaEspecialidades";
+    CeldaListaEspecialidades *cell = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if ( cell == nil )
+    {
+        cell = [[CeldaListaEspecialidades alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        cell.lblEspecialidad.text= self.searchResult[indexPath.row];
+    }
+    
+    else
+    {
+        cell.lblEspecialidad.text=titulos[indexPath.row];
+    }
+    
+
+    
+    return cell;
+    
+    /*UITableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaEspecialidades"];
+    
     
     if (tableView == self.searchDisplayController.searchResultsTableView)
     {
@@ -91,7 +117,7 @@ NSMutableArray * respuesta;
     else
     {
         ((CeldaListaEspecialidades*)cell).lblEspecialidad.text=titulos[indexPath.row];
-    }
+    }*/
     
     
     

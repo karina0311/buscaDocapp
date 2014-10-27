@@ -47,6 +47,7 @@ NSInteger var;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.table.dataSource=self;
     self.table.delegate=self;
     [self.datepicker addTarget:self action:@selector(updateSelectedDate) forControlEvents:UIControlEventValueChanged];
@@ -224,6 +225,8 @@ NSInteger var;
     escenadestino.horainicio=horasinicio[var];
     escenadestino.horafin=horasfin[var];
     escenadestino.fechaseleccionada=self.datepicker.selectedDate;
+    escenadestino.iddoctor=self.iddoctor;
+    
     
 }
 

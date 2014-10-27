@@ -1,4 +1,4 @@
-//
+
 //  DocsBusquedaTableViewController.m
 //  buscaDocapp
 //
@@ -41,6 +41,7 @@ NSDictionary *consulta;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     names = [[NSMutableArray alloc] init];
     lastnames = [[NSMutableArray alloc] init];
     iddoctors = [[NSMutableArray alloc] init];

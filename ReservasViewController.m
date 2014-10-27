@@ -18,6 +18,8 @@
 @implementation ReservasViewController
 
 NSDictionary * respuesta;
+NSDictionary * respuesta2;
+NSString *fechasel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,13 +33,15 @@ NSDictionary * respuesta;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     [self ActualizaDatosClinica];
 
     
 }
 
 - (IBAction)confirmarReserva:(id)sender {
+    
+    [self RegistroCita];
 }
 
 
@@ -87,7 +91,7 @@ NSDictionary * respuesta;
         //NSDate *dateEightHoursAhead = [self.horainicio dateByAddingTimeInterval:secondsInEightHours];
         
         
-        NSString *fechasel =[dateFormat stringFromDate:self.fechaseleccionada];
+        fechasel =[dateFormat stringFromDate:self.fechaseleccionada];
         //NSString *horai = [dateFormat3 stringFromDate:dateEightHoursAhead];
         
         
@@ -112,6 +116,56 @@ NSDictionary * respuesta;
     
 }
 
+
+//PARA EL REGISTRO DE CITAS
+
+-(void) RegistroCita{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    self.idpatient = [NSNumber numberWithInt:pat];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.idblock,@"idblock",self.idschedule,@"idschedule",self.idpatient,@"idpatient",self.horainicio,@"start_time",self.horafin,@"end_time",self.iddoctor,@"iddoctor", fechasel,@"fecha",nil];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:guardaCita parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        respuesta2 = responseObject;
+        NSLog(@"JSON: %@", respuesta2);
+        
+        
+        NSString* resultado=  respuesta2[@"status"];
+        
+        
+        if ([resultado isEqualToString:@"ok"]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Se registro correctamente su Cita"
+                                                                message:nil
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+    
+    
+}
 
 
 

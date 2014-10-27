@@ -12,7 +12,8 @@
 
 @property NSNumber* idblock;
 @property NSNumber *idschedule;
-@property NSNumber *idpatient;
+@property NSNumber * idpatient;
+@property NSNumber * iddoctor;
 @property NSString* name;
 @property NSString* lastname;
 @property NSNumber *idclinic;

@@ -39,6 +39,7 @@ NSMutableArray *dias;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
     idshorarios = [[NSMutableArray alloc] init];
     horasinicio = [[NSMutableArray alloc] init];
     horasfin = [[NSMutableArray alloc] init];
