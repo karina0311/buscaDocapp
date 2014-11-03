@@ -42,6 +42,10 @@
 		12A57F4F19D202F30005827A /* ok-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F4E19D202F30005827A /* ok-26.png */; };
 		12A57F5119D203590005827A /* cancel-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12A57F5019D203590005827A /* cancel-26.png */; };
 		12A57F5419D2038A0005827A /* BloqueEspTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */; };
+		12B083861A0834F3004A3EE4 /* EDStarRating.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B083841A0834F3004A3EE4 /* EDStarRating.m */; };
+		12B083881A08382A004A3EE4 /* doctor-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B083871A08382A004A3EE4 /* doctor-25.png */; };
+		12B0838A1A0838FB004A3EE4 /* doctor-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B083891A0838FB004A3EE4 /* doctor-32.png */; };
+		12B0838D1A083B14004A3EE4 /* MiDoctorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */; };
 		12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */; };
 		12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */; };
 		12E9D58B19F71B7000162D79 /* ReservasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E9D58A19F71B7000162D79 /* ReservasViewController.m */; };
@@ -177,6 +181,12 @@
 		12A57F5019D203590005827A /* cancel-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancel-26.png"; sourceTree = "<group>"; };
 		12A57F5219D2038A0005827A /* BloqueEspTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BloqueEspTableViewCell.h; sourceTree = "<group>"; };
 		12A57F5319D2038A0005827A /* BloqueEspTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BloqueEspTableViewCell.m; sourceTree = "<group>"; };
+		12B083841A0834F3004A3EE4 /* EDStarRating.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDStarRating.m; sourceTree = "<group>"; };
+		12B083851A0834F3004A3EE4 /* EDStarRating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDStarRating.h; sourceTree = "<group>"; };
+		12B083871A08382A004A3EE4 /* doctor-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctor-25.png"; sourceTree = "<group>"; };
+		12B083891A0838FB004A3EE4 /* doctor-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "doctor-32.png"; sourceTree = "<group>"; };
+		12B0838B1A083B14004A3EE4 /* MiDoctorTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiDoctorTableViewCell.h; sourceTree = "<group>"; };
+		12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiDoctorTableViewCell.m; sourceTree = "<group>"; };
 		12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blog_image_frame-2.png"; sourceTree = "<group>"; };
 		12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tip6.BetterMedicalAppointments.JPG; sourceTree = "<group>"; };
 		12E9D58919F71B7000162D79 /* ReservasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservasViewController.h; sourceTree = "<group>"; };
@@ -331,6 +341,15 @@
 			name = "Sources DatePicker";
 			sourceTree = "<group>";
 		};
+		12B083831A0834C5004A3EE4 /* Sources EDStarRating */ = {
+			isa = PBXGroup;
+			children = (
+				12B083841A0834F3004A3EE4 /* EDStarRating.m */,
+				12B083851A0834F3004A3EE4 /* EDStarRating.h */,
+			);
+			name = "Sources EDStarRating";
+			sourceTree = "<group>";
+		};
 		12E9D58819F71ABA00162D79 /* Reservas */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,6 +374,8 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				12B083891A0838FB004A3EE4 /* doctor-32.png */,
+				12B083871A08382A004A3EE4 /* doctor-25.png */,
 				4D8A097119FDE827003232C9 /* 765-default-avatar.png */,
 				4D8A096D19FDB9C4003232C9 /* Button-Back-icon.png */,
 				12FB85CF19FC4E540056CCC7 /* address_book-26.png */,
@@ -394,6 +415,8 @@
 			children = (
 				4D8A097419FDE883003232C9 /* PerfilViewController.h */,
 				4D8A097519FDE883003232C9 /* PerfilViewController.m */,
+				12B0838B1A083B14004A3EE4 /* MiDoctorTableViewCell.h */,
+				12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */,
 			);
 			name = "Mi Perfil";
 			sourceTree = "<group>";
@@ -581,6 +604,7 @@
 		4DF562BB19943F3A006E7421 /* buscaDocapp */ = {
 			isa = PBXGroup;
 			children = (
+				12B083831A0834C5004A3EE4 /* Sources EDStarRating */,
 				12A4C95B19D1D31B0064428C /* Sources DatePicker */,
 				4DDB717219C17B0D00217DD3 /* AFNetworking */,
 				4DDB718619C17B0D00217DD3 /* UIKit+AFNetworking */,
@@ -726,6 +750,7 @@
 				12A4264F19FC0B12002F5B24 /* myit_icon_appointment.png in Resources */,
 				12989B4919CCCFDA00F2A2FD /* stethoscope-26w.png in Resources */,
 				12989B3D19CCC70F00F2A2FD /* ambulance-24.png in Resources */,
+				12B0838A1A0838FB004A3EE4 /* doctor-32.png in Resources */,
 				4D90E11219BD851200C1FC60 /* locked.png in Resources */,
 				12989B3419CCBA7200F2A2FD /* female50.png in Resources */,
 				12989B3B19CCC6D500F2A2FD /* hospital-3-26.png in Resources */,
@@ -757,6 +782,7 @@
 				4D90E11019BD850B00C1FC60 /* key.png in Resources */,
 				4D90E11819BD856300C1FC60 /* pin-2.png in Resources */,
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
+				12B083881A08382A004A3EE4 /* doctor-25.png in Resources */,
 				12989B4519CCCE0E00F2A2FD /* today-26.png in Resources */,
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
@@ -801,11 +827,13 @@
 				4DDB717119C1741500217DD3 /* URLS json.m in Sources */,
 				4DDB71A319C17B0D00217DD3 /* UIAlertView+AFNetworking.m in Sources */,
 				4D159CA819CBF8540039D348 /* CeldaListaDistritos.m in Sources */,
+				12B083861A0834F3004A3EE4 /* EDStarRating.m in Sources */,
 				12A57F5419D2038A0005827A /* BloqueEspTableViewCell.m in Sources */,
 				127D559819D4DB5E0005F28D /* CeldaDocsBusquedaTableViewCell.m in Sources */,
 				4DC581AA19C667C80072DE26 /* DoctoresxEspTableViewController.m in Sources */,
 				4D6301F119D0093900BEE7A2 /* CeldaListaClinicasTableViewCell.m in Sources */,
 				4D159CA519CBF66D0039D348 /* DistritosTableViewController.m in Sources */,
+				12B0838D1A083B14004A3EE4 /* MiDoctorTableViewCell.m in Sources */,
 				4DDB719919C17B0D00217DD3 /* AFHTTPRequestOperationManager.m in Sources */,
 				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
