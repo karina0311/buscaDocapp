@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EDStarRating.h"
 
 @interface MiDoctorTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *lblNombre;
+@property (weak, nonatomic) IBOutlet UILabel *lblClinica;
+@property (weak, nonatomic) IBOutlet EDStarRating *ratingDoc;
+@property (weak, nonatomic) IBOutlet UIImageView *avatarDoc;
+
 
 @end

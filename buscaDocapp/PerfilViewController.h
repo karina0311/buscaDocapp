@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PerfilViewController : UIViewController
+@interface PerfilViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *table;
+
+
 
 @end

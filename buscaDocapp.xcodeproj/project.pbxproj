@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		126AA5961A0A864F00E7E870 /* MisCitasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */; };
+		126AA5981A0A86AA00E7E870 /* calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 126AA5971A0A86AA00E7E870 /* calendar-50.png */; };
 		126F2F9019D353AA00AEE535 /* phone-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F8F19D353AA00AEE535 /* phone-26.png */; };
 		126F2F9219D3546100AEE535 /* gift-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9119D3546100AEE535 /* gift-26.png */; };
 		126F2F9419D3546B00AEE535 /* new_post-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F9319D3546B00AEE535 /* new_post-26.png */; };
@@ -136,6 +138,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		126AA5941A0A864F00E7E870 /* MisCitasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisCitasTableViewCell.h; sourceTree = "<group>"; };
+		126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MisCitasTableViewCell.m; sourceTree = "<group>"; };
+		126AA5971A0A86AA00E7E870 /* calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-50.png"; sourceTree = "<group>"; };
 		126F2F8F19D353AA00AEE535 /* phone-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "phone-26.png"; sourceTree = "<group>"; };
 		126F2F9119D3546100AEE535 /* gift-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gift-26.png"; sourceTree = "<group>"; };
 		126F2F9319D3546B00AEE535 /* new_post-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "new_post-26.png"; sourceTree = "<group>"; };
@@ -374,6 +379,7 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				126AA5971A0A86AA00E7E870 /* calendar-50.png */,
 				12B083891A0838FB004A3EE4 /* doctor-32.png */,
 				12B083871A08382A004A3EE4 /* doctor-25.png */,
 				4D8A097119FDE827003232C9 /* 765-default-avatar.png */,
@@ -417,6 +423,8 @@
 				4D8A097519FDE883003232C9 /* PerfilViewController.m */,
 				12B0838B1A083B14004A3EE4 /* MiDoctorTableViewCell.h */,
 				12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */,
+				126AA5941A0A864F00E7E870 /* MisCitasTableViewCell.h */,
+				126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */,
 			);
 			name = "Mi Perfil";
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */,
 				4D7F97191996F51E00417083 /* clinic2.png in Resources */,
 				4D90E12319BD8C1E00C1FC60 /* dot.png in Resources */,
+				126AA5981A0A86AA00E7E870 /* calendar-50.png in Resources */,
 				4DBAACE119F4FE4B00A46B8A /* doctor_suitecase-26.png in Resources */,
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
 				12A57F5119D203590005827A /* cancel-26.png in Resources */,
@@ -822,6 +831,7 @@
 				127D559519D4D15E0005F28D /* DocsBusquedaTableViewController.m in Sources */,
 				4DDB71A419C17B0D00217DD3 /* UIButton+AFNetworking.m in Sources */,
 				4DDB71A619C17B0D00217DD3 /* UIProgressView+AFNetworking.m in Sources */,
+				126AA5961A0A864F00E7E870 /* MisCitasTableViewCell.m in Sources */,
 				12989B3919CCBFEF00F2A2FD /* PerfilDocViewController.m in Sources */,
 				4DDB719819C17B0D00217DD3 /* AFHTTPRequestOperation.m in Sources */,
 				4DDB717119C1741500217DD3 /* URLS json.m in Sources */,
