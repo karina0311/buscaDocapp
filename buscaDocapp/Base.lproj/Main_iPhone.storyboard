@@ -1781,7 +1781,7 @@
                                 </segments>
                                 <color key="tintColor" red="0.2470588386" green="0.67450982329999998" blue="0.91764712329999998" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
-                                    <action selector="apretoSegmented:" destination="71A-bQ-ZL6" eventType="valueChanged" id="eHv-4o-wQB"/>
+                                    <action selector="cambioPerfil:" destination="71A-bQ-ZL6" eventType="valueChanged" id="TwV-nx-HgT"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ffk-9g-9Gk">

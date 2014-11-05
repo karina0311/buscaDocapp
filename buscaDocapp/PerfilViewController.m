@@ -35,8 +35,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)apretoSegmented:(id)sender {
+- (IBAction)cambioPerfil:(UISegmentedControl *)sender {
+    
+    /*if([sender selectedSegmentIndex]==0){
+        segindice=0;
+        [self.tablaeventos reloadData];
+        
+    }else if([sender selectedSegmentIndex]==1){
+        segindice=1;
+        [self.tablaeventos reloadData];
+        
+    }else if([sender selectedSegmentIndex]==2){
+        segindice=2;
+        [self.tablaeventos reloadData];
+        */
 }
+
 
 
 @end
