@@ -1822,7 +1822,7 @@
                                             <outlet property="ratingDoc" destination="IZr-sq-h5j" id="aoA-w5-Mcc"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="77" id="L8R-J3-PzC" customClass="MisCitasTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CitaCell" rowHeight="77" id="L8R-J3-PzC" customClass="MisCitasTableViewCell">
                                         <rect key="frame" x="0.0" y="86" width="273" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L8R-J3-PzC" id="fkE-TH-8gX">
