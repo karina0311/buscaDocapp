@@ -47,4 +47,8 @@
 
 #define sacaDocsporPaciente @"http://10.101.33.4:8080/tesis2Karina/services/getDoctorsbyPatient"
 
+#define sacaEspecialidadporPaciente @"http://10.101.33.4:8080/tesis2Karina/services/getSpecialtybyPatient"
+
+#define sacaClinicaporPaciente @"http://10.101.33.4:8080/tesis2Karina/services/getClinicsbyPatient"
+
 @end

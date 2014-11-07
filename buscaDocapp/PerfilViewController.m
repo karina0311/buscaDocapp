@@ -21,6 +21,13 @@
 NSNumber *idpatient;
 NSMutableArray *respuesta;
 NSMutableArray *respuesta2;
+NSMutableArray *respuesta3;
+NSMutableArray *respuesta4;
+
+
+NSMutableArray *clinicAppointment;
+NSMutableArray *SpecialtyAppointment;
+
 NSMutableArray *iddoctors;
 NSMutableArray *namesdoctor;
 NSMutableArray *clinicsdoctor;
@@ -52,12 +59,15 @@ int segindice;
     start_times = [[NSMutableArray alloc] init];
     end_times = [[NSMutableArray alloc] init];
     
+    clinicAppointment= [[NSMutableArray alloc] init];
+    SpecialtyAppointment= [[NSMutableArray alloc] init];
+    
     iddoctors= [[NSMutableArray alloc] init];
     namesdoctor=[[NSMutableArray alloc] init];
     clinicsdoctor=[[NSMutableArray alloc] init];
     specialtiesdoctor=[[NSMutableArray alloc] init];
     [self loadAppointments];
-    [self loadDoctors];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,15 +106,14 @@ int segindice;
         static NSString *MyIdentifier = @"DoctorCell";
         MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         return cell;
-        
     }else if (segindice==1){
         
         static NSString *MyIdentifier = @"DoctorCell";
         MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         
-        ((MiDoctorTableViewCell*)cell).lblNombre = [namesdoctor objectAtIndex:indexPath.row];
+        ((MiDoctorTableViewCell*)cell).lblNombre.text = [NSString stringWithFormat:@"%@",(NSString*)namesdoctor[indexPath.row]];
         
-        ((MiDoctorTableViewCell*)cell).lblClinica = [clinicsdoctor objectAtIndex:indexPath.row];
+        //((MiDoctorTableViewCell*)cell).lblClinica.text = [clinicsdoctor objectAtIndex:indexPath.row];
         
         return cell;
  
@@ -114,12 +123,15 @@ int segindice;
         
         ((MisCitasTableViewCell*)cell).lblFecha.text = [dates objectAtIndex:indexPath.row];
         
-         ((MisCitasTableViewCell*)cell).lblHora = [start_times objectAtIndex:indexPath.row];
+        ((MisCitasTableViewCell*)cell).lblHora.text = [NSString stringWithFormat:@"%@",(NSString*)start_times[indexPath.row]];
+        
+        ((MisCitasTableViewCell*)cell).lblClinica.text = [clinicAppointment objectAtIndex:indexPath.row];
+        
+          ((MisCitasTableViewCell*)cell).lblEspecialidad.text = [SpecialtyAppointment objectAtIndex:indexPath.row];
         
         return cell;
-       
     }
-    return nil;
+    return cell;
 }
 
 //Cargo Doctores por Paciente
@@ -140,7 +152,7 @@ int segindice;
     
     [manager POST:sacaDocsporPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta2 = responseObject;
-        NSLog(@"JSON: %@", respuesta);
+        NSLog(@"JSON: %@", respuesta2);
         
         
         
@@ -149,7 +161,7 @@ int segindice;
             NSDictionary * diccionario2=  diccionario[@"doctor"];
             NSNumber * IDDoctor= diccionario2[@"iddoctor"];
             NSString * namedoctor= diccionario2[@"name"];
-            NSString * lastnamedoctor= diccionario2[@"last_name"];
+            NSString * lastnamedoctor= diccionario2[@"lastName"];
             NSString * specialtydoctor= diccionario2[@"idspecialty"];
             NSString * clinicdoctor= diccionario2[@"idclinic"];
             
@@ -163,8 +175,7 @@ int segindice;
             
         }
         
-        
-        
+        [self loadClinics];
         
         
     }
@@ -221,6 +232,8 @@ int segindice;
             [dateFormat3 setDateFormat:@"HH:mm"];
             
             NSDate *fechaformato =[dateFormat dateFromString:date];
+            int daysToAdd = 1;
+            NSDate *fechareal = [fechaformato dateByAddingTimeInterval:60*60*24*daysToAdd];
             
             NSDate *date1 = [dateFormat dateFromString:start_time];
             NSTimeInterval secondsInEightHours = 29 * 60 * 60;
@@ -230,7 +243,7 @@ int segindice;
             NSTimeInterval secondsInEightHours2 = 29 * 60 * 60;
             NSDate *dateEightHoursAhead2 = [date2 dateByAddingTimeInterval:secondsInEightHours2];
             
-            NSString *fecha = [dateFormat3 stringFromDate:fechaformato];
+            NSString *fecha = [dateFormat2 stringFromDate:fechareal];
             NSString *horai = [dateFormat3 stringFromDate:dateEightHoursAhead];
             NSString *horaf= [dateFormat3 stringFromDate:dateEightHoursAhead2];
             
@@ -241,6 +254,98 @@ int segindice;
 
         }
         
+        
+        [self loadDoctors];
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+}
+
+/********************************/
+
+-(void) loadClinics{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    idpatient = [NSNumber numberWithInt:pat];
+    
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaClinicaporPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta3 = responseObject;
+        NSLog(@"JSON: %@", respuesta3);
+        
+        
+        
+        for(int i=0;i<respuesta3.count;i++){
+            NSDictionary * diccionario = respuesta3[i];
+            NSDictionary * diccionario2=  diccionario[@"clinic"];
+            NSString * NameClinic= diccionario2[@"name"];
+
+            
+            [clinicAppointment addObject:NameClinic];
+
+        }
+        
+        
+        [self loadSpecialty];
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+}
+
+-(void) loadSpecialty{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    idpatient = [NSNumber numberWithInt:pat];
+    
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaEspecialidadporPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta4 = responseObject;
+        NSLog(@"JSON: %@", respuesta4);
+        
+        
+        
+        for(int i=0;i<respuesta4.count;i++){
+            NSDictionary * diccionario = respuesta4[i];
+            NSDictionary * diccionario2=  diccionario[@"specialty"];
+            NSString * NameSpecialty= diccionario2[@"name"];
+            
+            
+            [SpecialtyAppointment addObject:NameSpecialty];
+            
+        }
         
         
         
@@ -257,8 +362,7 @@ int segindice;
     
 }
 
-
-
+/********************************/
 - (IBAction)cambioPerfil:(UISegmentedControl *)sender {
     
     if([sender selectedSegmentIndex]==0){
