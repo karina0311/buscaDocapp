@@ -20,6 +20,11 @@
 
 NSNumber *idpatient;
 NSMutableArray *respuesta;
+NSMutableArray *respuesta2;
+NSMutableArray *iddoctors;
+NSMutableArray *namesdoctor;
+NSMutableArray *clinicsdoctor;
+NSMutableArray *specialtiesdoctor;
 NSMutableArray *idsappointments;
 NSMutableArray *dates;
 NSMutableArray *start_times;
@@ -38,12 +43,21 @@ int segindice;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.table.dataSource=self;
+    self.table.delegate=self;
     // Do any additional setup after loading the view.
     idsappointments = [[NSMutableArray alloc] init];
     dates = [[NSMutableArray alloc] init];
     start_times = [[NSMutableArray alloc] init];
     end_times = [[NSMutableArray alloc] init];
+    
+    iddoctors= [[NSMutableArray alloc] init];
+    namesdoctor=[[NSMutableArray alloc] init];
+    clinicsdoctor=[[NSMutableArray alloc] init];
+    specialtiesdoctor=[[NSMutableArray alloc] init];
     [self loadAppointments];
+    [self loadDoctors];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,9 +78,9 @@ int segindice;
     
     int secciones;
     if(segindice==0){
-    
+        secciones=1;
     }else if (segindice==1){
-        
+        secciones = iddoctors.count;
     } else if (segindice==2){
         secciones= idsappointments.count;
     }
@@ -79,10 +93,18 @@ int segindice;
     UITableViewCell *cell;
     
     if(segindice==0){
-        
+        static NSString *MyIdentifier = @"DoctorCell";
+        MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         return cell;
         
     }else if (segindice==1){
+        
+        static NSString *MyIdentifier = @"DoctorCell";
+        MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
+        
+        ((MiDoctorTableViewCell*)cell).lblNombre = [namesdoctor objectAtIndex:indexPath.row];
+        
+        ((MiDoctorTableViewCell*)cell).lblClinica = [clinicsdoctor objectAtIndex:indexPath.row];
         
         return cell;
  
@@ -100,6 +122,62 @@ int segindice;
     return nil;
 }
 
+//Cargo Doctores por Paciente
+
+-(void) loadDoctors{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    idpatient = [NSNumber numberWithInt:pat];
+    
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaDocsporPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta2 = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        
+        
+        for(int i=0;i<respuesta2.count;i++){
+            NSDictionary * diccionario = respuesta2[i];
+            NSDictionary * diccionario2=  diccionario[@"doctor"];
+            NSNumber * IDDoctor= diccionario2[@"iddoctor"];
+            NSString * namedoctor= diccionario2[@"name"];
+            NSString * lastnamedoctor= diccionario2[@"last_name"];
+            NSString * specialtydoctor= diccionario2[@"idspecialty"];
+            NSString * clinicdoctor= diccionario2[@"idclinic"];
+            
+            
+            
+            
+            [iddoctors addObject:IDDoctor];
+            [namesdoctor addObject:[NSString stringWithFormat:@"Dr. %@ %@ ", namedoctor, lastnamedoctor]];
+            [specialtiesdoctor addObject:specialtydoctor];
+            [clinicsdoctor addObject:clinicdoctor];
+            
+        }
+        
+        
+        
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+}
 
 
 //Cargo Citas por Paciente
@@ -157,7 +235,7 @@ int segindice;
             NSString *horaf= [dateFormat3 stringFromDate:dateEightHoursAhead2];
             
             [idsappointments addObject:IDAppointment];
-            [dates addObject:date];
+            [dates addObject:fecha];
             [start_times addObject:horai];
             [end_times addObject:horaf];
 
