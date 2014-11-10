@@ -52,6 +52,9 @@ int segindice;
 {
     [super viewDidLoad];
     
+}
+
+-(void) viewWillAppear:(BOOL)animated{
     self.table.dataSource=self;
     self.table.delegate=self;
     // Do any additional setup after loading the view.
@@ -131,12 +134,12 @@ int segindice;
         
           ((MisCitasTableViewCell*)cell).lblEspecialidad.text = [SpecialtyAppointment objectAtIndex:indexPath.row];
         
-        NSDate *mydate =dates2[indexPath.row];
+        NSDate *mydate =[dates2 objectAtIndex: indexPath.row];
         NSDate *today =[NSDate date];
         
         if([mydate compare:today] == NSOrderedAscending){
-            ((MisCitasTableViewCell*)cell).status.alpha = 1;
-        } else  ((MisCitasTableViewCell*)cell).status.alpha = 0;
+            ((MisCitasTableViewCell*)cell).status.alpha = 0;
+        } else  ((MisCitasTableViewCell*)cell).status.alpha = 1;
         
         return cell;
     }
@@ -258,7 +261,7 @@ int segindice;
             
             [idsappointments addObject:IDAppointment];
             [dates addObject:fecha];
-            [dates addObject:fechareal];
+            [dates2 addObject:fechareal];
             [start_times addObject:horai];
             [end_times addObject:horaf];
 
