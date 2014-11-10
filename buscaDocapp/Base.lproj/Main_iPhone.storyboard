@@ -793,11 +793,11 @@
             </objects>
             <point key="canvasLocation" x="192" y="1486"/>
         </scene>
-        <!--General-->
+        <!--Búsqueda-->
         <scene sceneID="X9Q-ni-4Ve">
             <objects>
                 <navigationController definesPresentationContext="YES" id="y91-dM-3nI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="General" image="clinic2.png" id="ww7-pu-kX8"/>
+                    <tabBarItem key="tabBarItem" title="Búsqueda" image="search_property-32.png" id="ww7-pu-kX8"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ce-vY-yPN">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
@@ -814,7 +814,7 @@
             </objects>
             <point key="canvasLocation" x="1481" y="-1924"/>
         </scene>
-        <!--Busqueda General-->
+        <!--Búsqueda Avanzada-->
         <scene sceneID="zpZ-Sw-rvi">
             <objects>
                 <viewController id="hgG-g8-jN8" customClass="BusquedaGeneralViewController" sceneMemberID="viewController">
@@ -975,7 +975,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Busqueda General" id="uS2-h3-kpZ"/>
+                    <navigationItem key="navigationItem" title="Búsqueda Avanzada" id="uS2-h3-kpZ">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="1o6-CP-Njz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="hgG-g8-jN8" id="Omz-Xu-OqG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="SegmentedShift" destination="SxA-t3-zK9" id="4eR-sg-3uV"/>
                         <outlet property="lblDia" destination="UKU-e7-41i" id="r9X-C3-3UJ"/>
@@ -1044,7 +1051,7 @@
         <scene sceneID="GaE-Dc-amY">
             <objects>
                 <navigationController definesPresentationContext="YES" id="f1K-DG-TPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Especialidad" image="medical77.png" id="0cm-JK-d7p"/>
+                    <tabBarItem key="tabBarItem" title="Especialidad" image="stethoscope-32.png" id="0cm-JK-d7p"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="h9g-9B-KB6">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1314,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VfX-Ta-mtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="-259"/>
+            <point key="canvasLocation" x="3013" y="253"/>
         </scene>
         <!--Disponibilidad-->
         <scene sceneID="90W-g2-3Lu">
@@ -1663,11 +1670,11 @@
             </objects>
             <point key="canvasLocation" x="2345" y="-105"/>
         </scene>
-        <!--Clinicas-->
+        <!--Doctor-->
         <scene sceneID="8fj-8b-8gP">
             <objects>
                 <navigationController definesPresentationContext="YES" id="k0L-pU-d1O" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clinicas" image="heart275.png" id="p7P-WD-Qca"/>
+                    <tabBarItem key="tabBarItem" title="Doctor" image="medical77.png" id="p7P-WD-Qca"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iZN-Pg-pwu">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2470588386" green="0.67450982329999998" blue="0.91764712329999998" alpha="1" colorSpace="deviceRGB"/>
@@ -1677,58 +1684,165 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="aVx-4D-WqZ" kind="relationship" relationship="rootViewController" id="dSu-Wp-MMe"/>
+                        <segue destination="00n-YE-z0k" kind="relationship" relationship="rootViewController" id="bem-fA-nO6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwk-iu-5K9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="854"/>
+            <point key="canvasLocation" x="1561" y="674"/>
         </scene>
-        <!--Clinicas-->
-        <scene sceneID="Xv5-zq-2Dq">
+        <!--Búsqueda por Doctor-->
+        <scene sceneID="8x4-Yg-Fsl">
             <objects>
-                <tableViewController id="aVx-4D-WqZ" customClass="ListaClinicasTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rx7-Px-2Z7">
+                <viewController id="00n-YE-z0k" customClass="BusquedaDoctorViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GdF-Gy-YEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="9X7-Pl-fnN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ebj-tJ-i5i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nV-0W-Tdt">
+                                <rect key="frame" x="0.0" y="241" width="320" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apellido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXM-9d-ENV">
+                                        <rect key="frame" x="35" y="13" width="74" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search-25.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vmx-NQ-GCp">
+                                        <rect key="frame" x="11" y="17" width="16" height="16"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="apellido del doctor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cgX-Ml-3Au">
+                                        <rect key="frame" x="129" y="10" width="192" height="30"/>
+                                        <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgG-g8-jN8" id="Dpq-kO-gOh"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Si conoces el nombre o apellido del doctor busca su disponibilidad aqui:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hP9-Gl-QRW">
+                                <rect key="frame" x="23" y="89" width="307" height="60"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hh-oE-KhJ">
+                                <rect key="frame" x="59" y="328" width="234" height="39"/>
+                                <color key="backgroundColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Buscar Doctores">
+                                    <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ebE-mV-QfP" kind="push" id="Lvy-g2-WfT"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gD-Ck-BIj">
+                                <rect key="frame" x="0.0" y="184" width="320" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwp-3a-iO8">
+                                        <rect key="frame" x="35" y="13" width="73" height="24"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="search-25.png" translatesAutoresizingMaskIntoConstraints="NO" id="gKt-AB-Lrk">
+                                        <rect key="frame" x="11" y="17" width="16" height="16"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="nombre del doctor" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jTs-Qd-94z">
+                                        <rect key="frame" x="130" y="10" width="191" height="30"/>
+                                        <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="hgG-g8-jN8" id="4uY-TM-cpU"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Búsqueda por Doctor" id="esh-No-Yvi"/>
+                    <connections>
+                        <outlet property="LastnameField" destination="cgX-Ml-3Au" id="YqV-2D-8tb"/>
+                        <outlet property="NameField" destination="jTs-Qd-94z" id="0sh-go-0cw"/>
+                        <outlet property="lastnameField" destination="cgX-Ml-3Au" id="JgL-13-p0t"/>
+                        <outlet property="nameField" destination="jTs-Qd-94z" id="llA-dR-gyg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rtg-Du-9ot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="674"/>
+        </scene>
+        <!--Doctores-->
+        <scene sceneID="HKc-ll-IT0">
+            <objects>
+                <tableViewController id="ebE-mV-QfP" customClass="BusquedaDoctorTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" id="CuX-eU-cHh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="celdaClinicas" id="A9p-Xe-Gc0" customClass="CeldaListaClinicasTableViewCell">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="celdaBusquedaDoc" rowHeight="68" id="614-kh-paI" customClass="BusquedaDocTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A9p-Xe-Gc0" id="sif-2t-AyQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="614-kh-paI" id="wKy-bY-qid">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GPX-0E-rSL">
-                                            <rect key="frame" x="25" y="11" width="232" height="21"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-yk-gsR">
+                                            <rect key="frame" x="15" y="9" width="50" height="50"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxm-u8-dGL">
+                                            <rect key="frame" x="81" y="30" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY4-Qs-SDe">
+                                            <rect key="frame" x="81" y="8" width="182" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="lblNombre" destination="GPX-0E-rSL" id="D7z-A5-L1V"/>
+                                    <outlet property="iconDoc" destination="yHd-yk-gsR" id="xWv-HU-CXu"/>
+                                    <outlet property="lblClinica" destination="Dxm-u8-dGL" id="O4g-Ho-imC"/>
+                                    <outlet property="lblNombre" destination="eY4-Qs-SDe" id="5Ag-gs-yZw"/>
+                                    <segue destination="2qg-xT-MvU" kind="push" id="a4Q-g0-3QZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="aVx-4D-WqZ" id="fPA-67-nQn"/>
-                            <outlet property="delegate" destination="aVx-4D-WqZ" id="i9I-cs-rMU"/>
+                            <outlet property="dataSource" destination="ebE-mV-QfP" id="0jy-Vn-Og7"/>
+                            <outlet property="delegate" destination="ebE-mV-QfP" id="0Rb-wO-jr6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Clinicas" id="zAI-sS-DLg"/>
+                    <navigationItem key="navigationItem" title="Doctores" id="R1S-6O-XBX"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a5d-Fe-T2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o8a-Ii-Kgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1947" y="859"/>
+            <point key="canvasLocation" x="2369" y="668"/>
         </scene>
         <!--Mi Perfil-->
         <scene sceneID="Fdu-j1-Tz3">
             <objects>
                 <navigationController definesPresentationContext="YES" id="w1E-1Y-JNp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Mi Perfil" image="doctor_suitecase-26.png" id="5v8-g0-DCB"/>
+                    <tabBarItem key="tabBarItem" title="Mi Perfil" image="heart275.png" id="5v8-g0-DCB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAR-nh-wlg">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2470588386" green="0.67450982329999998" blue="0.91764712329999998" alpha="1" colorSpace="deviceRGB"/>
@@ -1892,45 +2006,16 @@
             </objects>
             <point key="canvasLocation" x="1887" y="1561"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="x98-rt-gwN">
-            <objects>
-                <tableViewController id="Lrk-UP-fd8" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ywT-Xa-3gl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Lh0-XU-mLh">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lh0-XU-mLh" id="HsX-RM-xw3">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Lrk-UP-fd8" id="J2O-vn-bts"/>
-                            <outlet property="delegate" destination="Lrk-UP-fd8" id="fTH-Zp-9az"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OHf-3J-5Zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2431" y="851"/>
-        </scene>
     </scenes>
     <resources>
         <image name="765-default-avatar.png" width="530" height="530"/>
+        <image name="LOGOUT.png" width="32" height="32"/>
         <image name="Tip6.BetterMedicalAppointments.JPG" width="1699" height="1130"/>
         <image name="address_book-26.png" width="26" height="26"/>
         <image name="alarm_clock-24.png" width="24" height="24"/>
         <image name="bigstock-schedule-icon-office-clock-w-29780108.jpg" width="1000" height="996"/>
         <image name="calendar-50.png" width="50" height="50"/>
-        <image name="clinic2.png" width="32" height="32"/>
         <image name="doctor-32.png" width="32" height="32"/>
-        <image name="doctor_suitecase-26.png" width="26" height="26"/>
         <image name="dot.png" width="256" height="256"/>
         <image name="error-26.png" width="26" height="26"/>
         <image name="gift-26.png" width="26" height="26"/>
@@ -1948,7 +2033,9 @@
         <image name="phone_office-26 copia.png" width="26" height="26"/>
         <image name="pin-2.png" width="16" height="16"/>
         <image name="search-25.png" width="25" height="25"/>
+        <image name="search_property-32.png" width="32" height="32"/>
         <image name="stethoscope-26w.png" width="26" height="26"/>
+        <image name="stethoscope-32.png" width="32" height="32"/>
         <image name="today-26.png" width="26" height="26"/>
         <image name="treatment_plan-26.png" width="26" height="26"/>
         <image name="unlocked.png" width="16" height="16"/>
@@ -1961,6 +2048,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="rn3-gf-WfV"/>
-        <segue reference="NDb-A1-jOF"/>
+        <segue reference="a4Q-g0-3QZ"/>
     </inferredMetricsTieBreakers>
 </document>

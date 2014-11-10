@@ -3,12 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[BusquedaDoctorTableViewController viewDidLoad]:BusquedaDoctorTableViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BusquedaDoctorTableViewController prepareForSegue:sender:]:BusquedaDoctorTableViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "filaseleccionada.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[EspecialidadTableViewController recuperoListaEspecialidades]:EspecialidadTableViewController.m">
          <PersistentStrings>
             <PersistentString
                value = "titulos">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__55-[BusquedaGeneralViewController sacoSegurosporPaciente]_block_invoke:BusquedaGeneralViewController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

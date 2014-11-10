@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121E8E001A1133B4006ECD5D /* stethoscope-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 121E8DFF1A1133B4006ECD5D /* stethoscope-50.png */; };
+		121E8E021A113458006ECD5D /* search_property-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 121E8E011A113458006ECD5D /* search_property-32.png */; };
+		121E8E041A1134BB006ECD5D /* stethoscope-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 121E8E031A1134BB006ECD5D /* stethoscope-32.png */; };
+		121E8E081A1138A8006ECD5D /* BusquedaDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121E8E071A1138A8006ECD5D /* BusquedaDoctorViewController.m */; };
+		121E8E0B1A113C48006ECD5D /* BusquedaDoctorTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121E8E0A1A113C48006ECD5D /* BusquedaDoctorTableViewController.m */; };
+		121E8E0E1A113DBC006ECD5D /* BusquedaDocTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 121E8E0D1A113DBC006ECD5D /* BusquedaDocTableViewCell.m */; };
+		121E8E101A11723A006ECD5D /* LOGOUT.png in Resources */ = {isa = PBXBuildFile; fileRef = 121E8E0F1A11723A006ECD5D /* LOGOUT.png */; };
 		126AA5961A0A864F00E7E870 /* MisCitasTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */; };
 		126AA5981A0A86AA00E7E870 /* calendar-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 126AA5971A0A86AA00E7E870 /* calendar-50.png */; };
 		126F2F9019D353AA00AEE535 /* phone-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 126F2F8F19D353AA00AEE535 /* phone-26.png */; };
@@ -139,6 +146,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		121E8DFF1A1133B4006ECD5D /* stethoscope-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stethoscope-50.png"; sourceTree = "<group>"; };
+		121E8E011A113458006ECD5D /* search_property-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_property-32.png"; sourceTree = "<group>"; };
+		121E8E031A1134BB006ECD5D /* stethoscope-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stethoscope-32.png"; sourceTree = "<group>"; };
+		121E8E061A1138A8006ECD5D /* BusquedaDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaDoctorViewController.h; sourceTree = "<group>"; };
+		121E8E071A1138A8006ECD5D /* BusquedaDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaDoctorViewController.m; sourceTree = "<group>"; };
+		121E8E091A113C48006ECD5D /* BusquedaDoctorTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaDoctorTableViewController.h; sourceTree = "<group>"; };
+		121E8E0A1A113C48006ECD5D /* BusquedaDoctorTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaDoctorTableViewController.m; sourceTree = "<group>"; };
+		121E8E0C1A113DBC006ECD5D /* BusquedaDocTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusquedaDocTableViewCell.h; sourceTree = "<group>"; };
+		121E8E0D1A113DBC006ECD5D /* BusquedaDocTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusquedaDocTableViewCell.m; sourceTree = "<group>"; };
+		121E8E0F1A11723A006ECD5D /* LOGOUT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LOGOUT.png; sourceTree = "<group>"; };
 		126AA5941A0A864F00E7E870 /* MisCitasTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MisCitasTableViewCell.h; sourceTree = "<group>"; };
 		126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MisCitasTableViewCell.m; sourceTree = "<group>"; };
 		126AA5971A0A86AA00E7E870 /* calendar-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendar-50.png"; sourceTree = "<group>"; };
@@ -337,6 +354,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121E8E051A113885006ECD5D /* Busqueda por Doctor */ = {
+			isa = PBXGroup;
+			children = (
+				121E8E061A1138A8006ECD5D /* BusquedaDoctorViewController.h */,
+				121E8E071A1138A8006ECD5D /* BusquedaDoctorViewController.m */,
+				121E8E091A113C48006ECD5D /* BusquedaDoctorTableViewController.h */,
+				121E8E0A1A113C48006ECD5D /* BusquedaDoctorTableViewController.m */,
+				121E8E0C1A113DBC006ECD5D /* BusquedaDocTableViewCell.h */,
+				121E8E0D1A113DBC006ECD5D /* BusquedaDocTableViewCell.m */,
+			);
+			name = "Busqueda por Doctor";
+			sourceTree = "<group>";
+		};
 		12A4C95B19D1D31B0064428C /* Sources DatePicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,6 +411,10 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				121E8E0F1A11723A006ECD5D /* LOGOUT.png */,
+				121E8E031A1134BB006ECD5D /* stethoscope-32.png */,
+				121E8E011A113458006ECD5D /* search_property-32.png */,
+				121E8DFF1A1133B4006ECD5D /* stethoscope-50.png */,
 				4DF9F1271A10579F00F87459 /* error-26.png */,
 				126AA5971A0A86AA00E7E870 /* calendar-50.png */,
 				12B083891A0838FB004A3EE4 /* doctor-32.png */,
@@ -615,6 +649,7 @@
 		4DF562BB19943F3A006E7421 /* buscaDocapp */ = {
 			isa = PBXGroup;
 			children = (
+				121E8E051A113885006ECD5D /* Busqueda por Doctor */,
 				12B083831A0834C5004A3EE4 /* Sources EDStarRating */,
 				12A4C95B19D1D31B0064428C /* Sources DatePicker */,
 				4DDB717219C17B0D00217DD3 /* AFNetworking */,
@@ -787,6 +822,8 @@
 				126AA5981A0A86AA00E7E870 /* calendar-50.png in Resources */,
 				4DBAACE119F4FE4B00A46B8A /* doctor_suitecase-26.png in Resources */,
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
+				121E8E101A11723A006ECD5D /* LOGOUT.png in Resources */,
+				121E8E041A1134BB006ECD5D /* stethoscope-32.png in Resources */,
 				12A57F5119D203590005827A /* cancel-26.png in Resources */,
 				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
 				4D90E11A19BD862800C1FC60 /* bullet.png in Resources */,
@@ -797,6 +834,8 @@
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
 				12B083881A08382A004A3EE4 /* doctor-25.png in Resources */,
 				12989B4519CCCE0E00F2A2FD /* today-26.png in Resources */,
+				121E8E021A113458006ECD5D /* search_property-32.png in Resources */,
+				121E8E001A1133B4006ECD5D /* stethoscope-50.png in Resources */,
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
 				12FB85CE19FC4C420056CCC7 /* phone_office-26 copia.png in Resources */,
@@ -852,6 +891,7 @@
 				127DD8F919C10CEE0059EA10 /* BusquedaGeneralViewController.m in Sources */,
 				4DD8F80D19A8329E000115EC /* EspecialidadTableViewController.m in Sources */,
 				4DDB71A519C17B0D00217DD3 /* UIImageView+AFNetworking.m in Sources */,
+				121E8E0B1A113C48006ECD5D /* BusquedaDoctorTableViewController.m in Sources */,
 				4DBAACDF19F4422C00A46B8A /* RegistroSeguro.m in Sources */,
 				4DDB719A19C17B0D00217DD3 /* AFHTTPSessionManager.m in Sources */,
 				4DDB71A219C17B0D00217DD3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -859,9 +899,11 @@
 				4DC581AD19C66EF60072DE26 /* CeldaDoctoresEspTableViewCell.m in Sources */,
 				4DDB71A119C17B0D00217DD3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				12A4C96419D1D4910064428C /* HorarioDocViewController.m in Sources */,
+				121E8E081A1138A8006ECD5D /* BusquedaDoctorViewController.m in Sources */,
 				4D97D5D419B3A2F300DB2201 /* LoginViewController.m in Sources */,
 				4DD8F81019A837F1000115EC /* CeldaListaEspecialidades.m in Sources */,
 				4D90E11F19BD88E300C1FC60 /* Registro1ViewController.m in Sources */,
+				121E8E0E1A113DBC006ECD5D /* BusquedaDocTableViewCell.m in Sources */,
 				4DDB719C19C17B0D00217DD3 /* AFSecurityPolicy.m in Sources */,
 				4DF562C619943F3A006E7421 /* AppDelegate.m in Sources */,
 				4DDB719E19C17B0D00217DD3 /* AFURLRequestSerialization.m in Sources */,

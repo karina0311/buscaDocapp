@@ -32,6 +32,7 @@ int variable;
 NSNumber* idespecialidad;
 NSNumber*  iddistrito;
 NSNumber*  idseguro;
+NSNumber*  idpatient;
 NSString *fechatexto;
 NSNumber * turno;
 
@@ -56,7 +57,7 @@ NSNumber * turno;
     idsseguro = [[NSMutableArray alloc] init];
     [self sacoEspecialidades];
     [self sacoDistritos];
-    [self sacoSeguros];
+    [self sacoSegurosporPaciente];
     [self llenoFechas ];
     
     
@@ -266,12 +267,22 @@ NSNumber * turno;
 
 }
 
--(void) sacoSeguros{
+-(void) sacoSegurosporPaciente{
+    
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    idpatient = [NSNumber numberWithInt:pat];
+    
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-    [manager GET:listaseguros parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaSegurosporPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuestaseg = responseObject;
         NSLog(@"JSON: %@", respuestaseg);
         
@@ -333,6 +344,42 @@ NSNumber * turno;
 
 }
 }
+
+
+//Cerrar Sesion
+
+- (IBAction)cerrarSesion:(id)sender {
+    
+    
+    UIAlertView* alertView;
+        alertView = [[UIAlertView alloc] initWithTitle:@"Cerrar Sesión"
+                                               message:@"Está seguro que desea cerrar sesión?"
+                                              delegate:self
+                                     cancelButtonTitle:@"No"
+                                     otherButtonTitles:@"Si",nil];
+        [alertView show];
+        
+    
+
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex==1){
+        
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"]; 
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"NombreUsuario"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"ContraseñaUsuario"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
+    
+}
+
 
 //Para pasar los datos a la otra ventana!
 
