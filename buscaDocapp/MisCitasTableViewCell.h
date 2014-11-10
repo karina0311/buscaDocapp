@@ -16,5 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblClinica;
 @property (weak, nonatomic) IBOutlet UILabel *lblEspecialidad;
 @property (weak, nonatomic) IBOutlet UIImageView *avatarCita;
+@property (weak, nonatomic) IBOutlet UIImageView *status;
 
 @end

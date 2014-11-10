@@ -125,6 +125,7 @@
 		4DF562DA19943F3A006E7421 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF562B919943F3A006E7421 /* UIKit.framework */; };
 		4DF562E219943F3A006E7421 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4DF562E019943F3A006E7421 /* InfoPlist.strings */; };
 		4DF562E419943F3A006E7421 /* buscaDocappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF562E319943F3A006E7421 /* buscaDocappTests.m */; };
+		4DF9F1281A10579F00F87459 /* error-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF9F1271A10579F00F87459 /* error-26.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -309,6 +310,7 @@
 		4DF562DF19943F3A006E7421 /* buscaDocappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "buscaDocappTests-Info.plist"; sourceTree = "<group>"; };
 		4DF562E119943F3A006E7421 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4DF562E319943F3A006E7421 /* buscaDocappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = buscaDocappTests.m; sourceTree = "<group>"; };
+		4DF9F1271A10579F00F87459 /* error-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error-26.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,6 +381,7 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				4DF9F1271A10579F00F87459 /* error-26.png */,
 				126AA5971A0A86AA00E7E870 /* calendar-50.png */,
 				12B083891A0838FB004A3EE4 /* doctor-32.png */,
 				12B083871A08382A004A3EE4 /* doctor-25.png */,
@@ -759,6 +762,7 @@
 				12989B4919CCCFDA00F2A2FD /* stethoscope-26w.png in Resources */,
 				12989B3D19CCC70F00F2A2FD /* ambulance-24.png in Resources */,
 				12B0838A1A0838FB004A3EE4 /* doctor-32.png in Resources */,
+				4DF9F1281A10579F00F87459 /* error-26.png in Resources */,
 				4D90E11219BD851200C1FC60 /* locked.png in Resources */,
 				12989B3419CCBA7200F2A2FD /* female50.png in Resources */,
 				12989B3B19CCC6D500F2A2FD /* hospital-3-26.png in Resources */,

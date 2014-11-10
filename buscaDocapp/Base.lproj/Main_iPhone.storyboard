@@ -1855,6 +1855,9 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="error-26.png" translatesAutoresizingMaskIntoConstraints="NO" id="pqU-zs-MVC">
+                                                    <rect key="frame" x="225" y="40" width="25" height="25"/>
+                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -1863,6 +1866,7 @@
                                             <outlet property="lblEspecialidad" destination="tS7-s1-bVJ" id="Rvy-RW-LRM"/>
                                             <outlet property="lblFecha" destination="snS-VV-l7D" id="QS1-Oc-EYZ"/>
                                             <outlet property="lblHora" destination="3tX-Ht-Qum" id="KJO-VI-IXH"/>
+                                            <outlet property="status" destination="pqU-zs-MVC" id="Uoe-yU-SL3"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="29" id="y4n-iZ-9I7">
@@ -1886,7 +1890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md9-M4-n7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1887" y="1563"/>
+            <point key="canvasLocation" x="1887" y="1561"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="x98-rt-gwN">
@@ -1928,6 +1932,7 @@
         <image name="doctor-32.png" width="32" height="32"/>
         <image name="doctor_suitecase-26.png" width="26" height="26"/>
         <image name="dot.png" width="256" height="256"/>
+        <image name="error-26.png" width="26" height="26"/>
         <image name="gift-26.png" width="26" height="26"/>
         <image name="heart275.png" width="32" height="32"/>
         <image name="home.png" width="16" height="16"/>

@@ -34,6 +34,7 @@ NSMutableArray *clinicsdoctor;
 NSMutableArray *specialtiesdoctor;
 NSMutableArray *idsappointments;
 NSMutableArray *dates;
+NSMutableArray *dates2;
 NSMutableArray *start_times;
 NSMutableArray *end_times;
 int segindice;
@@ -56,6 +57,7 @@ int segindice;
     // Do any additional setup after loading the view.
     idsappointments = [[NSMutableArray alloc] init];
     dates = [[NSMutableArray alloc] init];
+    dates2 = [[NSMutableArray alloc] init];
     start_times = [[NSMutableArray alloc] init];
     end_times = [[NSMutableArray alloc] init];
     
@@ -128,6 +130,13 @@ int segindice;
         ((MisCitasTableViewCell*)cell).lblClinica.text = [clinicAppointment objectAtIndex:indexPath.row];
         
           ((MisCitasTableViewCell*)cell).lblEspecialidad.text = [SpecialtyAppointment objectAtIndex:indexPath.row];
+        
+        NSDate *mydate =dates2[indexPath.row];
+        NSDate *today =[NSDate date];
+        
+        if([mydate compare:today] == NSOrderedAscending){
+            ((MisCitasTableViewCell*)cell).status.alpha = 1;
+        } else  ((MisCitasTableViewCell*)cell).status.alpha = 0;
         
         return cell;
     }
@@ -249,6 +258,7 @@ int segindice;
             
             [idsappointments addObject:IDAppointment];
             [dates addObject:fecha];
+            [dates addObject:fechareal];
             [start_times addObject:horai];
             [end_times addObject:horaf];
 
