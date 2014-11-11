@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface Registro1ViewController : UIViewController
+#import "Registro3ViewController.h"
+@interface Registro1ViewController : UIViewController<LoginDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *txtNombre;
 @property (weak, nonatomic) IBOutlet UITextField *txtApellidoP;

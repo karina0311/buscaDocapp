@@ -15,6 +15,8 @@
 
 @end
 
+typedef void (^myCompletion)(BOOL);
+
 @implementation Registro3ViewController
 
 NSMutableArray *respuesta1;
@@ -154,9 +156,20 @@ NSString * emailpaciente;
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
     if (buttonIndex == [alertView cancelButtonIndex]){
-         [self performSegueWithIdentifier:@"regresaLogin" sender:self];
+        [self myMethod:^(BOOL finished) {
+            if(finished){
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            }
+        }];
+        
     }
    
+}
+
+-(void) myMethod:(myCompletion) compblock {
+    [self.delegate regresarLogin];
+    compblock (YES);
+    
 }
 
 @end

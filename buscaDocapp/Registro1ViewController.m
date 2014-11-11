@@ -64,6 +64,11 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
+-(void)regresarLogin{
+    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
+                                                  bundle:nil];
+    UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"];
+        [self presentViewController:vc animated:YES completion:nil];
+}
 
 @end

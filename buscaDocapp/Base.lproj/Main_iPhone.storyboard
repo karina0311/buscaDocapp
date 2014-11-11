@@ -5,6 +5,23 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="e3y-92-a9t">
+            <objects>
+                <navigationController id="5qO-8E-fHL" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="lzj-EO-Uqg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="imM-z0-NYw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vvd-P2-Y3F" kind="relationship" relationship="rootViewController" id="8bW-87-Cbf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KtE-7M-bL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="186"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -13,7 +30,7 @@
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -83,7 +100,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Vvd-P2-Y3F" kind="modal" id="Tdg-1R-LQQ"/>
+                                    <segue destination="5qO-8E-fHL" kind="modal" id="fne-Bd-nK6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eres Nuevo?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bnc-wL-o4z">
@@ -260,7 +277,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="fsq-kv-vTg" kind="modal" id="ieR-m0-7YJ"/>
+                                    <segue destination="fsq-kv-vTg" kind="push" id="ieR-m0-7YJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1er Paso: Ingresa tus datos personales" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-QG-qfK">
@@ -425,7 +442,7 @@
                                 </state>
                                 <connections>
                                     <action selector="seApretoBoton:" destination="fsq-kv-vTg" eventType="touchUpInside" id="wqR-9D-EHt"/>
-                                    <segue destination="Jnf-iM-qB8" kind="modal" identifier="idsegue" id="rn3-gf-WfV"/>
+                                    <segue destination="Jnf-iM-qB8" kind="push" identifier="idsegue" id="rn3-gf-WfV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2do Paso: Ingresa tus datos de contacto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZm-2p-h3i">
@@ -485,7 +502,7 @@
                                 </state>
                                 <connections>
                                     <action selector="seApretoBotonSeguros:" destination="fsq-kv-vTg" eventType="touchUpInside" id="l3e-CK-P3q"/>
-                                    <segue destination="GKk-l7-CCW" kind="modal" identifier="idsegue2" id="2um-td-EZR"/>
+                                    <segue destination="GKk-l7-CCW" kind="push" identifier="idsegue2" id="2um-td-EZR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -629,7 +646,7 @@
                                 <connections>
                                     <action selector="seApretoBoton:" destination="fsq-kv-vTg" eventType="touchUpInside" id="8IT-qO-rBg"/>
                                     <action selector="seApretoSiguiente:" destination="GKk-l7-CCW" eventType="touchUpInside" id="hIA-bl-2AH"/>
-                                    <segue destination="Jnf-iM-qB8" kind="modal" identifier="idsegue" id="dF5-oR-9kJ"/>
+                                    <segue destination="Jnf-iM-qB8" kind="push" identifier="idsegue" id="dF5-oR-9kJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luY-bi-maA">
@@ -647,6 +664,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gOE-4X-t8H"/>
                     <connections>
                         <outlet property="seguro1" destination="ySw-Qy-v81" id="dXS-lH-wvK"/>
                         <outlet property="seguro2" destination="Dc5-wE-Tav" id="RIu-H7-Mcn"/>
@@ -751,7 +769,6 @@
                                 </state>
                                 <connections>
                                     <action selector="btnCreatuCuenta:" destination="Jnf-iM-qB8" eventType="touchUpInside" id="HOG-0R-5Cf"/>
-                                    <segue destination="vXZ-lx-hvc" kind="modal" identifier="regresaLogin" id="4no-7U-KNe"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="cPV-pX-JKO">
@@ -2047,7 +2064,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="rn3-gf-WfV"/>
+        <segue reference="dF5-oR-9kJ"/>
         <segue reference="a4Q-g0-3QZ"/>
     </inferredMetricsTieBreakers>
 </document>
