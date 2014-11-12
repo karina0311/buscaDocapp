@@ -155,14 +155,20 @@ NSString * emailpaciente;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    if (buttonIndex == [alertView cancelButtonIndex]){
+    UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
+                                                  bundle:nil];
+    UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"];
+    
+       [self presentViewController:vc animated:YES completion:nil];
+
+    /*if (buttonIndex == [alertView cancelButtonIndex]){
         [self myMethod:^(BOOL finished) {
             if(finished){
                 [self.navigationController popToRootViewControllerAnimated:YES];
             }
         }];
         
-    }
+    }*/
    
 }
 
