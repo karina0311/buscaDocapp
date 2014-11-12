@@ -46,6 +46,7 @@ NSNumber*  idseguro1;
     [self sacoSeguros];
     
     self.txtSeguro.delegate=self;
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

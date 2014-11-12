@@ -29,7 +29,7 @@
     [super viewDidLoad];
 
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
-    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
     [self.view addGestureRecognizer:tap];
 
 

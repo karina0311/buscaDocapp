@@ -51,6 +51,7 @@ int variable;
     self.seguro2.delegate=self;
     self.seguro3.delegate=self;
     self.seguro4.delegate=self;
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

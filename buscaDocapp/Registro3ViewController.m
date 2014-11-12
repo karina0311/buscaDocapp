@@ -43,7 +43,7 @@ NSString * emailpaciente;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
-    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
     
 }
 
