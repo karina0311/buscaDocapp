@@ -37,7 +37,7 @@ NSDictionary *consulta;
     
     [super viewDidLoad];
    
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:nil action:nil];
     
     
     names = [[NSMutableArray alloc] init];

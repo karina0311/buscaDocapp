@@ -1576,7 +1576,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="F5a-3U-xe3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Distrito" image="hospital21.png" id="l7F-r0-LgI"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xyz-q5-IbU">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="Button-Back-icon.png" id="Xyz-q5-IbU">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.24705883860588074" green="0.67450982332229614" blue="0.91764712333679199" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1824,16 +1824,16 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHd-yk-gsR">
                                             <rect key="frame" x="15" y="0.0" width="50" height="50"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxm-u8-dGL">
-                                            <rect key="frame" x="81" y="0.0" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Doctor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eY4-Qs-SDe">
-                                            <rect key="frame" x="81" y="0.0" width="182" height="21"/>
+                                            <rect key="frame" x="81" y="8" width="182" height="21"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="15"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dxm-u8-dGL">
+                                            <rect key="frame" x="81" y="29" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -1978,12 +1978,6 @@
                                                     <color key="textColor" red="0.066666670139999995" green="0.2823529541" blue="0.39607846740000002" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Especialidad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-s1-bVJ">
-                                                    <rect key="frame" x="48" y="124" width="139" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2X-NX-O5C">
                                                     <rect key="frame" x="48" y="30" width="182" height="22"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
@@ -1993,6 +1987,12 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="error-26.png" translatesAutoresizingMaskIntoConstraints="NO" id="pqU-zs-MVC">
                                                     <rect key="frame" x="216" y="47" width="25" height="25"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Especialidad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tS7-s1-bVJ">
+                                                    <rect key="frame" x="48" y="48" width="86" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -2025,7 +2025,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md9-M4-n7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="1559"/>
+            <point key="canvasLocation" x="1889" y="1558"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1hh-em-qWH">
@@ -2049,6 +2049,7 @@
     </scenes>
     <resources>
         <image name="765-default-avatar.png" width="530" height="530"/>
+        <image name="Button-Back-icon.png" width="32" height="32"/>
         <image name="LOGOUT.png" width="32" height="32"/>
         <image name="Tip6.BetterMedicalAppointments.JPG" width="1699" height="1130"/>
         <image name="address_book-26.png" width="26" height="26"/>
@@ -2088,6 +2089,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="dF5-oR-9kJ"/>
-        <segue reference="a4Q-g0-3QZ"/>
+        <segue reference="NDb-A1-jOF"/>
     </inferredMetricsTieBreakers>
 </document>

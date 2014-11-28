@@ -46,7 +46,14 @@ NSDictionary *consulta;
 {
     [super viewDidLoad];
     [self sacoEspecialidades];
-        self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@""
+                                                                   style:UIBarButtonItemStyleBordered
+                                                                  target:nil
+                                                                  action:nil];
+    
+    [self.navigationItem setBackBarButtonItem: backButton];
+    
     names = [[NSMutableArray alloc] init];
     lastnames = [[NSMutableArray alloc] init];
     iddoctors = [[NSMutableArray alloc] init];

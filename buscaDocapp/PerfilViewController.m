@@ -392,6 +392,20 @@ int segindice;
     
 }
 
+/*****************************/
+
+-(void) SacainfoPaciente{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    NSNumber* idpatient = [NSNumber numberWithInt:pat];
+
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+
+}
+
+
+
 /********************************/
 - (IBAction)cambioPerfil:(UISegmentedControl *)sender {
     
