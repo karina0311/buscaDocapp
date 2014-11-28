@@ -51,6 +51,7 @@ int segindice;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     
 }
 
@@ -117,6 +118,22 @@ int segindice;
         MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         
         ((MiDoctorTableViewCell*)cell).lblNombre.text = [NSString stringWithFormat:@"%@",(NSString*)namesdoctor[indexPath.row]];
+        
+        ((MiDoctorTableViewCell*)cell).ratingDoc.backgroundColor  = [UIColor clearColor];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.starImage = [[UIImage imageNamed:@"christmas_star-25"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.starHighlightedImage = [[UIImage imageNamed:@"christmas_star-26"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.maxRating = 5.0;
+        ((MiDoctorTableViewCell*)cell).ratingDoc.delegate = self;
+        ((MiDoctorTableViewCell*)cell).ratingDoc.horizontalMargin = 15.0;
+        ((MiDoctorTableViewCell*)cell).ratingDoc.editable=NO;
+        
+        ((MiDoctorTableViewCell*)cell).ratingDoc.rating= 3.5;
+
+        
+        
+        ((MiDoctorTableViewCell*)cell).ratingDoc.displayMode=EDStarRatingDisplayHalf;
+        [((MiDoctorTableViewCell*)cell).ratingDoc  setNeedsDisplay];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.tintColor = [[UIColor alloc] initWithRed:255.0/255.0 green:153.0/255.0 blue:51.0/255.0 alpha:1];
         
         //((MiDoctorTableViewCell*)cell).lblClinica.text = [clinicsdoctor objectAtIndex:indexPath.row];
         

@@ -57,6 +57,10 @@
 		12B0838D1A083B14004A3EE4 /* MiDoctorTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */; };
 		12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */; };
 		12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */; };
+		12C345601A27F67500C31B80 /* christmas_star-50-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C3455F1A27F67500C31B80 /* christmas_star-50-2.png */; };
+		12C345621A27F69300C31B80 /* christmas_star-50-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C345611A27F69300C31B80 /* christmas_star-50-3.png */; };
+		12C345641A27F7BE00C31B80 /* christmas_star-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C345631A27F7BE00C31B80 /* christmas_star-25.png */; };
+		12C345661A27F7C300C31B80 /* christmas_star-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C345651A27F7C300C31B80 /* christmas_star-26.png */; };
 		12E9D58B19F71B7000162D79 /* ReservasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12E9D58A19F71B7000162D79 /* ReservasViewController.m */; };
 		12FB85CC19FC47320056CCC7 /* punt_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12FB85CB19FC47320056CCC7 /* punt_01.jpg */; };
 		12FB85CE19FC4C420056CCC7 /* phone_office-26 copia.png in Resources */ = {isa = PBXBuildFile; fileRef = 12FB85CD19FC4C420056CCC7 /* phone_office-26 copia.png */; };
@@ -212,6 +216,10 @@
 		12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MiDoctorTableViewCell.m; sourceTree = "<group>"; };
 		12B9824719CC992900E5CCF1 /* blog_image_frame-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blog_image_frame-2.png"; sourceTree = "<group>"; };
 		12B9824A19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Tip6.BetterMedicalAppointments.JPG; sourceTree = "<group>"; };
+		12C3455F1A27F67500C31B80 /* christmas_star-50-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "christmas_star-50-2.png"; sourceTree = "<group>"; };
+		12C345611A27F69300C31B80 /* christmas_star-50-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "christmas_star-50-3.png"; sourceTree = "<group>"; };
+		12C345631A27F7BE00C31B80 /* christmas_star-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "christmas_star-25.png"; sourceTree = "<group>"; };
+		12C345651A27F7C300C31B80 /* christmas_star-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "christmas_star-26.png"; sourceTree = "<group>"; };
 		12E9D58919F71B7000162D79 /* ReservasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReservasViewController.h; sourceTree = "<group>"; };
 		12E9D58A19F71B7000162D79 /* ReservasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReservasViewController.m; sourceTree = "<group>"; };
 		12FB85CB19FC47320056CCC7 /* punt_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = punt_01.jpg; sourceTree = "<group>"; };
@@ -456,6 +464,10 @@
 		4D8A097319FDE85A003232C9 /* Mi Perfil */ = {
 			isa = PBXGroup;
 			children = (
+				12C345651A27F7C300C31B80 /* christmas_star-26.png */,
+				12C345631A27F7BE00C31B80 /* christmas_star-25.png */,
+				12C345611A27F69300C31B80 /* christmas_star-50-3.png */,
+				12C3455F1A27F67500C31B80 /* christmas_star-50-2.png */,
 				4D8A097419FDE883003232C9 /* PerfilViewController.h */,
 				4D8A097519FDE883003232C9 /* PerfilViewController.m */,
 				12B0838B1A083B14004A3EE4 /* MiDoctorTableViewCell.h */,
@@ -782,6 +794,7 @@
 				4D8A097019FDE529003232C9 /* purchase_order-25.png in Resources */,
 				12A4264D19FC0ACA002F5B24 /* People-Doctor-Female-icon.png in Resources */,
 				12A4265119FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg in Resources */,
+				12C345601A27F67500C31B80 /* christmas_star-50-2.png in Resources */,
 				4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */,
 				12989B4719CCCEFC00F2A2FD /* hospital-3-26w.png in Resources */,
 				12989B3F19CCC93F00F2A2FD /* overtime-25.png in Resources */,
@@ -789,6 +802,7 @@
 				12A57F4F19D202F30005827A /* ok-26.png in Resources */,
 				4D8A096E19FDB9C4003232C9 /* Button-Back-icon.png in Resources */,
 				126F2F9419D3546B00AEE535 /* new_post-26.png in Resources */,
+				12C345641A27F7BE00C31B80 /* christmas_star-25.png in Resources */,
 				12A4264B19FC0A95002F5B24 /* Doctor-Male-icon.png in Resources */,
 				12B9824819CC992900E5CCF1 /* blog_image_frame-2.png in Resources */,
 				4DF562CC19943F3A006E7421 /* Main_iPad.storyboard in Resources */,
@@ -829,6 +843,7 @@
 				4D90E11A19BD862800C1FC60 /* bullet.png in Resources */,
 				4DC581B119C673570072DE26 /* maledoctor.png in Resources */,
 				12989B4119CCC9F800F2A2FD /* stethoscope-24.png in Resources */,
+				12C345661A27F7C300C31B80 /* christmas_star-26.png in Resources */,
 				4D90E11019BD850B00C1FC60 /* key.png in Resources */,
 				4D90E11819BD856300C1FC60 /* pin-2.png in Resources */,
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
@@ -845,6 +860,7 @@
 				4D8A097219FDE827003232C9 /* 765-default-avatar.png in Resources */,
 				127DD8FB19C110390059EA10 /* search-25.png in Resources */,
 				126F2F9C19D3552B00AEE535 /* treatment_plan-26.png in Resources */,
+				12C345621A27F69300C31B80 /* christmas_star-50-3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
