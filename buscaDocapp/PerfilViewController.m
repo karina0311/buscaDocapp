@@ -23,6 +23,7 @@ NSMutableArray *respuesta;
 NSMutableArray *respuesta2;
 NSMutableArray *respuesta3;
 NSMutableArray *respuesta4;
+NSDictionary  *respuesta5;
 
 
 NSMutableArray *clinicAppointment;
@@ -37,6 +38,14 @@ NSMutableArray *dates;
 NSMutableArray *dates2;
 NSMutableArray *start_times;
 NSMutableArray *end_times;
+
+
+NSString *name;
+NSString *lastname;
+NSString *maidenname;
+NSString *email;
+
+
 int segindice;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -72,6 +81,10 @@ int segindice;
     namesdoctor=[[NSMutableArray alloc] init];
     clinicsdoctor=[[NSMutableArray alloc] init];
     specialtiesdoctor=[[NSMutableArray alloc] init];
+    self.icon.layer.cornerRadius = self.icon.frame.size.width / 2;
+    self.icon.clipsToBounds = YES;
+    
+    [self loadPatient];
     [self loadAppointments];
 
 }
@@ -94,10 +107,8 @@ int segindice;
     
     int secciones;
     if(segindice==0){
-        secciones=1;
-    }else if (segindice==1){
         secciones = iddoctors.count;
-    } else if (segindice==2){
+    }else if (segindice==1){
         secciones= idsappointments.count;
     }
     
@@ -109,11 +120,6 @@ int segindice;
     UITableViewCell *cell;
     
     if(segindice==0){
-        static NSString *MyIdentifier = @"DoctorCell";
-        MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
-        return cell;
-    }else if (segindice==1){
-        
         static NSString *MyIdentifier = @"DoctorCell";
         MiDoctorTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         
@@ -138,8 +144,7 @@ int segindice;
         //((MiDoctorTableViewCell*)cell).lblClinica.text = [clinicsdoctor objectAtIndex:indexPath.row];
         
         return cell;
- 
-    } else if (segindice==2){
+    }else if (segindice==1){
         static NSString *MyIdentifier = @"CitaCell";
         MisCitasTableViewCell *cell = [self.table dequeueReusableCellWithIdentifier:MyIdentifier];
         
@@ -149,7 +154,7 @@ int segindice;
         
         ((MisCitasTableViewCell*)cell).lblClinica.text = [clinicAppointment objectAtIndex:indexPath.row];
         
-          ((MisCitasTableViewCell*)cell).lblEspecialidad.text = [SpecialtyAppointment objectAtIndex:indexPath.row];
+        ((MisCitasTableViewCell*)cell).lblEspecialidad.text = [SpecialtyAppointment objectAtIndex:indexPath.row];
         
         NSDate *mydate =[dates2 objectAtIndex: indexPath.row];
         NSDate *today =[NSDate date];
@@ -159,6 +164,8 @@ int segindice;
         } else  ((MisCitasTableViewCell*)cell).status.alpha = 1;
         
         return cell;
+        
+ 
     }
     return cell;
 }
@@ -392,6 +399,7 @@ int segindice;
     
 }
 
+<<<<<<< Updated upstream
 /*****************************/
 
 -(void) SacainfoPaciente{
@@ -405,6 +413,48 @@ int segindice;
 }
 
 
+=======
+
+-(void) loadPatient{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    idpatient = [NSNumber numberWithInt:pat];
+    
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaInfoPaciente parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta5 = responseObject;
+        NSLog(@"JSON: %@", respuesta5);
+        
+        NSDictionary * diccionario2=  respuesta5[@"patient"];
+        name= diccionario2[@"name"];
+        lastname= diccionario2[@"last_name"];
+        maidenname= diccionario2[@"maiden_name"];
+        
+        self.namePatient.text=[NSString stringWithFormat:@"%@ %@ ", name, lastname];
+        
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+
+
+}
+>>>>>>> Stashed changes
 
 /********************************/
 - (IBAction)cambioPerfil:(UISegmentedControl *)sender {
@@ -417,11 +467,7 @@ int segindice;
         segindice=1;
         [self.table reloadData];
         
-    }else if([sender selectedSegmentIndex]==2){
-        segindice=2;
-        [self.table reloadData];
-        
-}
+    }
 
 }
 

@@ -1894,10 +1894,10 @@
                                 <rect key="frame" x="0.0" y="63" width="320" height="193"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="765-default-avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-M8-Nja">
-                                        <rect key="frame" x="120" y="33" width="80" height="88"/>
+                                        <rect key="frame" x="120" y="13" width="80" height="88"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Paciente" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-Fv-v19">
-                                        <rect key="frame" x="34" y="143" width="266" height="25"/>
+                                        <rect key="frame" x="34" y="109" width="266" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1908,7 +1908,6 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nxp-MD-RIf">
                                 <rect key="frame" x="0.0" y="255" width="330" height="29"/>
                                 <segments>
-                                    <segment title="Mis Datos"/>
                                     <segment title="Mis Doctores"/>
                                     <segment title="Mis Citas"/>
                                 </segments>
@@ -2020,6 +2019,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mi Perfil" id="fPN-jb-UyL"/>
                     <connections>
+                        <outlet property="icon" destination="ydK-M8-Nja" id="oor-cl-OnT"/>
+                        <outlet property="namePatient" destination="Nlq-Fv-v19" id="f6s-qm-GPJ"/>
                         <outlet property="table" destination="Ffk-9g-9Gk" id="WmL-kN-Ad0"/>
                     </connections>
                 </viewController>
