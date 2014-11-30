@@ -493,6 +493,36 @@
             endingLineNumber = "285"
             landmarkName = "-RegistroSeguros"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RegistroSeguro RegistroSeguros]"
+                  moduleName = "buscaDocapp"
+                  urlString = "file:///Users/nancyramirez/Documents/Karina/buscaDocapp/buscaDocapp/RegistroSeguro.m"
+                  timestampString = "439024196.944966"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "285"
+                  endingLineNumber = "285"
+                  offsetFromSymbolStart = "410">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__33-[RegistroSeguro RegistroSeguros]_block_invoke"
+                  moduleName = "buscaDocapp"
+                  urlString = "file:///Users/nancyramirez/Documents/Karina/buscaDocapp/buscaDocapp/RegistroSeguro.m"
+                  timestampString = "439024196.94512"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "285"
+                  endingLineNumber = "285"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
