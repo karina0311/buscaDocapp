@@ -11,6 +11,7 @@
 #import "MisCitasTableViewCell.h"
 #import "UIImageView+AFNetworking.h"
 #import "URLS json.h"
+#import "CalificarDoctorViewController.h"
 
 @interface PerfilViewController ()
 
@@ -44,6 +45,9 @@ NSString *name;
 NSString *lastname;
 NSString *maidenname;
 NSString *email;
+NSString *cellphone;
+NSString *username;
+NSString *birthday;
 
 
 int segindice;
@@ -86,6 +90,7 @@ int segindice;
     
     [self loadPatient];
     [self loadAppointments];
+    [self.segmented setSelectedSegmentIndex:0];
 
 }
 
@@ -126,8 +131,8 @@ int segindice;
         ((MiDoctorTableViewCell*)cell).lblNombre.text = [NSString stringWithFormat:@"%@",(NSString*)namesdoctor[indexPath.row]];
         
         ((MiDoctorTableViewCell*)cell).ratingDoc.backgroundColor  = [UIColor clearColor];
-        ((MiDoctorTableViewCell*)cell).ratingDoc.starImage = [[UIImage imageNamed:@"christmas_star-25"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
-        ((MiDoctorTableViewCell*)cell).ratingDoc.starHighlightedImage = [[UIImage imageNamed:@"christmas_star-26"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.starImage = [[UIImage imageNamed:@"starvacia"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+        ((MiDoctorTableViewCell*)cell).ratingDoc.starHighlightedImage = [[UIImage imageNamed:@"starllena"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
         ((MiDoctorTableViewCell*)cell).ratingDoc.maxRating = 5.0;
         ((MiDoctorTableViewCell*)cell).ratingDoc.delegate = self;
         ((MiDoctorTableViewCell*)cell).ratingDoc.horizontalMargin = 15.0;
@@ -399,28 +404,18 @@ int segindice;
     
 }
 
-<<<<<<< Updated upstream
+
 /*****************************/
 
--(void) SacainfoPaciente{
-    
-    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
-    int pat= [datos integerForKey:@"IDPatient"];
-    NSNumber* idpatient = [NSNumber numberWithInt:pat];
-
-    NSDictionary *consulta = @{@"idpatient": idpatient};
-
-}
 
 
-=======
 
 -(void) loadPatient{
     
     NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
     int pat= [datos integerForKey:@"IDPatient"];
+    username = [datos stringForKey:@"NombreUsuario"];
     idpatient = [NSNumber numberWithInt:pat];
-    
     
     NSDictionary *consulta = @{@"idpatient": idpatient};
     
@@ -437,9 +432,14 @@ int segindice;
         name= diccionario2[@"name"];
         lastname= diccionario2[@"last_name"];
         maidenname= diccionario2[@"maiden_name"];
+        email= diccionario2[@"email"];
+        //cellphone= diccionario2[@"cellphone"];
         
-        self.namePatient.text=[NSString stringWithFormat:@"%@ %@ ", name, lastname];
+        self.namePatient.text=[NSString stringWithFormat:@"%@ %@ %@", name, lastname, maidenname];
         
+        self.correo.text=email;
+        self.user.text=username;
+        //self.cellphone.text=cellphone;
         
         
     }
@@ -454,7 +454,7 @@ int segindice;
 
 
 }
->>>>>>> Stashed changes
+
 
 /********************************/
 - (IBAction)cambioPerfil:(UISegmentedControl *)sender {
@@ -469,6 +469,16 @@ int segindice;
         
     }
 
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    CalificarDoctorViewController *escenadestino = segue.destinationViewController;
+    NSIndexPath *filaseleccionada = [self.table indexPathForSelectedRow];
+    escenadestino.iddoctor = iddoctors[filaseleccionada.row];
+    escenadestino.name = namesdoctor[filaseleccionada.row];
+
+    
 }
 
 @end

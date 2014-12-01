@@ -1862,7 +1862,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="w1E-1Y-JNp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mi Perfil" image="heart275.png" id="5v8-g0-DCB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wAR-nh-wlg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="backButton2.png" id="wAR-nh-wlg">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2470588386" green="0.67450982329999998" blue="0.91764712329999998" alpha="1" colorSpace="deviceRGB"/>
                         <textAttributes key="titleTextAttributes">
@@ -1893,15 +1893,33 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u4b-cR-8bH">
                                 <rect key="frame" x="0.0" y="63" width="320" height="193"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="765-default-avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-M8-Nja">
-                                        <rect key="frame" x="120" y="13" width="80" height="88"/>
-                                    </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre del Paciente" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-Fv-v19">
                                         <rect key="frame" x="34" y="109" width="266" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="765-default-avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="ydK-M8-Nja">
+                                        <rect key="frame" x="120" y="13" width="80" height="88"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correo.png" translatesAutoresizingMaskIntoConstraints="NO" id="abX-GM-Zh6">
+                                        <rect key="frame" x="106" y="135" width="16" height="16"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pen-kb-QkB">
+                                        <rect key="frame" x="130" y="132" width="150" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okN-gp-DU7">
+                                        <rect key="frame" x="130" y="156" width="100" height="21"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                        <color key="textColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checked_user-26.png" translatesAutoresizingMaskIntoConstraints="NO" id="lyg-oS-bji">
+                                        <rect key="frame" x="106" y="159" width="16" height="16"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.039215687659999998" green="0.35294118520000001" blue="0.47450983520000001" alpha="1" colorSpace="deviceRGB"/>
                             </view>
@@ -1928,27 +1946,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Nombre Apellido1 Apellido2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1d-wr-dde">
-                                                    <rect key="frame" x="39" y="0.0" width="214" height="22"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                                    <rect key="frame" x="59" y="8" width="214" height="22"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.050980396568775177" green="0.22352942824363708" blue="0.31372550129890442" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clinica" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCT-CV-qpm">
-                                                    <rect key="frame" x="39" y="19" width="97" height="21"/>
+                                                    <rect key="frame" x="60" y="29" width="97" height="21"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doctor-32.png" translatesAutoresizingMaskIntoConstraints="NO" id="yL0-EL-ljz">
-                                                    <rect key="frame" x="8" y="8" width="25" height="25"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="male50.png" translatesAutoresizingMaskIntoConstraints="NO" id="xfI-rM-o68">
+                                                    <rect key="frame" x="16" y="10" width="35" height="35"/>
                                                 </imageView>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IZr-sq-h5j" customClass="EDStarRating">
-                                                    <rect key="frame" x="102" y="37" width="119" height="21"/>
+                                                    <rect key="frame" x="132" y="38" width="100" height="25"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="avatarDoc" destination="yL0-EL-ljz" id="WR1-GO-gA1"/>
+                                            <outlet property="avatarDoc" destination="xfI-rM-o68" id="y0F-YR-JmO"/>
                                             <outlet property="lblClinica" destination="oCT-CV-qpm" id="4vW-uZ-UIC"/>
                                             <outlet property="lblNombre" destination="x1d-wr-dde" id="QUb-9r-H8b"/>
                                             <outlet property="ratingDoc" destination="IZr-sq-h5j" id="aoA-w5-Mcc"/>
@@ -2019,19 +2037,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Mi Perfil" id="fPN-jb-UyL"/>
                     <connections>
+                        <outlet property="correo" destination="Pen-kb-QkB" id="U1D-tO-uJp"/>
                         <outlet property="icon" destination="ydK-M8-Nja" id="oor-cl-OnT"/>
                         <outlet property="namePatient" destination="Nlq-Fv-v19" id="f6s-qm-GPJ"/>
+                        <outlet property="segmented" destination="Nxp-MD-RIf" id="av0-Jc-xUK"/>
                         <outlet property="table" destination="Ffk-9g-9Gk" id="WmL-kN-Ad0"/>
+                        <outlet property="user" destination="okN-gp-DU7" id="pjp-NF-Dux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Md9-M4-n7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1889" y="1558"/>
+            <point key="canvasLocation" x="1889" y="1557"/>
         </scene>
-        <!--View Controller-->
+        <!--Calificar Doctor-->
         <scene sceneID="1hh-em-qWH">
             <objects>
-                <viewController id="NgL-Fy-rta" sceneMemberID="viewController">
+                <viewController id="NgL-Fy-rta" customClass="CalificarDoctorViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BFI-LE-cSF"/>
                         <viewControllerLayoutGuide type="bottom" id="V4W-6v-XV1"/>
@@ -2039,9 +2060,86 @@
                     <view key="view" contentMode="scaleToFill" id="Hbl-JW-yWr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puedes emitir una calificación a este doctor. Recuerda que tu opinión será importante para tomar de referencia!" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="Pj2-dL-Hsn">
+                                <rect key="frame" x="13" y="88" width="239" height="105"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="thumb_up-32.png" translatesAutoresizingMaskIntoConstraints="NO" id="p0f-pg-8QV">
+                                <rect key="frame" x="266" y="119" width="32" height="32"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScC-pN-Tqn">
+                                <rect key="frame" x="51" y="421" width="234" height="39"/>
+                                <color key="backgroundColor" red="0.11372549830000001" green="0.69019609689999994" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Emitir Calificación">
+                                    <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-G0-gCr">
+                                <rect key="frame" x="0.0" y="310" width="320" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rapidez de Consulta" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7m-KZ-ZeO">
+                                        <rect key="frame" x="35" y="1" width="93" height="46"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medical77.png" translatesAutoresizingMaskIntoConstraints="NO" id="U1f-jG-dRM">
+                                        <rect key="frame" x="10" y="14" width="16" height="16"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-K3-lGj" customClass="EDStarRating">
+                                        <rect key="frame" x="153" y="11" width="150" height="25"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9mT-G2-Xn9">
+                                <rect key="frame" x="0.0" y="255" width="320" height="47"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calidad de Atención" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57n-bv-187">
+                                        <rect key="frame" x="35" y="1" width="88" height="46"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="medical77.png" translatesAutoresizingMaskIntoConstraints="NO" id="n82-hr-Nr9">
+                                        <rect key="frame" x="10" y="14" width="16" height="16"/>
+                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="msf-J7-gnO" customClass="EDStarRating">
+                                        <rect key="frame" x="153" y="9" width="150" height="25"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.88560675180000004" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doctor:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="mE0-au-2RZ">
+                                <rect key="frame" x="13" y="201" width="66" height="19"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" red="0.089973053601556621" green="0.32039569726491585" blue="0.48246173469387754" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dr. Nombre Apellido" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="307" translatesAutoresizingMaskIntoConstraints="NO" id="nKN-Al-EZb">
+                                <rect key="frame" x="87" y="199" width="228" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" red="0.089973053600000005" green="0.3203956973" blue="0.48246173469999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="RHm-eU-hpX"/>
+                    <navigationItem key="navigationItem" title="Calificar Doctor" id="RHm-eU-hpX"/>
+                    <connections>
+                        <outlet property="RatingCalidad" destination="msf-J7-gnO" id="5mT-vc-5BA"/>
+                        <outlet property="RatingRapidez" destination="aOt-K3-lGj" id="8N6-tD-uDc"/>
+                        <outlet property="namelabel" destination="nKN-Al-EZb" id="6fW-1k-b8i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htj-Aw-70D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2055,9 +2153,11 @@
         <image name="Tip6.BetterMedicalAppointments.JPG" width="1699" height="1130"/>
         <image name="address_book-26.png" width="26" height="26"/>
         <image name="alarm_clock-24.png" width="24" height="24"/>
+        <image name="backButton2.png" width="52" height="52"/>
         <image name="bigstock-schedule-icon-office-clock-w-29780108.jpg" width="1000" height="996"/>
         <image name="calendar-50.png" width="50" height="50"/>
-        <image name="doctor-32.png" width="32" height="32"/>
+        <image name="checked_user-26.png" width="26" height="26"/>
+        <image name="correo.png" width="26" height="26"/>
         <image name="dot.png" width="256" height="256"/>
         <image name="error-26.png" width="26" height="26"/>
         <image name="gift-26.png" width="26" height="26"/>
@@ -2068,6 +2168,7 @@
         <image name="identity_theft-26.png" width="26" height="26"/>
         <image name="key_security-26.png" width="26" height="26"/>
         <image name="lock-26.png" width="26" height="26"/>
+        <image name="male50.png" width="50" height="52"/>
         <image name="maledoctor.png" width="175" height="182"/>
         <image name="medical77.png" width="32" height="32"/>
         <image name="new_post-26.png" width="26" height="26"/>
@@ -2078,6 +2179,7 @@
         <image name="search_property-32.png" width="32" height="32"/>
         <image name="stethoscope-26w.png" width="26" height="26"/>
         <image name="stethoscope-32.png" width="32" height="32"/>
+        <image name="thumb_up-32.png" width="32" height="32"/>
         <image name="today-26.png" width="26" height="26"/>
         <image name="treatment_plan-26.png" width="26" height="26"/>
         <image name="unlocked.png" width="16" height="16"/>
@@ -2090,6 +2192,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="dF5-oR-9kJ"/>
-        <segue reference="NDb-A1-jOF"/>
+        <segue reference="a4Q-g0-3QZ"/>
     </inferredMetricsTieBreakers>
 </document>

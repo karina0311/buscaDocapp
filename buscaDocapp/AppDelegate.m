@@ -14,9 +14,13 @@
 {
     // Override point for customization after application launch.
     
-    UIImage *backButtonImage = [[UIImage imageNamed:@"Button-Back-icon.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backButtonImage  forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, backButtonImage.size.height*2) forBarMetrics:UIBarMetricsDefault];
+    UIImage *backOriginal =[UIImage imageNamed:@"backButton2"];
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:backOriginal
+                            forState:UIControlStateHighlighted
+                            barMetrics:UIBarMetricsDefault];
+    
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(5, 0)forBarMetrics:UIBarMetricsDefault];
     
     
 [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];

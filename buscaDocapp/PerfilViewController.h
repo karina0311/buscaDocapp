@@ -15,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UIImageView *icon;
 @property (weak, nonatomic) IBOutlet UILabel *namePatient;
 
+@property (weak, nonatomic) IBOutlet UILabel *correo;
+@property (weak, nonatomic) IBOutlet UILabel *user;
+@property (weak, nonatomic) IBOutlet UILabel *birthday;
+@property (weak, nonatomic) IBOutlet UILabel *cellphone;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmented;
 
 @end

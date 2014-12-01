@@ -79,6 +79,17 @@
 		4D8A097019FDE529003232C9 /* purchase_order-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A096F19FDE529003232C9 /* purchase_order-25.png */; };
 		4D8A097219FDE827003232C9 /* 765-default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8A097119FDE827003232C9 /* 765-default-avatar.png */; };
 		4D8A097619FDE883003232C9 /* PerfilViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A097519FDE883003232C9 /* PerfilViewController.m */; };
+		4D8FA5AB1A2C0C9200DFDA9A /* 1417423168_common_star_favorite_bookmark_-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5AA1A2C0C9200DFDA9A /* 1417423168_common_star_favorite_bookmark_-16.png */; };
+		4D8FA5AD1A2C0C9900DFDA9A /* 1417423110_star-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5AC1A2C0C9900DFDA9A /* 1417423110_star-16.png */; };
+		4D8FA5AF1A2C0CE000DFDA9A /* starllena.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5AE1A2C0CE000DFDA9A /* starllena.png */; };
+		4D8FA5B11A2C0CE500DFDA9A /* starvacia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5B01A2C0CE500DFDA9A /* starvacia.png */; };
+		4D8FA5B31A2C329D00DFDA9A /* correo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5B21A2C329D00DFDA9A /* correo.png */; };
+		4D8FA5B51A2C32A200DFDA9A /* birthday.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5B41A2C32A200DFDA9A /* birthday.png */; };
+		4D8FA5B71A2C32A700DFDA9A /* cellphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5B61A2C32A700DFDA9A /* cellphone.png */; };
+		4D8FA5B91A2C344500DFDA9A /* checked_user-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5B81A2C344500DFDA9A /* checked_user-26.png */; };
+		4D8FA5BB1A2C3CE700DFDA9A /* thumb_up-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5BA1A2C3CE700DFDA9A /* thumb_up-32.png */; };
+		4D8FA5BE1A2C45BB00DFDA9A /* CalificarDoctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D8FA5BD1A2C45BB00DFDA9A /* CalificarDoctorViewController.m */; };
+		4D8FA5C01A2C4BC000DFDA9A /* backButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D8FA5BF1A2C4BC000DFDA9A /* backButton2.png */; };
 		4D90E10219BD6D1200C1FC60 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10119BD6D1200C1FC60 /* user.png */; };
 		4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10319BD6D1900C1FC60 /* unlocked.png */; };
 		4D90E10919BD7CDF00C1FC60 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4D90E10819BD7CDF00C1FC60 /* images.jpeg */; };
@@ -246,6 +257,18 @@
 		4D8A097119FDE827003232C9 /* 765-default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "765-default-avatar.png"; sourceTree = "<group>"; };
 		4D8A097419FDE883003232C9 /* PerfilViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PerfilViewController.h; sourceTree = "<group>"; };
 		4D8A097519FDE883003232C9 /* PerfilViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PerfilViewController.m; sourceTree = "<group>"; };
+		4D8FA5AA1A2C0C9200DFDA9A /* 1417423168_common_star_favorite_bookmark_-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1417423168_common_star_favorite_bookmark_-16.png"; sourceTree = "<group>"; };
+		4D8FA5AC1A2C0C9900DFDA9A /* 1417423110_star-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1417423110_star-16.png"; sourceTree = "<group>"; };
+		4D8FA5AE1A2C0CE000DFDA9A /* starllena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starllena.png; sourceTree = "<group>"; };
+		4D8FA5B01A2C0CE500DFDA9A /* starvacia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starvacia.png; sourceTree = "<group>"; };
+		4D8FA5B21A2C329D00DFDA9A /* correo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correo.png; sourceTree = "<group>"; };
+		4D8FA5B41A2C32A200DFDA9A /* birthday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = birthday.png; sourceTree = "<group>"; };
+		4D8FA5B61A2C32A700DFDA9A /* cellphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellphone.png; sourceTree = "<group>"; };
+		4D8FA5B81A2C344500DFDA9A /* checked_user-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked_user-26.png"; sourceTree = "<group>"; };
+		4D8FA5BA1A2C3CE700DFDA9A /* thumb_up-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumb_up-32.png"; sourceTree = "<group>"; };
+		4D8FA5BC1A2C45BB00DFDA9A /* CalificarDoctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalificarDoctorViewController.h; sourceTree = "<group>"; };
+		4D8FA5BD1A2C45BB00DFDA9A /* CalificarDoctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalificarDoctorViewController.m; sourceTree = "<group>"; };
+		4D8FA5BF1A2C4BC000DFDA9A /* backButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backButton2.png; sourceTree = "<group>"; };
 		4D90E10119BD6D1200C1FC60 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		4D90E10319BD6D1900C1FC60 /* unlocked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlocked.png; sourceTree = "<group>"; };
 		4D90E10819BD7CDF00C1FC60 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
@@ -419,6 +442,16 @@
 		4D7F96ED1996F2AF00417083 /* Iconos */ = {
 			isa = PBXGroup;
 			children = (
+				4D8FA5BF1A2C4BC000DFDA9A /* backButton2.png */,
+				4D8FA5BA1A2C3CE700DFDA9A /* thumb_up-32.png */,
+				4D8FA5B81A2C344500DFDA9A /* checked_user-26.png */,
+				4D8FA5B61A2C32A700DFDA9A /* cellphone.png */,
+				4D8FA5B41A2C32A200DFDA9A /* birthday.png */,
+				4D8FA5B21A2C329D00DFDA9A /* correo.png */,
+				4D8FA5B01A2C0CE500DFDA9A /* starvacia.png */,
+				4D8FA5AE1A2C0CE000DFDA9A /* starllena.png */,
+				4D8FA5AC1A2C0C9900DFDA9A /* 1417423110_star-16.png */,
+				4D8FA5AA1A2C0C9200DFDA9A /* 1417423168_common_star_favorite_bookmark_-16.png */,
 				121E8E0F1A11723A006ECD5D /* LOGOUT.png */,
 				121E8E031A1134BB006ECD5D /* stethoscope-32.png */,
 				121E8E011A113458006ECD5D /* search_property-32.png */,
@@ -474,6 +507,8 @@
 				12B0838C1A083B14004A3EE4 /* MiDoctorTableViewCell.m */,
 				126AA5941A0A864F00E7E870 /* MisCitasTableViewCell.h */,
 				126AA5951A0A864F00E7E870 /* MisCitasTableViewCell.m */,
+				4D8FA5BC1A2C45BB00DFDA9A /* CalificarDoctorViewController.h */,
+				4D8FA5BD1A2C45BB00DFDA9A /* CalificarDoctorViewController.m */,
 			);
 			name = "Mi Perfil";
 			sourceTree = "<group>";
@@ -792,12 +827,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D8A097019FDE529003232C9 /* purchase_order-25.png in Resources */,
+				4D8FA5C01A2C4BC000DFDA9A /* backButton2.png in Resources */,
 				12A4264D19FC0ACA002F5B24 /* People-Doctor-Female-icon.png in Resources */,
 				12A4265119FC0BA9002F5B24 /* bigstock-schedule-icon-office-clock-w-29780108.jpg in Resources */,
 				12C345601A27F67500C31B80 /* christmas_star-50-2.png in Resources */,
 				4DC581AF19C673510072DE26 /* femaledoctor.png in Resources */,
 				12989B4719CCCEFC00F2A2FD /* hospital-3-26w.png in Resources */,
+				4D8FA5AD1A2C0C9900DFDA9A /* 1417423110_star-16.png in Resources */,
+				4D8FA5AB1A2C0C9200DFDA9A /* 1417423168_common_star_favorite_bookmark_-16.png in Resources */,
 				12989B3F19CCC93F00F2A2FD /* overtime-25.png in Resources */,
+				4D8FA5B71A2C32A700DFDA9A /* cellphone.png in Resources */,
 				4D7F971F1996F5E000417083 /* hospital21.png in Resources */,
 				12A57F4F19D202F30005827A /* ok-26.png in Resources */,
 				4D8A096E19FDB9C4003232C9 /* Button-Back-icon.png in Resources */,
@@ -815,6 +854,7 @@
 				4D90E11219BD851200C1FC60 /* locked.png in Resources */,
 				12989B3419CCBA7200F2A2FD /* female50.png in Resources */,
 				12989B3B19CCC6D500F2A2FD /* hospital-3-26.png in Resources */,
+				4D8FA5B51A2C32A200DFDA9A /* birthday.png in Resources */,
 				126F2F9819D3548000AEE535 /* key_security-26.png in Resources */,
 				12989B4319CCCA9400F2A2FD /* phone_office-26.png in Resources */,
 				4DF562D119943F3A006E7421 /* Images.xcassets in Resources */,
@@ -837,6 +877,7 @@
 				4DBAACE119F4FE4B00A46B8A /* doctor_suitecase-26.png in Resources */,
 				4D90E11C19BD872300C1FC60 /* bullet-white-icon.png in Resources */,
 				121E8E101A11723A006ECD5D /* LOGOUT.png in Resources */,
+				4D8FA5B11A2C0CE500DFDA9A /* starvacia.png in Resources */,
 				121E8E041A1134BB006ECD5D /* stethoscope-32.png in Resources */,
 				12A57F5119D203590005827A /* cancel-26.png in Resources */,
 				4D90E10E19BD850000C1FC60 /* home.png in Resources */,
@@ -844,9 +885,11 @@
 				4DC581B119C673570072DE26 /* maledoctor.png in Resources */,
 				12989B4119CCC9F800F2A2FD /* stethoscope-24.png in Resources */,
 				12C345661A27F7C300C31B80 /* christmas_star-26.png in Resources */,
+				4D8FA5B91A2C344500DFDA9A /* checked_user-26.png in Resources */,
 				4D90E11019BD850B00C1FC60 /* key.png in Resources */,
 				4D90E11819BD856300C1FC60 /* pin-2.png in Resources */,
 				4D90E11419BD852700C1FC60 /* envelope.png in Resources */,
+				4D8FA5B31A2C329D00DFDA9A /* correo.png in Resources */,
 				12B083881A08382A004A3EE4 /* doctor-25.png in Resources */,
 				12989B4519CCCE0E00F2A2FD /* today-26.png in Resources */,
 				121E8E021A113458006ECD5D /* search_property-32.png in Resources */,
@@ -854,9 +897,11 @@
 				4D90E10419BD6D1900C1FC60 /* unlocked.png in Resources */,
 				4D7F971B1996F5CA00417083 /* medical77.png in Resources */,
 				12FB85CE19FC4C420056CCC7 /* phone_office-26 copia.png in Resources */,
+				4D8FA5AF1A2C0CE000DFDA9A /* starllena.png in Resources */,
 				126F2F9A19D354AD00AEE535 /* identity_theft-26.png in Resources */,
 				12B9824B19CC99A100E5CCF1 /* Tip6.BetterMedicalAppointments.JPG in Resources */,
 				12FB85CC19FC47320056CCC7 /* punt_01.jpg in Resources */,
+				4D8FA5BB1A2C3CE700DFDA9A /* thumb_up-32.png in Resources */,
 				4D8A097219FDE827003232C9 /* 765-default-avatar.png in Resources */,
 				127DD8FB19C110390059EA10 /* search-25.png in Resources */,
 				126F2F9C19D3552B00AEE535 /* treatment_plan-26.png in Resources */,
@@ -924,6 +969,7 @@
 				4DF562C619943F3A006E7421 /* AppDelegate.m in Sources */,
 				4DDB719E19C17B0D00217DD3 /* AFURLRequestSerialization.m in Sources */,
 				4DDB719B19C17B0D00217DD3 /* AFNetworkReachabilityManager.m in Sources */,
+				4D8FA5BE1A2C45BB00DFDA9A /* CalificarDoctorViewController.m in Sources */,
 				4DDB71A819C17B0D00217DD3 /* UIWebView+AFNetworking.m in Sources */,
 				129FAE3A19FABC88005B1CBC /* DIDatepickerDateView.m in Sources */,
 				12E9D58B19F71B7000162D79 /* ReservasViewController.m in Sources */,
