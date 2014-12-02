@@ -64,6 +64,7 @@ int segindice;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.table reloadData];
 
     
 }
@@ -91,6 +92,7 @@ int segindice;
     [self loadPatient];
     [self loadAppointments];
     [self.segmented setSelectedSegmentIndex:0];
+    [self.table reloadData];
 
 }
 
@@ -413,9 +415,9 @@ int segindice;
 -(void) loadPatient{
     
     NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
-    int pat= [datos integerForKey:@"IDPatient"];
+    NSInteger pat= [datos integerForKey:@"IDPatient"];
     username = [datos stringForKey:@"NombreUsuario"];
-    idpatient = [NSNumber numberWithInt:pat];
+    idpatient = [NSNumber numberWithInteger:pat];
     
     NSDictionary *consulta = @{@"idpatient": idpatient};
     

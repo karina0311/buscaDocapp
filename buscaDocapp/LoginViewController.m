@@ -92,6 +92,7 @@ Login *objetoLogin;
 -(void)loginExito{
     [self myMethod:^(BOOL finished) {
         if(finished){
+            
             [self performSegueWithIdentifier:@"exito_login" sender:self];
         }
     }];

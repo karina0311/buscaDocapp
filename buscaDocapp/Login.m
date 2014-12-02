@@ -41,7 +41,7 @@ static Login *sharedMyManager;
     NSDictionary *consulta = @{@"usuario": NombreUsuario};
     
     NSLog(@"%@", consulta);
-
+    [[NSUserDefaults standardUserDefaults] setObject:NombreUsuario forKey:@"NombreUsuario"];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
