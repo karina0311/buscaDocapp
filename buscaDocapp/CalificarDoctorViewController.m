@@ -7,12 +7,18 @@
 //
 
 #import "CalificarDoctorViewController.h"
+#import "URLS json.h"
 
 @interface CalificarDoctorViewController ()
 
 @end
 
 @implementation CalificarDoctorViewController
+
+NSNumber * ratingCalidad;
+NSNumber * ratingRapidez;
+NSDictionary * respuesta;
+NSDictionary * respuesta2;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,14 +62,61 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)GuardaRating:(id)sender {
+    
+    double ratingAux = self.RatingCalidad.rating;
+    ratingCalidad = [[NSNumber alloc] initWithDouble:ratingAux];
+    double ratingAux2 = self.RatingRapidez.rating;
+    ratingRapidez = [[NSNumber alloc] initWithDouble:ratingAux2];
+    
+    [self guardoRating];
 }
-*/
+
+
+/*ENVIO JSON*/
+-(void) guardoRating{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    int pat= [datos integerForKey:@"IDPatient"];
+    self.idpatient = [NSNumber numberWithInt:pat];
+    
+    NSDictionary * consulta = [NSDictionary dictionaryWithObjectsAndKeys:self.idpatient,@"idpatient",ratingCalidad,@"ratingcalidad",ratingRapidez,@"ratingrapidez",self.iddoctor,@"iddoctor",nil];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:guardaRating parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta2 = responseObject;
+        NSLog(@"JSON: %@", respuesta2);
+        
+        
+        NSString* resultado=  respuesta2[@"status"];
+        
+        
+        if ([resultado isEqualToString:@"ok"]) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Mensaje"
+                                                                message:@"Muchas Gracias por darnos tu opinión!. Su calificación se registró satisfactoriamente. "
+                                                               delegate:self
+                                                      cancelButtonTitle:@"Ok"
+                                                      otherButtonTitles:nil];
+            [alertView show];
+        }
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+    
+}
+
 
 @end

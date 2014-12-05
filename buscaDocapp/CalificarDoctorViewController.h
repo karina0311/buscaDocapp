@@ -17,5 +17,5 @@
 
 @property NSNumber* iddoctor;
 @property NSString* name;
-
+@property NSNumber* idpatient;
 @end

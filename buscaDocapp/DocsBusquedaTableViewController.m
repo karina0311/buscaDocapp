@@ -23,9 +23,11 @@ NSMutableArray *lastnames;
 NSMutableArray *maidennames;
 NSMutableArray *iddoctors;
 NSMutableArray *idclinics;
+NSMutableArray *clinicas;
 NSMutableArray *gender;
 
 NSMutableArray * respuesta;
+NSMutableArray * respuestacli;
 NSDictionary *consulta;
 
 
@@ -45,9 +47,10 @@ NSDictionary *consulta;
     names = [[NSMutableArray alloc] init];
     lastnames = [[NSMutableArray alloc] init];
     iddoctors = [[NSMutableArray alloc] init];
+    clinicas = [[NSMutableArray alloc] init];
     idclinics = [[NSMutableArray alloc] init];
     gender = [[NSMutableArray alloc] init];
-    [self BusquedaAvanzada];
+    [self sacoClinicas];
 
 }
 
@@ -78,6 +81,9 @@ NSDictionary *consulta;
     cell = [tableView dequeueReusableCellWithIdentifier:@"celdaDocBusqueda"];
     
     ((CeldaDocsBusquedaTableViewCell*)cell).lblNombre.text= [NSString stringWithFormat:@"Dr. %@ %@ ",(NSString*)names[indexPath.row], (NSString*)lastnames[indexPath.row]];
+    
+    
+    ((CeldaDocsBusquedaTableViewCell*)cell).lblClinica.text = [clinicas objectAtIndex: ((NSNumber*)idclinics[indexPath.row]).intValue -1 ];
     
     if (((NSNumber*)gender[indexPath.row]).intValue==70) {
         ((CeldaDocsBusquedaTableViewCell*)cell).imageView.image= [UIImage imageNamed:@"female50.png"];
@@ -136,6 +142,48 @@ NSDictionary *consulta;
     
     
 }
+
+//CargoClinicas
+
+-(void) sacoClinicas{
+    
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [manager GET:listaclinicas parameters:nil success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuestacli = responseObject;
+        NSLog(@"JSON: %@", respuestacli);
+        
+        for(int i=0;i<respuestacli.count;i++){
+            NSDictionary * diccionario = respuestacli[i];
+            NSDictionary * diccionario2=  diccionario[@"clinic"];
+            NSString * NombreClinica= diccionario2[@"name"];
+            NSNumber * IDSpecialty = diccionario2[@"idclinic"];
+            
+            
+            [clinicas addObject:NombreClinica];
+ 
+            
+        }
+        
+        [self BusquedaAvanzada];
+        
+        
+    }
+         failure:^(AFHTTPRequestOperation *task, NSError *error) {
+             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                 message:[error localizedDescription]
+                                                                delegate:nil
+                                                       cancelButtonTitle:@"Ok"
+                                                       otherButtonTitles:nil];
+             [alertView show];
+         }];
+    
+    
+    
+}
+
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     

@@ -25,6 +25,7 @@ NSMutableArray *respuesta2;
 NSMutableArray *respuesta3;
 NSMutableArray *respuesta4;
 NSDictionary  *respuesta5;
+NSMutableArray  *respuesta6;
 
 
 NSMutableArray *clinicAppointment;
@@ -39,7 +40,7 @@ NSMutableArray *dates;
 NSMutableArray *dates2;
 NSMutableArray *start_times;
 NSMutableArray *end_times;
-
+NSMutableArray *scores;
 
 NSString *name;
 NSString *lastname;
@@ -85,10 +86,11 @@ int segindice;
     iddoctors= [[NSMutableArray alloc] init];
     namesdoctor=[[NSMutableArray alloc] init];
     clinicsdoctor=[[NSMutableArray alloc] init];
+    scores=[[NSMutableArray alloc] init];
     specialtiesdoctor=[[NSMutableArray alloc] init];
     self.icon.layer.cornerRadius = self.icon.frame.size.width / 2;
     self.icon.clipsToBounds = YES;
-    
+    [self loadRatings];
     [self loadPatient];
     [self loadAppointments];
     [self.segmented setSelectedSegmentIndex:0];
@@ -140,7 +142,8 @@ int segindice;
         ((MiDoctorTableViewCell*)cell).ratingDoc.horizontalMargin = 15.0;
         ((MiDoctorTableViewCell*)cell).ratingDoc.editable=NO;
         
-        ((MiDoctorTableViewCell*)cell).ratingDoc.rating= 3.5;
+        ((MiDoctorTableViewCell*)cell).ratingDoc.rating= ((NSNumber*)scores[indexPath.row]).floatValue;
+        NSLog(@"%f",((NSNumber*)scores[indexPath.row]).floatValue);
 
         
         
@@ -457,6 +460,49 @@ int segindice;
 
 }
 
+-(void) loadRatings{
+    
+    NSUserDefaults * datos = [NSUserDefaults standardUserDefaults];
+    NSInteger pat= [datos integerForKey:@"IDPatient"];
+    username = [datos stringForKey:@"NombreUsuario"];
+    idpatient = [NSNumber numberWithInteger:pat];
+    
+    NSDictionary *consulta = @{@"idpatient": idpatient};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:sacaRating parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta6 = responseObject;
+        NSLog(@"JSON: %@", respuesta6);
+        
+        for(int i=0;i<respuesta6.count;i++){
+            NSDictionary * diccionario = respuesta6[i];
+            NSDictionary * diccionario2=  diccionario[@"rating"];
+            NSNumber * score= diccionario2[@"score"];
+
+            [scores addObject:score];
+        
+            
+        }
+
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
+    
+    
+}
+
 
 /********************************/
 - (IBAction)cambioPerfil:(UISegmentedControl *)sender {
@@ -480,6 +526,38 @@ int segindice;
     escenadestino.iddoctor = iddoctors[filaseleccionada.row];
     escenadestino.name = namesdoctor[filaseleccionada.row];
 
+    
+}
+
+- (IBAction)cerrarSesion:(id)sender {
+    
+    
+    UIAlertView* alertView;
+    alertView = [[UIAlertView alloc] initWithTitle:@"Cerrar Sesión"
+                                           message:@"Está seguro que desea cerrar sesión?"
+                                          delegate:self
+                                 cancelButtonTitle:@"No"
+                                 otherButtonTitles:@"Si",nil];
+    [alertView show];
+    
+    
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if (buttonIndex==1){
+        
+        UIStoryboard*  sb = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIViewController* vc = [sb instantiateViewControllerWithIdentifier:@"login"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"NombreUsuario"];
+        
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:@"ContraseñaUsuario"];
+        
+        [self presentViewController:vc animated:YES completion:nil];
+        
+    }
     
 }
 

@@ -1133,7 +1133,13 @@
                             <outlet property="delegate" destination="2DJ-MT-CvL" id="4mW-u9-WhF"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Especialidades" id="aEY-n9-L5j"/>
+                    <navigationItem key="navigationItem" title="Especialidades" id="aEY-n9-L5j">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="5El-g1-LXs">
+                            <connections>
+                                <action selector="cerrarSesion:" destination="2DJ-MT-CvL" id="sk9-ow-qQK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="MOC-oh-ZcL" id="hdW-dh-aLv"/>
                         <outlet property="searchDisplayController" destination="yHs-1J-LnE" id="yrz-gr-Bfr"/>
@@ -1629,7 +1635,14 @@
                             <outlet property="delegate" destination="dHc-G3-3aG" id="xR5-xp-SLt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Distritos" id="tXS-Ca-2jH"/>
+                    <navigationItem key="navigationItem" title="Distritos" id="tXS-Ca-2jH">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="Dhc-15-2XS">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="dHc-G3-3aG" id="O9v-5d-8y8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Of-ZC-Tdm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1793,7 +1806,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Búsqueda por Doctor" id="esh-No-Yvi"/>
+                    <navigationItem key="navigationItem" title="Búsqueda por Doctor" id="esh-No-Yvi">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="dTJ-3E-j4E">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="00n-YE-z0k" id="xAa-AT-Vys"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="LastnameField" destination="cgX-Ml-3Au" id="YqV-2D-8tb"/>
                         <outlet property="NameField" destination="jTs-Qd-94z" id="0sh-go-0cw"/>
@@ -2035,7 +2055,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Mi Perfil" id="fPN-jb-UyL"/>
+                    <navigationItem key="navigationItem" title="Mi Perfil" id="fPN-jb-UyL">
+                        <barButtonItem key="rightBarButtonItem" image="LOGOUT.png" id="Wmr-1h-Qso">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="cerrarSesion:" destination="71A-bQ-ZL6" id="OJ7-Xv-ZWh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="correo" destination="Pen-kb-QkB" id="U1D-tO-uJp"/>
                         <outlet property="icon" destination="ydK-M8-Nja" id="oor-cl-OnT"/>
@@ -2078,6 +2105,9 @@
                                     <color key="titleColor" red="0.98431378599999997" green="0.98431378599999997" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="GuardaRating:" destination="NgL-Fy-rta" eventType="touchUpInside" id="tr7-38-THT"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sDa-G0-gCr">
                                 <rect key="frame" x="0.0" y="310" width="320" height="47"/>
@@ -2192,6 +2222,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="dF5-oR-9kJ"/>
-        <segue reference="a4Q-g0-3QZ"/>
+        <segue reference="M4Q-yL-Wdm"/>
     </inferredMetricsTieBreakers>
 </document>
