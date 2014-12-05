@@ -29,7 +29,8 @@ NSMutableArray *gender;
 NSMutableArray * respuesta;
 NSMutableArray * respuestacli;
 NSDictionary *consulta;
-
+NSDictionary *respuesta2;
+NSString * nombreesp;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -126,7 +127,7 @@ NSDictionary *consulta;
         }
         [self.tableView reloadData];
         
-        
+        [self recuperoEspecialidad];
         
         
     }
@@ -140,6 +141,40 @@ NSDictionary *consulta;
           }];
     
     
+    
+}
+
+//cargp Especialidad
+
+-(void) recuperoEspecialidad{
+    
+    NSDictionary *consulta = @{@"idspecialty": self.idespecialidad};
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSLog(@"%@", consulta);
+    
+    [manager POST:namespecialty parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
+        respuesta2 = responseObject;
+        NSLog(@"JSON: %@", respuesta);
+        
+        
+        NSDictionary * diccionario3=  respuesta2[@"specialty"];
+        nombreesp= diccionario3[@"name"];
+        
+        
+        
+        
+    }
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
     
 }
 
@@ -194,7 +229,7 @@ NSDictionary *consulta;
     escenadestino.lastname = lastnames[filaseleccionada.row];
     escenadestino.idclinic = idclinics[filaseleccionada.row];
     escenadestino.cantidadfilas = iddoctors.count;
-    //escenadestino.nombreespecialidad= self.idespecialidad;
+    escenadestino.nombreespecialidad= nombreesp;
     
 }
 

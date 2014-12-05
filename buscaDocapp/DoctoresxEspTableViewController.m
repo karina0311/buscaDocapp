@@ -27,7 +27,8 @@ NSMutableArray *gender;
 
 NSMutableArray * respuesta;
 NSDictionary *consulta;
-
+NSDictionary *respuesta2;
+NSString *nombreesp;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -90,14 +91,19 @@ NSDictionary *consulta;
 }
 
 
--(void) recuperoDoctoresporEspecialidad{
 
+
+
+//Nombre Especialidad
+
+-(void) recuperoDoctoresporEspecialidad{
+    
     NSDictionary *consulta = @{@"idspecialty": self.idespecialidad};
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     
-     NSLog(@"%@", consulta);
+    NSLog(@"%@", consulta);
     
     [manager POST:docsxespecialidad parameters:consulta success:^(AFHTTPRequestOperation *task, id responseObject) {
         respuesta = responseObject;
@@ -123,18 +129,18 @@ NSDictionary *consulta;
             [gender addObject:Genero];
         }
         [self.tableView reloadData];
-       
-
+        
+        
         
     }
-         failure:^(AFHTTPRequestOperation *task, NSError *error) {
-             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
-                                                                 message:[error localizedDescription]
-                                                                delegate:nil
-                                                       cancelButtonTitle:@"Ok"
-                                                       otherButtonTitles:nil];
-             [alertView show];
-         }];
+          failure:^(AFHTTPRequestOperation *task, NSError *error) {
+              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No choco con el servidor"
+                                                                  message:[error localizedDescription]
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"Ok"
+                                                        otherButtonTitles:nil];
+              [alertView show];
+          }];
     
 }
 
